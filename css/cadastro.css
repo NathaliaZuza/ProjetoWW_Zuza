@@ -1,0 +1,266 @@
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;     
+}
+body{
+    background-color: #e6effd;
+}
+/*-----------HEADER-----------*/
+
+.box{
+    height: 3vh;
+    border-bottom: 1px solid  #0f00591f;
+    border-top:  1px solid #0f00591f;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    background-color: #fff;
+}
+.nav-logar{
+    display: flex;
+    list-style: none;
+    left: 0;
+    align-items: center;
+    font-family: kinetika; 
+}
+.nav-logar li{
+    margin-left: 27px;
+    padding: 7px;
+    margin-top: 0px;
+}
+.btn-logar{
+    margin-top: -5px;
+    display: flex;
+    margin-left: 40px;
+    height: 30px;
+}
+
+.btn-logar a{
+    text-decoration: none;
+    font-family: kinetika;
+    color: #F3B700;
+    display: flex;
+    width: 180px;
+    text-align: center;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.btn-logar2{
+    margin-top: -5px;
+    display: flex;
+    margin-left: 25px;
+    height: 30px;
+    
+}
+
+.btn-logar2 a{
+    text-decoration: none;
+    font-family: kinetika;
+    color:  #0f0059da;
+    display: flex;
+    width: 250px;
+    text-align: center;
+    align-items: center;
+    margin-left: 20px; 
+}
+#cadastro{
+    font-size: 15px;
+    margin-right: 10px;
+    color:  #0f0059da;
+}
+
+#img-account{
+    margin-right: 10px;
+}
+.logo{
+    background-color: #F3B700;
+    color: #0f0059da;
+    letter-spacing: 4px;
+}
+.logo{
+    border-radius: 5px;
+    padding: 7px;   
+}
+.inputSearch input[type=text]{
+    padding-left: 35px;
+    border: 1px solid  #0f00597e;
+    outline: none;
+    background-color: #ffffff00;
+    border-radius: 3px;
+    height: 29px;
+    width: 500px;
+    margin-left: 15px ;
+}
+.inputSearch{
+    position: relative;
+}
+.inputSearch i{
+    position: absolute;
+    left: 0;
+    top: 2.5px;
+    padding: 6px;
+    padding-left: 22px;
+    color: #e4ab00;   
+}
+
+/*-----------CADASTRO-----------*/
+form{
+    font-family: kinetika;
+}
+h1{
+    font-family: kinetika;
+    color: #0F0059;
+    padding-left: 60px;
+    padding-top: 30px;
+    background-color: #e6effd;
+}
+#img-login{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.img-login1{
+    display: flex;
+    height: 410px;
+    margin-top: 20px;
+    margin-left: 40px;
+}
+.botão{
+    background-color: #e4ab00;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: kinetika;
+}
+.botão:hover{
+    background-color: #0F0059;
+    cursor: pointer;
+}
+.formContainer{
+    position: absolute;
+    top: 22%;
+    left: 51%;
+    background-color:#fff;
+    padding: 40px;
+    border-radius: 10px;
+    width: 38%;
+    color:#0F0059;
+}
+.inputBox{
+    position: relative;   
+}
+.inputUser{
+    background-color: inherit;
+    border: none;
+    border-bottom: 1px solid #0f00597e;
+    outline: none;
+    color: #0F0059;
+    font-size: 15px;
+    width: 100%;
+    height: 30px;
+    font-family: kinetika-light;
+}
+.labelInput{
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+.inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+    top: -20px;
+    font-size: 12px;
+    color: #e4ab00;
+}
+#data_nasc{
+    border: 1px solid #0f00597e;
+    padding: 8px;
+    border-radius: 7px;
+    outline: none;
+    font-size: 15px;
+    color: #e4ab00;
+    margin-left: 15px;
+    font-family: kinetika-light;
+}
+
+
+/*-----------MENU------------*/
+
+.nav-list{
+    display: flex;
+    height: 10vh;
+    list-style: none;
+    left: 0;
+    background-color: #fff;
+    align-items: center;
+    font-family: kinetika; 
+
+}
+.nav-list li{
+    margin-left: 70px;
+    font-weight: bolder;
+    padding: 7px;
+    margin-top: 0px;
+}
+.produtoshover{
+    font-family: kinetika-light;
+}
+.produtoshover:hover{
+    border-bottom: 2px solid #F3B700;
+}
+div > ul > li > a{
+    color:  #0F0059;
+    text-decoration: none;
+}
+#cadastro{
+    color: #0F0059;
+}
+.carrinho{
+    background-color: #F3B700;
+    color: #0F0059;
+    border-radius: 5px;
+    width:100px;
+    height: 20px;
+    align-items: center;
+}
+.carrinho:hover{
+    background-color: #e4ab00;
+    cursor: pointer;
+}
+
+@media screen and (max-width:600px) {
+
+    .nav-list{       
+        margin: auto;
+        top: 8vh;
+        right: 0;
+        width: 100vw;
+        height: 92vh;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+
+    }
+    .nav-list li{
+        margin-left: 0;
+    } 
+}  

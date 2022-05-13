@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;     
+}
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+/*-----------LOGIN-----------*/
+h1{
+    font-family: kinetika;
+    color: #0F0059;
+    padding-left: 80px;
+    padding-top: 30px;
+    background-color: #e6effd;
+}
+.login{
+    margin-top: 25px;
+    background-color:#fff;
+    position: absolute;
+    top: 55%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+    color: aliceblue;
+    padding: 70px;
+    border-radius: 10px;
+}
+.botão{
+    background-color: #0F0059;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    text-decoration: none;
+}
+.nome, .senha{
+    padding: 15px;
+    border: 2px solid #0f00595e ;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+}
+body{
+    background-color: #e6effd;
+}
+
+#img-login{
+    text-align: center;
+    padding-bottom: 30px;
+}
+.img-login1{
+    display: flex;
+    height: 400px;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+/*-----ALERTA------*/
+.alerta{
+    color: red;
+    text-align: center;
+    font-family: kinetika;
+    padding-top: 20px;
+
+}
+.alerta2{
+    font-family: kinetika-light;
+    color: #0F0059;
+    text-align: center;
+}

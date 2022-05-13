@@ -1,0 +1,131 @@
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;   
+}
+h3{
+
+    padding: 20px 0px 15px 60px;
+    font-size: 23px;
+    color: #0F0059;
+    font-family: kinetika; 
+}
+
+#produtos{
+    padding: 10px 5px 10px 5px;
+    display: inline-block;
+    width: 100%;
+    height: 80vh;
+    position: relative;
+}
+.produto-single{
+    box-shadow: 4px 2px 5px 5px #e7e7e7;
+    border-radius: 5px;   
+    display: inline-block;
+    width:auto;
+}
+.produto-single:hover{
+    cursor: pointer;
+    box-shadow: 4px 2px 5px 5px #e2e2ff;
+    background-color: #f6f6ff;
+}
+.pai{
+   align-items: center;
+   align-self: center;
+}
+p{
+    font-size: 16px;
+    color: #0F0059;
+}
+.info{
+    padding: 10px 10px -4px 10px;
+    width: 300px;
+    font-family: kinetika;  
+}
+.descricao{
+    font-family: kinetika-light;
+    font-weight: 900;
+}
+.nome_produto{
+    text-align: center;
+    padding: 15px 15px 10px 15px; 
+    font-size: 25px;
+    color: #F3B700;
+    font-family: kinetika;  
+}
+.preco{
+    text-align: center;
+    padding: 10px; 
+    font-size: 20px;
+    color: #F3B700;
+    font-family: kinetika;  
+}
+.img_produto{
+    background-color: #0F0059;
+    display: flex;
+    width: 50%;
+}
+.img_produto img{
+    width: 80%;
+    margin: 0;
+    padding: 0;
+
+}
+.btn-info{
+    text-align: center;
+    padding: 12px;
+    background-color: #F3B700;
+    width: 60%;
+    margin: auto;  
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 15px;
+    transform: translateX(0) scale(0.8);
+}
+.btn-info p {
+    font-family: kinetika;
+}
+
+.btn-info:hover,
+.btn-info:focus{
+    cursor: pointer; 
+    background-color: #ffd659;
+    transform: translateX(0) scale(1.0);
+    transition: 0.5s ease-in;
+}
+#undIndex{
+    font-family: kinetika-light;
+    font-weight: 900;
+    font-size: 14px;
+    color: #0F0059; 
+}
+
+@media screen and (max-width:600px) {
+    #produtos{
+        margin: 0; 
+        padding: 0 2%;
+        display: flex; 
+        flex-direction: column;
+        gap: 10px;
+    }
+    .produto-single{
+        width: 85%;   
+        padding: 12px 12px 12px 12px;
+       border-radius: 5px;
+    }
+  
+}  
+

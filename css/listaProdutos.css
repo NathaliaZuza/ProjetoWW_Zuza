@@ -1,0 +1,45 @@
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+table{
+    margin: auto;
+    margin-top: 5%;
+    border-collapse: collapse;
+    border: 1px solid  #000c42;
+    border-radius: 5px;
+}
+th{
+    font-family: kinetika;
+    background-color: #000c42;
+    padding: 15px;
+    color: #fff;
+}
+tr{
+    font-family: kinetika-light;
+    border: 1px solid ;  
+}
+tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.137);
+}
+td{
+    padding: 15px;
+}
+
+.icone{
+    color:#1cd43b;
+}
+
+.iconelixo{
+    color:#d60000;
+}
