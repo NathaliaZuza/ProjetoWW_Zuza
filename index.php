@@ -52,41 +52,41 @@
     <!------------PRODUTOS----------->
 
     <h3>Produtos em destaque</h3>
-    
-  
+
+
     <div class="pai">
 
         <?php
-        require_once './dao/ProdutoDAO.php';
-        $produtoDAO = new ProdutoDAO();
-        $produtos = $produtoDAO->findAll();
-    
-        foreach ($produtos as $produto){   
-            echo "<div id='produtos'>";     
-                    echo "<div class='produto-single'>";
-                
-        ?>
+            require_once './dao/ProdutoDAO.php';
+            $produtoDAO = new ProdutoDAO();
+            $produtos   = $produtoDAO->findAll();
+
+            foreach ( $produtos as $produto ) {
+                echo "<div id='produtos'>";
+                echo "<div class='produto-single'>";
+
+            ?>
                             <div class='img_produto'>
-                            <p> <img src="../img/produto/foto/<?php echo $produto["foto"]?>" width="112"/></p>
+                            <p> <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112"/></p>
                             </div>
-<?php    
-                    echo 
-                            "<div class='nome_produto'>
+<?php
+    echo
+            "<div class='nome_produto'>
                             {$produto["nome"]}
                             </div>";
 
-                    echo    "<div class='preco'>
+        echo "<div class='preco'>
                             <p>A partir de: </p>R$ {$produto["preco"]}<span id='undIndex'>/{$produto["qtd"]}</span>
                             </div>";
 
-                    echo    "<div class='btn-info'>
+        echo "<div class='btn-info'>
                                 <p>Mais informações</p>
-                            </div>";     
-                    echo "</div>" ;
-                echo "</div>" ;
-            }
-            ?>
+                            </div>";
+        echo "</div>";
+        echo "</div>";
+    }
+?>
 
     </div>
 
-</html>
+</html>sadas
