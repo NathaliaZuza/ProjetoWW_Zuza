@@ -8,5 +8,5 @@ $nomeFoto = $_GET['foto'];
 $produtoDAO = new ProdutoDAO();
 if ($produtoDAO->deleteById($idProduto)){
     unlink(DIR_FOTO . $nomeFoto);
-    header ("Location: ../view/formCadastrarProduto.php");
+    header ("Location: ../view/Produtos.php");
 }

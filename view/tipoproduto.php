@@ -96,8 +96,8 @@
             $produtoDAO = new ProdutoDAO();
             $produtos   = $produtoDAO->findByCategoria( $categoria_id );
 
-            //var_dump( $produtos );
-            //[0]=> array(10) { ["id"]=> string(1) "1" ["nome"]=> string(12) "Panfleto 4x1" ["preco"]=> string(5) "70,00" ["cores"]=> string(3) "4x0" ["material"]=> string(13) "Papel Couchê" ["tamanho"]=> string(11) "15cm x 10cm" ["prazo"]=> string(13) "3 dias úteis" ["qtd"]=> string(6) "5000un" ["foto"]=> string(17) "627bfb295a9a0.png" ["categoria_id"]=> string(1) "1" }
+            // var_dump( $produtos );
+            //[0]=> array(10) { ["id"]=> string(1) "1" ["nome"]=> string(12) "Panfleto 4x1" ["preco"]=> string(5) "70,00" ["cores"]=> string(3) "4x0" ["material"]=> string(13) "Papel Couchê" ["tamanho"]=> string(11) "15cm x 10cm" ["prazo"]=> string(13) "3 dias úteis" ["qtd"]=> string(6) "5000un" ["foto"]=> string(17) "627bfb295a9a0.png" ["categoria_id"]=> string(1) "1" 
             if ( !empty( $produtos ) ) {
                 foreach ( $produtos as $produto ) {
                     echo "<div id='produtos'>";
