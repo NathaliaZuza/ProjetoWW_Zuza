@@ -58,12 +58,12 @@
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="#">
+                <a href="/view/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="#">
+                <a href="/view/tipoproduto.php?categoria_id=5">
                     <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>

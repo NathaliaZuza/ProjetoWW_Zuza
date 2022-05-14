@@ -21,13 +21,10 @@
 <h2 id="carrinhotitle">Carrinho</h2>
 
 <div class="container">
-    <div class="imgCarrrinho">
-<!--     <img src="../img/carrinho-01.png">
- -->    
-
-               
-</div>        
-    
+  <!--  <div class="imgCarrrinho">
+            <img src="../img/carrinho-01.png">
+        </div> -->
+                
 </body>
 
 </html>

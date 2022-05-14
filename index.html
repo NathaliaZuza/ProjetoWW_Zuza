@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <div class="calculadora">
+        <input type="number" name="numero" id="numero">
+        <button class="b7" onclick="inserirNumero(7)">7</button>
+        <button class="b8" onclick="inserirNumero(8)" >8</button>
+        <button class="b9" onclick="inserirNumero(9)">9</button>
+        <button class="bd" onclick="calculo('%')">%</button>
+        <button class="b4" onclick="inserirNumero(4)">4</button>
+        <button class="b5" onclick="inserirNumero(5)">5</button>
+        <button class="b6" onclick="inserirNumero(6)">6</button>
+        <button class="bX" onclick="calculo('X')">X</button>
+        <button class="b1" onclick="inserirNumero(1)">1</button>
+        <button class="b2" onclick="inserirNumero(2)">2</button>
+        <button class="b3" onclick="inserirNumero(3)">3</button>
+        <button class="bsub" onclick="calculo('-')">-</button>
+        <button class="b0" onclick="inserirNumero(0)">0</button>
+        <button class="bsom" onclick="calculo('+')">+</button>
+        <button class="bresul"  onclick="resultado()" >=</button>
+    </div>
+</body>
+<script>
+
+var num1 = 0;
+var simbolo = 0;
+function inserirNumero(num){
+    const inputNum = document.querySelector("#numero");
+    inputNum.value += num;
+}
+function calculo(sim){
+    const inputNum = document.querySelector("#numero");
+    num1 = inputNum.value;
+    inputNum.value = "";
+    simbolo = sim;
+}
+function resultado(){
+    const inputNum = document.querySelector("#numero");
+    var num2 = inputNum.value; 
+    console.log(num1);
+    console.log(simbolo);
+    console.log(num2)
+    if (simbolo == '+'){
+        resultado = Number(num1) + Number(num2);
+    }
+    if (simbolo == '-'){
+        resultado = num1 - num2;
+    }
+    if (simbolo == '%'){
+        resultado = num1 / num2;
+    }
+    if (simbolo == 'X'){
+        resultado = num1 * num2;
+    }
+    inputNum.value = resultado;
+} 
+
+</script>
+</html>
