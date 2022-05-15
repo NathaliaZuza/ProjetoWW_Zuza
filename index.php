@@ -15,7 +15,9 @@
 
 <body>
 
-  <?php include './view/headerMenu.php'?>
+    <?php include './view/headerMenu.php' ?>
+
+
 
     <!------------CARROSSEL DE IMAGENS----------->
 
@@ -34,22 +36,23 @@
             <div class="image">
                 <img src="../img/1.png" alt="">
             </div>
-            <div class="image">
+            <!-- <div class="image">
                 <img src="../img/3.jpg" alt="">
             </div>
             <div class="image">
                 <img src="../img/0.jpg" alt="">
-            </div>
+            </div> -->
         </div>
         <div class="balls">
             <div class="imgAtual" id="0"></div>
             <div id="1"></div>
-            <div id="2"></div>
-            <div id="3"></div>
+            <!-- <div id="2"></div>
+            <div id="3"></div> -->
         </div>
     </div>
 
     <script src="js/scripts.js"></script>
+
     <!------------PRODUTOS----------->
 
     <h3>Todos os produtos</h3>
@@ -58,41 +61,58 @@
     <div class="pai">
 
         <?php
-            require_once './dao/ProdutoDAO.php';
-            $produtoDAO = new ProdutoDAO();
-            $produtos   = $produtoDAO->findAll();
+        require_once './dao/ProdutoDAO.php';
+        $produtoDAO = new ProdutoDAO();
+        $produtos   = $produtoDAO->findAll();
 
-            foreach ( $produtos as $produto ) {
-                echo "<div id='produtos'>";
-                echo "<div class='produto-single'>";
+        foreach ($produtos as $produto) {
+            echo "<div id='produtos'>";
+            echo    "<div class='produto-single'>";
 
-            ?>
-                            <div class='img_produto'>
-                            <p> <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112"/></p>
-                            </div>
-<?php
-    echo
+        ?>
+            <div class='img_produto'>
+                <p> <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112" /></p>
+            </div>
+        <?php
+            echo
             "<div class='nome_produto'>
                             {$produto["nome"]}
-                            </div>";
+                     </div>";
 
-        echo "<div class='preco'>
-                            <p>A partir de: </p>R$ {$produto["preco"]}<span id='undIndex'>/{$produto["qtd"]}</span>
-                            </div>";
+            echo   "<div class='preco'>
+                        <p>A partir de: </p>R$ {$produto["preco"]}<span id='undIndex'>/{$produto["qtd"]}</span>
+                     </div>";
 
-        echo "<div class='btn-info'>
-                               <p>Mais informações</p>
-                            </div>";
-        echo "</div>";
-        echo "</div>"; 
-    }
-?>
+            echo    "<div class='btn-info'>
+                        <p>Mais informações</p>
+                    </div>";
 
-<footer>
-<a href="#" class="fab fa-facebook-f"></a>
-<a href="#" class="fab fa-twitter"></a>
-<a href="#" class="fab fa-instagram"></a>
-
-</footer>
+            echo "</div>";
+            echo "</div>";
+        }
+        ?>
     </div>
+
+    <footer>
+        <div class="social">
+            <p><span class="logo">WW.ZUZA</span></p>
+            <div class="socialcirc">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+                <p>Copyright © 2022 Todos os <br> direitos reservados</p>
+            </div>
+        </div>
+      <!--   <div class="pagamento">
+            <p>Formas de pagamento:</p>
+            <p>
+                <img src="./img/pagamento-07.png" width="70x">
+                <img src="./img/pagamento-08.png" width="70px">
+            </p>
+        </div> -->
+        <div class="criacao">
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+        </div>
+    </footer>
 </html>

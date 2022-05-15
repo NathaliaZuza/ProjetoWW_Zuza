@@ -67,10 +67,9 @@
     background-color: #0f0059da;
     color: #F3B700;
     letter-spacing: 4px;
-}
-.logo{
     border-radius: 5px;
     padding: 7px;   
+    font-family: kinetika;
 }
 .inputSearch input[type=text]{
     padding-left: 35px;
@@ -156,3 +155,64 @@ div > ul > li > a{
         margin-left: 0;
     } 
 }  
+/*--------FOOTER--------*/
+
+footer{
+    background-color: #0f00590c;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 33vh;
+    margin-top: 20px;
+}
+.social {
+    margin: auto;
+    text-align: center;
+    padding: 40px 40px 10px 40px;
+    font-family: kinetika-light;
+    margin-top: 15px;
+    width: 30vw;
+}
+
+.social .socialcirc{
+    margin-top: 15px;
+}
+footer .social a{
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    line-height: 2.5rem;
+    font-size: 1.5rem;
+    color:#0F0059;
+    border: 1px solid #0F0059;
+    margin:.2rem;
+    border-radius: 50%;
+    text-decoration: none;
+    display: inline-block;
+}
+
+footer .social a:hover{
+    background-color: #e4ab00;
+    border: 1px solid #0F0059;
+}
+.criacao p {
+    font-family: kinetika;
+    text-align: center;
+}
+#criado #autores{
+    font-family: kinetika-light;
+}
+/* .pagamento {
+    font-family: kinetika-light;
+    width: 400px;
+    font-size: 8px;
+    padding: 0 20px 20px 60px;
+    text-align: left;
+    display: inline-block;
+    margin-top: -600px ;
+}
+.pagamento img {
+    border: 1px solid #0F0059;
+    padding: 5px;
+    border-radius: 4px;
+} */
