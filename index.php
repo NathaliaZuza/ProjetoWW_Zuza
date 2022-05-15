@@ -84,7 +84,7 @@
                      </div>";
 
             echo    "<div class='btn-info'>
-                        <p>Mais informações</p>
+                    <p>Mais informações</p>
                     </div>";
 
             echo "</div>";

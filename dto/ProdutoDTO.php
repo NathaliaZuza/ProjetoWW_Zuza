@@ -9,7 +9,8 @@ class ProdutoDTO {
     private $prazo;
     private $preco;
     private $qtd;
-    private $foto;
+    private $foto;  
+    private $fotoBanner;
     private $categoriaId;
 
     public function getId() {
@@ -66,7 +67,12 @@ class ProdutoDTO {
     public function setFoto( $foto ) {
         $this->foto = $foto;
     }
-
+    public function getFotoBanner() {
+        return $this->fotoBanner;
+    }
+    public function setFotoBanner( $fotoBanner ) {
+        $this->fotoBanner = $fotoBanner;
+    }
     public function getCategoriaId() {
         return $this->categoriaId;
     }

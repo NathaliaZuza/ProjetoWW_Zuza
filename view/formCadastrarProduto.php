@@ -75,7 +75,7 @@
                     </div>
                     <div class="inputbox">
                         <input type="file" name="foto" id="foto">
-                        <label for="foto">Imagem</label>
+                        <label for="foto">Imagem produto</label>
                     </div>
                 </div>
                 <div class="row">
