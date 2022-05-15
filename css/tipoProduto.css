@@ -47,6 +47,8 @@ h3{
 .produto-single:hover{
     cursor: pointer;
     background-color: #f6f6ff;
+    box-shadow: 3px 3px 8px #727272;
+    transition: 0.5s;
 }
 .pai{
    align-items: center;
@@ -79,8 +81,8 @@ p{
 .preco{
     text-align: center;
     padding: 10px; 
-    font-size: 20px;
-    color: #F3B700;
+    font-size: 25px;
+    color: #0F0059;
     font-family: kinetika;  
 }
 .img_produto{

@@ -211,3 +211,27 @@ p{
   
 }  
 
+/*--------FOOTER--------*/
+
+footer{
+    background-color: #0F0059;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+
+footer .share a{
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color:#fff;
+    border:var(--border);
+    margin:.3rem;
+    border-radius: 50%;
+}
+
+footer .share a:hover{
+    background-color: var(--main-color);
+}

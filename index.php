@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>WWZ | Serviços gráficos pra você.</title>
     <link rel="styleSheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
@@ -31,7 +32,7 @@
                 <img src="../img/bannerteste-01.png" alt="">
             </div>
             <div class="image">
-                <img src="../img/2.png" alt="">
+                <img src="../img/1.png" alt="">
             </div>
             <div class="image">
                 <img src="../img/3.jpg" alt="">
@@ -83,9 +84,15 @@
                                <p>Mais informações</p>
                             </div>";
         echo "</div>";
-        echo "</div>";
+        echo "</div>"; 
     }
 ?>
 
+<footer>
+<a href="#" class="fab fa-facebook-f"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-instagram"></a>
+
+</footer>
     </div>
 </html>
