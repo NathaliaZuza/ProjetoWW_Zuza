@@ -114,35 +114,21 @@ $pathImagem = $arrayImagem[$categoria_id];
             foreach ($produtos as $produto) {
                 echo "<div id='produtos'>";
                 echo "  <div class='produto-single'>";
-                                echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
+                echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
                 echo "      <div class='img_produto'>";
                 echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
                 echo "      </div>";
-
-                echo "      <div class='preco'> R$ {$produto["preco"]} </div>";
-                echo "<div class='info'>
-                         <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
-                      </div>";
-
-                echo    "<div class='info'>
-                    <p>Material: <span class='descricao'>{$produto['material']}</span></p>
-                    </div>";
-
-                echo    "<div class='info'>
-                    <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
-                    </div>";
-
-                echo    "<div class='info'>
-                    <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
-                    </div>";
-
-                echo    "<div class='info'>
-                    <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
-                    </div>";
-
+                echo "      <div class='preco'> R$ {$produto["preco"]} </div>
+                            <div class='info'>                           
+                                <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
+                                <p>Material: <span class='descricao'>{$produto['material']}</span></p>
+                                <p>Tamanho final: <span class='descricao'>{$produto["tamanho"]}</span></p>                   
+                                <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>                
+                                <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
+                                </div>";
                 echo    "<div class='btn-info'>
-                        <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
-                    </div>";
+                            <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
+                        </div>";
                 echo "</div>";
                 echo "</div>";
             }

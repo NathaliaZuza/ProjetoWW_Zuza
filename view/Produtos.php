@@ -23,8 +23,8 @@
 
     $produtoDAO = new ProdutoDAO();
     $produtos = $produtoDAO->findAll();
-    echo  "<main class='container'>";
-    echo  "<div class='conteudo'>";
+    echo "<main class='container'>";
+    echo "<div class='conteudo'>";
     echo "<h1>Listar produtos</h1>";
     echo "<table border='1'>";
     echo "<tr><th>Nome</th>";   
@@ -47,7 +47,7 @@
         echo "<td>{$produto["qtd"]}</td>";
         echo "<td>{$produto["prazo"]}</td>";
         echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='fa-solid fa-trash iconelixo'></a></i></td>";
-        echo "  <td align='center'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='fa-solid fa-pen-to-square'></a></i></td>";
+        echo "  <td align='center'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='fa-solid fa-pen-to-square icone'></a></i></td>";
         echo "</tr>";
         echo "</main>";
         echo "</div>";

@@ -9,7 +9,7 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>WWZ | Serviços gráficos pra você.</title>
-    <link rel="styleSheet" href="../css/estilo.css">
+    <link rel="styleSheet" href="../css/itemProduto.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
 </head>
 
@@ -99,44 +99,52 @@
        $produto   = $produtoDAO->findById($produto_id);
 
        if (!empty($produto)) {
-                    echo "<div id='produtos'>";
-               echo "  <div class='produto-single'>";
-                               echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
-               echo "      <div class='img_produto'>";
-               echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
-               echo "      </div>";
 
-               echo "      <div class='preco'> R$ {$produto["preco"]} </div>";
-               echo "<div class='info'>
+        echo "<div class='container'>";
+        echo "  <div class='div-img'>";
+        echo "      <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
+        echo "  </div>";
+
+        echo "  <div class='div-info'>";
+        echo "      <div class='nome_produto'>
+                        {$produto["nome"]}
+                    </div>";
+
+        echo "      <div class='preco'> 
+                        R$ {$produto["preco"]}
+                    </div>";
+        echo "      <div class='info'>
                         <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
-                     </div>";
+                    </div>";
 
-               echo    "<div class='info'>
-                   <p>Material: <span class='descricao'>{$produto['material']}</span></p>
-                   </div>";
+        echo        "<div class='info'>
+                        <p>Material: <span class='descricao'>{$produto['material']}</span></p>
+                    </div>";
 
-               echo    "<div class='info'>
-                   <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
-                   </div>";
+        echo        "<div class='info'>
+                        <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
+                    </div>";
 
-               echo    "<div class='info'>
-                   <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
-                   </div>";
+        echo        "<div class='info'>
+                        <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
+                    </div>";
 
-               echo    "<div class='info'>
-                   <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
-                   </div>";
+        echo        "<div class='info'>
+                        <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
+                    </div>";
 
-               echo    "<div class='btn-info'>
-                       <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
-                   </div>";
-               echo "</div>";
-               echo "</div>";
-           
+        echo        "<div class='btn-info'>
+                        <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
+                    </div>";               
+        echo    "</div>";
+        echo "</div>";
+
        } else {
            echo "Não existe produtos cadastrados";
        }
        ?>
+
+
 
     </div>
 
