@@ -64,6 +64,7 @@
         require_once './dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
         $produtos   = $produtoDAO->findAll();
+        
 
         foreach ($produtos as $produto) {
             echo "<div id='produtos'>";
@@ -84,9 +85,8 @@
                      </div>";
 
             echo    "<div class='btn-info'>
-                    <p>Mais informações</p>
+                   <a href='view/itemProduto.php?id={$produto["id"]}'>Mais informações</a>
                     </div>";
-
             echo "</div>";
             echo "</div>";
         }

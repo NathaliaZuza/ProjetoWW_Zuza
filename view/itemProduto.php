@@ -1,15 +1,3 @@
-<?php
-$categoria_id = $_GET['categoria_id'];
-$arrayImagem = array(
-    1 => '../img/banner-panfleto-04.png',
-    2 => '../img/1.png',
-    3 => '../img/2.png',
-    4 => '../img/3.jpg',
-); 
-$pathImagem = $arrayImagem[$categoria_id];
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -19,11 +7,13 @@ $pathImagem = $arrayImagem[$categoria_id];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>WWZ | Serviços gráficos pra você.</title>
-    <link rel="styleSheet" href="../css/tipoProduto.css">
+    <link rel="styleSheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
-
 </head>
+
+<body>
 
 <body>
 
@@ -97,63 +87,59 @@ $pathImagem = $arrayImagem[$categoria_id];
 
         </ul>
     </div>
-    <!------------PRODUTOS----------->
-    <div class="div1">
-    <div class="img-banner">
-    
-    <img src=<?=$pathImagem;?>/>
-    </div>
+
+
     <div class="pai">
-  
+
         <?php
-        require_once '../dao/ProdutoDAO.php';
-        $produtoDAO = new ProdutoDAO();
-        $produtos   = $produtoDAO->findByCategoria($categoria_id);
+       require_once '../dao/ProdutoDAO.php';
 
-        if (!empty($produtos)) {
-            foreach ($produtos as $produto) {
-                echo "<div id='produtos'>";
-                echo "  <div class='produto-single'>";
-                                echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
-                echo "      <div class='img_produto'>";
-                echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
-                echo "      </div>";
+       $produto_id = $_GET['id'];
+       $produtoDAO = new ProdutoDAO();
+       $produto   = $produtoDAO->findById($produto_id);
 
-                echo "      <div class='preco'> R$ {$produto["preco"]} </div>";
-                echo "<div class='info'>
-                         <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
-                      </div>";
+       if (!empty($produto)) {
+                    echo "<div id='produtos'>";
+               echo "  <div class='produto-single'>";
+                               echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
+               echo "      <div class='img_produto'>";
+               echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
+               echo "      </div>";
 
-                echo    "<div class='info'>
-                    <p>Material: <span class='descricao'>{$produto['material']}</span></p>
-                    </div>";
+               echo "      <div class='preco'> R$ {$produto["preco"]} </div>";
+               echo "<div class='info'>
+                        <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
+                     </div>";
 
-                echo    "<div class='info'>
-                    <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
-                    </div>";
+               echo    "<div class='info'>
+                   <p>Material: <span class='descricao'>{$produto['material']}</span></p>
+                   </div>";
 
-                echo    "<div class='info'>
-                    <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
-                    </div>";
+               echo    "<div class='info'>
+                   <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
+                   </div>";
 
-                echo    "<div class='info'>
-                    <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
-                    </div>";
+               echo    "<div class='info'>
+                   <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
+                   </div>";
 
-                echo    "<div class='btn-info'>
-                        <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
-                    </div>";
-                echo "</div>";
-                echo "</div>";
-            }
-        } else {
-            echo "Não existe produtos cadastrados";
-        }
-        ?>
+               echo    "<div class='info'>
+                   <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
+                   </div>";
 
-   
-        </div> 
+               echo    "<div class='btn-info'>
+                       <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
+                   </div>";
+               echo "</div>";
+               echo "</div>";
+           
+       } else {
+           echo "Não existe produtos cadastrados";
+       }
+       ?>
+
     </div>
+
     <footer>
         <div class="social">
             <p><span class="logo">WW.ZUZA</span></p>
@@ -173,8 +159,7 @@ $pathImagem = $arrayImagem[$categoria_id];
             </p>
         </div> -->
         <div class="criacao">
-            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Barbosa</span></p>
         </div>
     </footer>
-</body>
 </html>

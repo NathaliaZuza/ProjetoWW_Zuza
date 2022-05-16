@@ -99,6 +99,21 @@ class ProdutoDAO {
             echo "Erro ao cadastrar: ", $e->getMessage();
         }
     }
+    public function selecionarProduto( ProdutoDTO $produtoDTO ) {
+        try {
+            $sql  = "select *
+            from ww_zuza.produto as prod,
+            ww_zuza.categoria as cat
+            where prod.categoria_id = cat.id";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $id );
+            $stmt->execute();
+            $produto = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $produto;
+        } catch ( PDOException $e ) {
+            echo "Erro ao selecionar o produto: ", $e->getMessage();
+        }
+    }
 
 }
 
