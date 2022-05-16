@@ -112,7 +112,7 @@
             </p>
         </div> -->
         <div class="criacao">
-            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Cardoso</span></p>
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Barbosa</span></p>
         </div>
     </footer>
 </html>
