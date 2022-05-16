@@ -2,7 +2,7 @@
 $categoria_id = $_GET['categoria_id'];
 $arrayImagem = array(
     1 => '../img/banner-panfleto-04.png',
-    2 => '../img/1.png',
+    2 => '../img/3.png',
     3 => '../img/2.png',
     4 => '../img/3.jpg',
 ); 

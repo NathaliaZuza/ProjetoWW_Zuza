@@ -85,7 +85,7 @@
                      </div>";
 
             echo    "<div class='btn-info'>
-                   <a href='view/itemProduto.php?id={$produto["id"]}'>Mais informações</a>
+                   <a href='view/itemProduto.php?id={$produto["id"]}'><p>Mais informações</p></a>
                     </div>";
             echo "</div>";
             echo "</div>";
