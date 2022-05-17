@@ -2,7 +2,7 @@
 require_once '../dto/ClienteDTO.php';
 require_once '../dao/ClienteDAO.php';
 
-$id = $_POST["id"];
+$idCliente = $_POST["idCliente"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 // $telefone = $_POST["telefone"];
@@ -14,7 +14,7 @@ $cpf = $_POST["cpf"];
 
 
 $clienteDTO = new ClienteDTO();
-$clienteDTO->setId( $id );
+$clienteDTO->setId( $idCliente );
 $clienteDTO->setNome( $nome );
 $clienteDTO->setCpf( $cpf );
 // $clienteDTO->setTelefone( $telefone);

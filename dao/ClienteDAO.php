@@ -52,11 +52,11 @@ class ClienteDAO {
         }
     }
 
-    public function deleteById( $id ) {
+    public function deleteById( $idCliente ) {
         try {
             $sql = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $id );
+            $stmt->bindValue( 1, $idCliente );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
@@ -77,18 +77,7 @@ class ClienteDAO {
     }
 
 
-    public function findByEmail( $email ) {
-    try {
-        $sql = 'SELECT * FROM usuario WHERE email = ?';
-        $stmt = $this->pdo->prepare( $sql );
-        $stmt->bindValue( 1, $email );
-        $stmt->execute();
-        $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
-        return $cliente;
-    } catch ( PDOException $e ) {
-        echo 'Erro ao listar o cliente pelo email: ', $e->getMessage();
-    }
-}
+    
 public function update( ClienteDTO $clienteDTO ) {
     try {
         $sql = 'UPDATE cliente SET '
@@ -111,4 +100,20 @@ public function update( ClienteDTO $clienteDTO ) {
         echo 'Erro ao atualizar o cliente: ', $e->getMessage();
     }
 }
+
+
+
+public function findByEmail( $email ) {
+    try {
+        $sql = 'SELECT * FROM usuario WHERE email = ?';
+        $stmt = $this->pdo->prepare( $sql );
+        $stmt->bindValue( 1, $email );
+        $stmt->execute();
+        $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
+        return $cliente;
+    } catch ( PDOException $e ) {
+        echo 'Erro ao listar o cliente pelo email: ', $e->getMessage();
+    }
 }
+}
+?>

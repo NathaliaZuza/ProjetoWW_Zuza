@@ -102,7 +102,12 @@
                 </div>
                 <br><br>
                 <div class="inputBox">
-                <input type="email" name="email" id=email required>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cpf</label> <br>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                <input type="text" name="email" id=email class="inputUser" required>
                     <label for="email" class="labelInput">E-mail</label>
                 </div>
                 <br><br>
@@ -115,16 +120,10 @@
                     <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
                     <label for="senha" class="labelInput">Confirmar Senha</label>
                 </div>
-
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cpf</label> <br>
-                </div>
                 <br><br>
                  <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
                     </td>
-                <!-- <input type="submit" name="submit" id="submit" class="botão"> -->
+                
 
         </form>
  </div>
@@ -162,6 +161,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
                     required: true,
                 },
                 senhaC: {
+                    required: true,
                     equalTo: "#senha"
                 },
             },
@@ -181,6 +181,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
                 },
                 senhaC: {
                     equalTo: "Os campos não são iguais",
+                    required: "Campo obrigatório"
                 }
 
             }
