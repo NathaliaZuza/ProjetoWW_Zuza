@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `prazo` VARCHAR(15) NOT NULL,
   `qtd` VARCHAR(15) NOT NULL,
   `foto` VARCHAR(60) NULL DEFAULT NULL,
-  `fotoBanner` VARCHAR(60) NULL DEFAULT NULL,
   `categoria_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY(categoria_id) REFERENCES categoria(id)

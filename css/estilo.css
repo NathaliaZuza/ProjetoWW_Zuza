@@ -167,14 +167,13 @@ p{
     width: 100%;
     margin: 0;
     padding: 0;
-  border-radius: 5px  5px 0px 0px ; 
+    border-radius: 5px  5px 0px 0px ; 
 }
 .btn-info{
     text-align: center;
     padding: 12px;
     background-color: #F3B700;
     width: 60%;
-    margin: auto;  
     border-radius: 5px;
     margin: auto;
     margin-bottom: 15px;
