@@ -30,22 +30,24 @@ div.container {
 div.div-img {
     width: 48%;
     display: inline-block;
-    /* border: 1px solid red; */
+    /* border: 1px solid red;  */
     text-align: center;
     padding: 5vw 0vw 5vw 0vw;
     min-width:40vw;
 }
 div.div-img img {
-    width: 80%;
+    width: 85%;
     text-align: center;
+    height: 100%;
 }
 div.div-info {
     width: 48%;
-    /* border: 1px solid green;  */
+    /* border: 1px solid green;   */
     display: inline-block;
     text-align: left;
     padding: 5vw 0vw 5vw 0vw;
     min-width:40vw;
+
 }
 /* .pai{
    align-items: center;
@@ -67,14 +69,14 @@ p{
 }
 .nome_produto{
     text-align: left;
-    padding: 15px 15px 10px 15px; 
+    padding: 30px 15px 40px 15px; 
     font-size: 30px;
     color: #0F0059;
     font-family: kinetika;  
 }
 .preco{
     text-align: left;
-    padding: 0 0 0 15px; 
+    padding: 0 0 30px 15px; 
     font-size: 35px;
     color: #0F0059;
     font-family: kinetika;  
@@ -86,7 +88,8 @@ p{
     width: 90%;
     border-radius: 5px;
     margin-top: 30px;
-    margin-left: 15px
+    margin-left: 15px;
+    
     /* transform: translateX(0) scale(0.8); */
 }
 .btn-info a {
