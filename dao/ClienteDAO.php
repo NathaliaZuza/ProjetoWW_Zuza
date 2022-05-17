@@ -50,6 +50,19 @@ class ClienteDAO {
         }
     }
 
+    public function findById( $id ) {
+        try {
+            $sql = 'SELECT * FROM cliente WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $id );
+            $stmt->execute();
+            $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $cliente;
+        } catch ( PDOException $e ) {
+            echo 'Erro ao listar um cliente: ', $e->getMessage();
+        }
+    }
+
 
     public function findByEmail( $email ) {
     try {
@@ -61,6 +74,24 @@ class ClienteDAO {
         return $cliente;
     } catch ( PDOException $e ) {
         echo 'Erro ao listar o cliente pelo email: ', $e->getMessage();
+    }
+}
+public function update( ClienteDTO $clienteDTO ) {
+    try {
+        $sql = 'UPDATE cliente SET '
+            . 'nome=?, cpf=?, telefone=?, '
+            . 'WHERE id=?';
+        $stmt = $this->pdo->prepare( $sql );
+        $stmt->bindValue( 1, $clienteDTO->getNome() );
+        $stmt->bindValue( 2, $clienteDTO->getCpf() );
+        
+        $stmt->bindValue( 4, $clienteDTO->getTelefone() );
+        
+        $stmt->bindValue( 6, $clienteDTO->getId() );
+        return $stmt->execute();
+
+    } catch ( PDOException $e ) {
+        echo 'Erro ao atualizar o cliente: ', $e->getMessage();
     }
 }
 }
