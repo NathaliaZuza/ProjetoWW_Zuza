@@ -2,7 +2,7 @@
 require_once '../dto/ClienteDTO.php';
 require_once '../dao/ClienteDAO.php';
 
-$idCliente = $_POST["idCliente"];
+$idCliente = $_POST["id"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $telefone = $_POST["telefone"];

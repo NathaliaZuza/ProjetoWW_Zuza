@@ -49,10 +49,10 @@ class ClienteDAO {
             echo "Erro ao listar os clientes: ", $e->getMessage();
         }
     }
-    
+
     public function deleteById( $idCliente ) {
         try {
-            $sql = 'DELETE FROM tb_cliente WHERE id = ?';
+            $sql = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idCliente );
             return $stmt->execute();
