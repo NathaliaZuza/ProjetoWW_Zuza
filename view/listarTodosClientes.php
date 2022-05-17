@@ -34,6 +34,7 @@
     echo "<th>Telefone</th>";
     echo "<th>CEP</th>";
     echo "<th>Estado</th>";
+    echo "<th>cidade</th>";
     echo "<th>Endereco</th>";
     echo "<th>Casa</th>";
     echo "<th>Excluir</th>";
@@ -44,8 +45,9 @@
         echo "<td >{$cliente["nome"]}</td>";
         echo "<td >{$cliente["cpf"]}</td>";
         echo "<td>{$cliente["telefone"]}</td>";
-        echo "<td>{$cliente["endereco"]}</td>";
+        echo "<td>{$cliente["cep"]}</td>";
         echo "<td>{$cliente["estado"]}</td>";
+        echo "<td>{$cliente["cidade"]}</td>";
         echo "<td>{$cliente["endereco"]}</td>";
         echo "<td>{$cliente["numero_casa"]}</td>";
         echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='fa-solid fa-trash iconelixo'></a></i></td>";
