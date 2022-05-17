@@ -55,7 +55,7 @@ class ClienteDAO {
                 $this->pdo->beginTransaction();
                 $cliente = $this->findById( $idCliente );
     
-                $sql = 'DELETE FROM tb_cliente WHERE id = ?';
+                $sql = 'DELETE FROM cliente WHERE id = ?';
                 $stmt = $this->pdo->prepare( $sql );
                 $stmt->bindValue( 1, $idCliente );
                 $stmt->execute();
@@ -68,7 +68,7 @@ class ClienteDAO {
                 echo 'Erro ao excluir um cliente ', $e->getMessage();
             }
         }
-        
+
     public function findByEmail( $email ) {
     try {
         $sql = 'SELECT * FROM usuario WHERE email = ?';
