@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/cadastro.css">
-   
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/jquery.mask.min.js"></script>
+    <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <title>Cadastro | WWZ</title>
 </head>
 
@@ -91,55 +93,40 @@
 
     <div class="formContainer">
     <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
-        <form action="cadastro_realizado.php" method="POST">
+    <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome Completo</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="email" id="email" class="inputUser" required>
+                <input type="email" name="email" id=email required>
                     <label for="email" class="labelInput">E-mail</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
                     <input type="password" name="senha" id="senha" class="inputUser" required>
                     <label for="senha" class="labelInput">Senha</label>
+                    <br><br>
                 </div>
-                <br>
-                <div class="sexo">
-                    <p>Sexo:</p>
-                    <input type="radio" id="feminino" name="sexo" value="feminino" required>
-                    <label for="feminino">Feminino</label>
-
-                    <input type="radio" id="masculino" name="sexo" value="masculino" required>
-                    <label for="masculino">Masculino</label>
-
-                    <input type="radio" id="outro" name="sexo" value="outro" required>
-                    <label for="outro">Outro</label>
-                </div>
-                <br>
-                <div>
-                    <label for="data_nasc"><b>Data de nascimento: </b></label>
-                    <input type="date" name="data_nasc" id="data_nasc" required>
+                <div class="inputBox">
+                    <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
+                    <label for="senha" class="labelInput">Confirmar Senha</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade:</label> <br>
+                    <input type="text" name="cep" id="cep" class="inputUser" required>
+                    <label for="cidade" class="labelInput">CEP</label> <br>
                 </div>
                 <br><br>
                 <div class="inputBox">
-                    <input type="text" name="estado" id="estado" class="inputUser" required>
-                    <label for="estado" class="labelInput">Estado:</label> <br>
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cpf</label> <br>
                 </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">Endereço:</label> <br>
-                </div>
-                <br><br>
-                <input type="submit" name="submit" id="submit" class="botão">
+                 <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                    </td>
+                <!-- <input type="submit" name="submit" id="submit" class="botão"> -->
 
         </form>
     </div>
