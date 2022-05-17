@@ -50,11 +50,11 @@ class ClienteDAO {
         }
     }
 
-    public function deleteById( $idCliente ) {
+    public function deleteById( $id ) {
         try {
             $sql = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $idCliente );
+            $stmt->bindValue( 1, $id );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
@@ -90,15 +90,18 @@ class ClienteDAO {
 public function update( ClienteDTO $clienteDTO ) {
     try {
         $sql = 'UPDATE cliente SET '
-            . 'nome=?, cpf=?, telefone=?, '
+            . 'nome=?, cpf=?, telefone=?, cep=?, estado=?, cidade=?, endereco=?, numero_casa=? '
             . 'WHERE id=?';
         $stmt = $this->pdo->prepare( $sql );
         $stmt->bindValue( 1, $clienteDTO->getNome() );
         $stmt->bindValue( 2, $clienteDTO->getCpf() );
-        
-        $stmt->bindValue( 4, $clienteDTO->getTelefone() );
-        
-        $stmt->bindValue( 6, $clienteDTO->getId() );
+        $stmt->bindValue( 3, $clienteDTO->getTelefone() );
+        $stmt->bindValue( 4, $clienteDTO->getCep() );
+        $stmt->bindValue( 5, $clienteDTO->getEstado() );
+        $stmt->bindValue( 6, $clienteDTO->getCidade() );
+        $stmt->bindValue( 7, $clienteDTO->getEndereco() );
+        $stmt->bindValue( 8, $clienteDTO->getNumero_casa() );
+        $stmt->bindValue( 9, $clienteDTO->getId() );
         return $stmt->execute();
 
     } catch ( PDOException $e ) {
