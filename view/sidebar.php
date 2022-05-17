@@ -24,7 +24,7 @@
                <span class="tooltip">Geral</span>
             </li>
             <li>
-                <a href="#">
+                <a href="listarTodosClientes.php">
                     <i class='bx bxs-user-detail'></i>
                     <span class="links_name">Clientes</span>
                 </a>

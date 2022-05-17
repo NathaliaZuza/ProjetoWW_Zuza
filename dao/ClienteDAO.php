@@ -1,5 +1,6 @@
 <?php
 require_once 'conexao/Conexao.php';
+require_once 'UsuarioDAO.php';
 
 class ClienteDAO {
     private $pdo;
@@ -49,8 +50,25 @@ class ClienteDAO {
             echo "Erro ao listar os clientes: ", $e->getMessage();
         }
     }
-
-
+        public function deleteById( $idCliente ) {
+            try {
+                $this->pdo->beginTransaction();
+                $cliente = $this->findById( $idCliente );
+    
+                $sql = 'DELETE FROM tb_cliente WHERE id = ?';
+                $stmt = $this->pdo->prepare( $sql );
+                $stmt->bindValue( 1, $idCliente );
+                $stmt->execute();
+    
+                $this->usuarioDAO->deleteById( $cliente["usuario"] );
+                return $this->pdo->commit();
+    
+            } catch ( PDOException $e ) {
+                $this->pdo->rollBack();
+                echo 'Erro ao excluir um cliente ', $e->getMessage();
+            }
+        }
+        
     public function findByEmail( $email ) {
     try {
         $sql = 'SELECT * FROM usuario WHERE email = ?';
@@ -61,6 +79,20 @@ class ClienteDAO {
         return $cliente;
     } catch ( PDOException $e ) {
         echo 'Erro ao listar o cliente pelo email: ', $e->getMessage();
+    }
+}
+
+
+public function findById( $id ) {
+    try {
+        $sql  = "SELECT * FROM cliente WHERE id = ?";
+        $stmt = $this->pdo->prepare( $sql );
+        $stmt->bindValue( 1, $id );
+        $stmt->execute();
+        $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
+        return $cliente;
+    } catch ( PDOException $e ) {
+        echo "Erro ao listar o cliente: ", $e->getMessage();
     }
 }
 }
