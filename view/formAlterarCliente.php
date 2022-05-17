@@ -15,51 +15,25 @@ $idCliente = $_GET['id'];
 $clienteDAO = new ClienteDAO();
 $cliente = $clienteDAO->findById( $idCliente );
 ?>
-    <fieldset>
-        <legend>Cadastro de cliente</legend>
-        <form action="../controller/alterarClienteController.php" method="post">
-            <table>
-                <tr>
-                    <td>Nome:</td>
-                    <td><input type="text" name="nome"></td>
-                </tr>
-                <tr>
-                    <td><label for="cpf">Cpf:</label></td>
-                    <td><input type="text" name="cpf" id="cpf"></td>
-                </tr>
-                
-                <tr>
-                    <td><label for="tel">Telefone:</label></td>
-                    <td><input type="text" name="tel" id=tel></td>
-                </tr>
-                <tr>
-                    <td>cep:</td>
-                    <td><input type="text" name="cep"></td>
-                </tr>
-                <tr>
-                    <td>Estado:</td>
-                    <td><input type="text" name="estado"></td>
-                </tr>
-                <tr>
-                    <td>cidade:</td>
-                    <td><input type="text" name="cidade"></td>
-                </tr>
-                <tr>
-                    <td>Endereço:</td>
-                    <td><input type="text" name="endereco"></td>
-                </tr>
-                <tr>
-                    <td>N° da casa:</td>
-                    <td><input type="text" name="numero_casa"></td>
-                </tr>
-                <tr>
-                    <td colspan="2">
-                    <button type="submit">Enviar</button>
+    <div class="formContainer">
+    <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
+    <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
+                <div class="inputBox">
+                    <input type="text" name="nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome Completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                    <label for="cidade" class="labelInput">Cpf</label> <br>
+                </div>
+                <br><br>
+                 <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
                     </td>
-                </tr>
-            </table>
+                
+
         </form>
-    </fieldset>
+ </div>
     <div style="text-align: center;">
     <?php
 if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
