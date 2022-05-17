@@ -49,6 +49,17 @@ class ClienteDAO {
             echo "Erro ao listar os clientes: ", $e->getMessage();
         }
     }
+    
+    public function deleteById( $idCliente ) {
+        try {
+            $sql = 'DELETE FROM tb_cliente WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $idCliente );
+            return $stmt->execute();
+        } catch ( PDOException $e ) {
+            echo 'Erro ao excluir um cliente ', $e->getMessage();
+        }
+    }
 
     public function findById( $id ) {
         try {
