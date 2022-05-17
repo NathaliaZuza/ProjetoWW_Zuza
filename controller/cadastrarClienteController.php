@@ -4,7 +4,7 @@ require_once '../dao/ClienteDAO.php';
 
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
-$telefone = $_POST["tel"];
+$telefone = $_POST["telefone"];
 $email = $_POST["email"];
 $senha = md5( $_POST["senha"] );
 $cep = $_POST["cep"];

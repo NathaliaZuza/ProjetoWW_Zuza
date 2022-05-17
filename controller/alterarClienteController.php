@@ -2,7 +2,7 @@
 require_once '../dto/ClienteDTO.php';
 require_once '../dao/ClienteDAO.php';
 
-$idCliente = $_POST["id"];
+$id = $_POST["id"];
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $telefone = $_POST["telefone"];
@@ -14,10 +14,10 @@ $numero_casa = $_POST["numero_casa"];
 
 
 $clienteDTO = new ClienteDTO();
-$clienteDTO->setId( $idCliente );
+$clienteDTO->setId( $id );
 $clienteDTO->setNome( $nome );
 $clienteDTO->setCpf( $cpf );
-$clienteDTO->setTelefone( $telefone );
+$clienteDTO->setTelefone( $telefone);
 $clienteDTO->setCep($cep);
 $clienteDTO->setEstado($estado);
 $clienteDTO->setCidade($cidade);
@@ -31,5 +31,3 @@ $clienteDAO = new ClienteDAO();
 if ( $clienteDAO->update( $clienteDTO ) ) {
     header( "Location: ../view/listarTodosClientes.php" );
 }
-
-// Wendel
