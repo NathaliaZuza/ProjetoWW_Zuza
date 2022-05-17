@@ -17,8 +17,6 @@
 
     <?php include './view/headerMenu.php' ?>
 
-
-
     <!------------CARROSSEL DE IMAGENS----------->
 
     <div class="slide">
