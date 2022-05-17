@@ -29,12 +29,13 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
   `preco` VARCHAR(20) NOT NULL,
-  `cores` VARCHAR(80) NOT NULL,
+  `cores` VARCHAR(10) NOT NULL,
   `material` VARCHAR(45) NOT NULL,
   `tamanho` VARCHAR(15) NOT NULL,
   `prazo` VARCHAR(15) NOT NULL,
   `qtd` VARCHAR(15) NOT NULL,
   `foto` VARCHAR(60) NULL DEFAULT NULL,
+  `fotoBanner` VARCHAR(60) NULL DEFAULT NULL,
   `categoria_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   FOREIGN KEY(categoria_id) REFERENCES categoria(id)
@@ -66,13 +67,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
-  `cpf` INT(11) NOT NULL,
-  `telefone` INT(15) NOT NULL,
-  `cep` INT(10) NOT NULL,
-  `estado` VARCHAR(20) NOT NULL,
-  `cidade` VARCHAR(40) NOT NULL,
-  `endereco` VARCHAR(255) NOT NULL,
-  `numero_casa` INT(10) NOT NULL,
+  `cpf` INT(11) NOT NULL UNIQUE,
   `usuario_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_usuario1_idx` (`usuario_id` ASC),
@@ -82,7 +77,32 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
+AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8;
+
+-- -----------------------------------------------------
+-- Table `ww_zuza`.`endereco_cliente`
+-- -----------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `ww_zuza`.`endereco_cliente` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `telefone` INT(15) NOT NULL,
+  `cep` INT(10) NOT NULL,
+  `estado` VARCHAR(20) NOT NULL,
+  `cidade` VARCHAR(45) NOT NULL,
+  `endereco` VARCHAR(255) NOT NULL,
+  `numero_casa` VARCHAR(45) NOT NULL,
+  `cliente_id` INT(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  INDEX `fk_endereco_cliente_cliente_idx` (`cliente_id` ASC),
+  CONSTRAINT `fk_endereco_cliente_cliente`
+    FOREIGN KEY (`cliente_id`)
+    REFERENCES `ww_zuza`.`cliente` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+USE `ww_zuza` ;
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`pedido`
