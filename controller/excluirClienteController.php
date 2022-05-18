@@ -1,7 +1,7 @@
 <?php
 require_once '../dao/ClienteDAO.php';
-$id = $_GET['id'];
+$idCliente = $_GET['excluirId'];
 $clienteDAO = new ClienteDAO();
-if ( $clienteDAO->deleteById( $id ) ) {
-    // header( "Location: ../view/listarTodosClientes.php" );
+if ( $clienteDAO->deleteById( $idCliente ) ) {
+     header( "Location: ../view/listarTodosClientes.php" );
 }

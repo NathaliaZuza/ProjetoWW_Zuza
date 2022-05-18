@@ -44,11 +44,11 @@ class ClienteDAO {
         }
     }
 
-    public function deleteById( $id ) {
+    public function deleteById( $idCliente ) {
         try {
             $sql = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $id );
+            $stmt->bindValue( 1, $idCliente );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
