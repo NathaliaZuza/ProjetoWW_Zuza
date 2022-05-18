@@ -178,6 +178,7 @@ body{
 .sidebar.active  .profile #log_out{
     left: 88%;
 }
+
 #iframe {
     width: calc(100% - 240px);
     left: 240px;

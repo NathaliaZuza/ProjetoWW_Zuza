@@ -101,7 +101,7 @@
             iframe.src="painelAdministrativo.php"
         }
         function index(){
-            iframe.src="../index.php.php"
+            iframe.src="../index.php"
         }
     </script>
 </body>
