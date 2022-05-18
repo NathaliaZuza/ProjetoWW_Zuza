@@ -103,7 +103,7 @@
             <br><br>
             <input type="password" name="senha" placeholder="Senha" class="senha">
             <br><br>
-            <input class="botão" type="submit" name="submit" value="Enviar">
+            <input class="botão2" type="submit" name="submit" value="Entrar">
             </form>
         </div>
     </div>

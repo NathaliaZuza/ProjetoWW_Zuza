@@ -7,7 +7,7 @@ $senha = $_POST["senha"];
 $loginDAO = new LoginDAO();
 $login = $loginDAO->findByEmailSenha( $email, $senha );
 if ( !empty( $login ) ) {
-    echo "Logado com sucesso";
+    header ("Location: ../view/sidebar.php");
 } else {
     echo "Senha e/ou email incorreto!";
 }
