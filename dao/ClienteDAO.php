@@ -19,20 +19,12 @@ class ClienteDAO {
             $stmt->execute();
             $usuario_id = $this->pdo->lastInsertId();
             $sql = 'INSERT INTO ' 
-                // . 'cliente(nome,cpf,telefone,cep,estado,cidade,endereco,numero_casa,usuario_id) '
-                // . 'VALUES(:nome,:cpf,:tel,:cep,:estado,:cidade,:endereco,:n_casa,:usuario_id)';
                    . 'cliente(nome,cpf,usuario_id) '
                    . 'VALUES(:nome,:cpf,:usuario_id)';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $clienteDTO->getNome() );
             $stmt->bindValue( ":cpf", $clienteDTO->getCpf() ); 
             $stmt->bindValue( ":usuario_id", $usuario_id );
-            // $stmt->bindValue( ":tel", $clienteDTO->getTelefone() );
-            // $stmt->bindValue( ":cep", $clienteDTO->getCep() );
-            // $stmt->bindValue( ":estado", $clienteDTO->getEstado() );
-            // $stmt->bindValue( ":cidade", $clienteDTO->getCidade() );
-            // $stmt->bindValue( ":endereco", $clienteDTO->getEndereco() );
-            // $stmt->bindValue( ":n_casa", $clienteDTO->getNumero_casa() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {
@@ -52,11 +44,11 @@ class ClienteDAO {
         }
     }
 
-    public function deleteById( $idCliente ) {
+    public function deleteById( $id ) {
         try {
             $sql = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $idCliente );
+            $stmt->bindValue( 1, $id );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
@@ -81,20 +73,14 @@ class ClienteDAO {
 public function update( ClienteDTO $clienteDTO ) {
     try {
         $sql = 'UPDATE cliente SET '
-            // . 'nome=?, cpf=?, telefone=?, cep=?, estado=?, cidade=?, endereco=?, numero_casa=? '
             . 'nome=?, cpf=? '
             . 'WHERE id=?';
         $stmt = $this->pdo->prepare( $sql );
         $stmt->bindValue( 1, $clienteDTO->getNome() );
         $stmt->bindValue( 2, $clienteDTO->getCpf() );   
-        $stmt->bindValue( 9, $clienteDTO->getId() );
+        $stmt->bindValue( 3, $clienteDTO->getId() );
         return $stmt->execute();
-        // $stmt->bindValue( 3, $clienteDTO->getTelefone() );
-        // $stmt->bindValue( 4, $clienteDTO->getCep() );
-        // $stmt->bindValue( 5, $clienteDTO->getEstado() );
-        // $stmt->bindValue( 6, $clienteDTO->getCidade() );
-        // $stmt->bindValue( 7, $clienteDTO->getEndereco() );
-        // $stmt->bindValue( 8, $clienteDTO->getNumero_casa() );
+        
      
     } catch ( PDOException $e ) {
         echo 'Erro ao atualizar o cliente: ', $e->getMessage();
