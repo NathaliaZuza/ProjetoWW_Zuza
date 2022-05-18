@@ -61,13 +61,26 @@ ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
 -- -----------------------------------------------------
+-- Table `ww_zuza`.`lg_adm`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `ww_zuza`.`lg_adm` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `email` VARCHAR(45) NOT NULL,
+  `senha` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+INSERT INTO `lg_adm`(`id`,`email`,`senha`) VALUES
+(1,'adm@email.com','123123');
+
+-- -----------------------------------------------------
 -- Table `ww_zuza`.`cliente`
 -- -----------------------------------------------------
 
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
-  `cpf` INT(11) NOT NULL UNIQUE,
+  `cpf` VARCHAR(14) NOT NULL UNIQUE,
   `usuario_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_cliente_usuario1_idx` (`usuario_id` ASC),
