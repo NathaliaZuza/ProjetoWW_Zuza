@@ -12,18 +12,41 @@
     font-style: normal;
     box-sizing: border-box;
 }
+h1{
+    font-family: kinetika;
+    text-align: center;
+    color: #000c42;
+    font-size: 27px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.container{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudo{
+    position: absolute;
+    width: 80%;
+}
 table{
     margin: auto;
     margin-top: 5%;
-    border-collapse: collapse;
+    border-style: solid;
     border: 1px solid  #000c42;
     border-radius: 5px;
+    color: #000c42;
 }
 th{
     font-family: kinetika;
     background-color: #000c42;
-    padding: 15px;
-    color: #fff;
+    padding: 10px 15px 10px 15px;
+    color: #F3B700;
 }
 tr{
     font-family: kinetika-light;
@@ -33,7 +56,7 @@ tr:nth-child(even){
     background-color: rgba(255, 255, 255, 0.137);
 }
 td{
-    padding: 15px;
+    padding: 5px 15px 5px 15px;
 }
 
 .icone{

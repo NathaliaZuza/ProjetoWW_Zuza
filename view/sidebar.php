@@ -70,8 +70,8 @@
                        <div class="job">Serviços gráficos</div>
                    </div>
                 </div>
-               
-                <i class='bx bx-log-out' id="log_out" onclick="index()"></i>
+               <a href="../index.php"><i class='bx bx-log-out' id="log_out" onclick="log_out()"></i></a>
+                
                 
             </div>
         </div>
@@ -97,11 +97,11 @@
         function ListarClientes(){
             iframe.src="listarTodoscLientes.php"
         }
-        function home(){
+        function geral(){
             iframe.src="painelAdministrativo.php"
         }
-        function index(){
-            iframe.src="../index.php"
+        function log_out(){
+            return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");
         }
     </script>
 </body>

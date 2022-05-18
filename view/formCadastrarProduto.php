@@ -33,9 +33,9 @@
                     <div class="categoriadiv">
                         <label for="nome">Categoria do produto</label>
                         <select class="categoria" name="categoria">
-                            <option value="0">Escolha a categoria</option>
+                            <option value="0" class="option-cat">Escolha a categoria</option>
                             <?php foreach ( $categorias as $cat ) {?>
-                                <option value="<?=$cat['id']?>"><?=$cat['nome']?></option>
+                                <option class="option-cat" value="<?=$cat['id']?>"><?=$cat['nome']?></option>
                             <?php }?>
                         </select>
                     </div>
