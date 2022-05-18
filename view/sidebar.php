@@ -19,14 +19,14 @@
         </div>
         <ul class="nav-list">
             <li>
-                <a href="painelAdministrativo.php">
+                <a onclick="geral()">
                     <i class='bx bxs-dashboard'></i>
                     <span class="links_name">Geral</span>
                 </a>
                <span class="tooltip">Geral</span>
             </li>
             <li>
-                <a href="listarTodosClientes.php">
+                <a onclick="ListarClientes()">
                     <i class='bx bxs-user-detail'></i>
                     <span class="links_name">Clientes</span>
                 </a>
@@ -91,6 +91,12 @@
         }
         function produtosLista(){
             iframe.src="Produtos.php"
+        }
+        function ListarClientes(){
+            iframe.src="listarTodoscLientes.php"
+        }
+        function home(){
+            iframe.src="painelAdministrativo.php"
         }
     </script>
 </body>
