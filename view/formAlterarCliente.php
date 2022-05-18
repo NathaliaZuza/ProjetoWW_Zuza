@@ -17,16 +17,17 @@ $cliente = $clienteDAO->findById( $idCliente );
 ?>
     <div class="formContainer">
     <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
-    <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome Completo</label>
-                </div>
+    <form id="formCadastroCliente" action="../controller/alterarClienteController.php" method="post">
+    <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
+                    <div class="inputbox">
+                        <input type="text" name="nome" id="nome" value="<?php echo $cliente["nome"] ?>">
+                        <label for="nome">Nome Completo</label>
+                    </div>
                 <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cpf</label> <br>
-                </div>
+                <div class="inputbox">
+                        <input type="text" name="cpf" id="cpf" value="<?php echo $cliente["cpf"] ?>">
+                        <label for="cpf">Cpf</label>
+                    </div>
                 <br><br>
                  <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
                     </td>
