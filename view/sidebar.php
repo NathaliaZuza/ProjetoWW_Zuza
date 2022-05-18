@@ -70,7 +70,9 @@
                        <div class="job">Serviços gráficos</div>
                    </div>
                 </div>
-                <i class='bx bx-log-out' id="log_out"></i>
+               
+                <i class='bx bx-log-out' id="log_out" onclick="index()"></i>
+                
             </div>
         </div>
     </div>
@@ -97,6 +99,9 @@
         }
         function home(){
             iframe.src="painelAdministrativo.php"
+        }
+        function index(){
+            iframe.src="../index.php.php"
         }
     </script>
 </body>
