@@ -13,7 +13,7 @@
 
 <body>
 
-    <?php include 'sidebar.php';
+    <?php
         require_once '../dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
         require_once '../dao/CategoriaDAO.php';

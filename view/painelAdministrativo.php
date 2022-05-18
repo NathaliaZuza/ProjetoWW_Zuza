@@ -13,8 +13,6 @@
 
 <body>  
 
-<?php include 'sidebar.php' ?>
-
     <main class="container">
         <div class="conteudo">     
                 <h1>Home</h1>

@@ -14,7 +14,7 @@
 <body>
 
     <?php
-    include 'sidebar.php';
+   
     require_once '../dao/ProdutoDAO.php';
     $idProduto = $_GET["id"];
     $produtoDAO = new ProdutoDAO();
