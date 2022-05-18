@@ -33,14 +33,14 @@
                <span class="tooltip">Clientes</span>
             </li>
             <li>
-                <a href="formCadastrarProduto.php">
-                    <i class='bx bxs-edit'></i>
+                <a onclick="produtosCadastro()">
+                    <i class='bx bxs-edit'></i> 
                     <span class="links_name">Produtos cadastro</span>
                 </a>
                <span class="tooltip">Produtos</span>
             </li>
             <li>
-                <a href="produtos.php">
+                <a onclick="produtosLista()">
                     <i class='bx bx-list-ul'></i>
                     <span class="links_name">Produtos lista</span>
                 </a>
@@ -74,17 +74,24 @@
             </div>
         </div>
     </div>
+    <iframe src="" frameborder="0" id="iframe"></iframe>
 
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
-
+        const iframe = document.querySelector("#iframe");
         btn.onclick = function(){
             sidebar.classList.toggle("active")
         }
         function confirmarExcluir(){
             return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
         } 
+        function produtosCadastro(){
+            iframe.src="formCadastrarProduto.php"
+        }
+        function produtosLista(){
+            iframe.src="Produtos.php"
+        }
     </script>
 </body>
 </html>
