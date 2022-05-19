@@ -46,6 +46,10 @@ $pathImagem = $arrayImagem[$categoria_id];
                 <img id="img-account" src="../img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
+        <div class="btn-logar">
+            <a href="../view/loginADM.php">
+                Página do Funcionário</a>
+        </div>
         <div class="btn-logar2"><a href="../view/cadastro.php">
                 <p id="cadastro">É novo por aqui? </p>Cadastre-se
             </a></div>
