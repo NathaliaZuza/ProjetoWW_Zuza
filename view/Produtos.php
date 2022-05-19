@@ -44,8 +44,8 @@
         echo "<td>{$produto["tamanho"]}</td>";
         echo "<td>{$produto["qtd"]}</td>";
         echo "<td>{$produto["prazo"]}</td>";
-        echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='fa-solid fa-trash iconelixo'></a></i></td>";
-        echo "  <td align='center'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='fa-solid fa-pen-to-square icone'></a></i></td>";
+        echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
+        echo "  <td align='center'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='bx bx-edit icone'></a></i></td>";
         echo "</tr>";
         echo "</main>";
         echo "</div>";

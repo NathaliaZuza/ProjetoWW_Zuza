@@ -37,8 +37,8 @@
         echo "<tr>";
         echo "<td >{$cliente["nome"]}</td>";
         echo "<td >{$cliente["cpf"]}</td>";
-        echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='fa-solid fa-trash iconelixo'></a></i></td>";
-        echo "<td align='center'><a href='formAlterarCliente.php?id={$cliente["id"]}'><i class='fa-solid fa-pen-to-square icone'></a></i></td>";
+        echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
+        echo "<td align='center'><a href='formAlterarCliente.php?id={$cliente["id"]}'><i class='bx bx-edit icone'></a></i></td>";
         echo "</tr>";
         echo "</main>";
         echo "</div>";
