@@ -8,11 +8,11 @@
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.mask.min.js"></script>
     <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
     <title>Cadastro | WWZ</title>
-
 </head>
 
 <body>
@@ -41,7 +41,7 @@
                 Página do Funcionário</a>
         </div>
         <div class="btn-logar2"><a href="formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
-    </div>
+</div>
 
 
     <!------------MENU----------->
@@ -91,47 +91,70 @@
     </div>
 
 <!----------CADASTRO---------->
+<div class="containerpai">
+    <h1>Cadastro</h1>
+        <div class="img-login1">
+            <img src="../img/cadastro-02.png">
+        </div>
+    
 
-<h1>Cadastro</h1>
-    <div class="img-login1">
-        <img src="../img/cadastro-02.png">
+    <div class="formContainer">
+        <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
+        <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                        <label for="cidade" class="labelInput">Cpf</label> <br>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                    <input type="text" name="email" id=email class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail</label>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha</label><br>
+                    <br><br>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
+                        <label for="senha" class="labelInput">Confirmar Senha</label>
+                    </div>
+                    <br><br>
+                    <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                        </td>
+            </form>
     </div>
-  
+</div>
+ <!---------FOOTER------------->
 
-<div class="formContainer">
-    <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
-    <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
-                <div class="inputBox">
-                    <input type="text" name="nome" id="nome" class="inputUser" required>
-                    <label for="nome" class="labelInput">Nome Completo</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cpf</label> <br>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                <input type="text" name="email" id=email class="inputUser" required>
-                    <label for="email" class="labelInput">E-mail</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="password" name="senha" id="senha" class="inputUser" required>
-                    <label for="senha" class="labelInput">Senha</label><br>
-                <br><br>
-                </div>
-                <div class="inputBox">
-                    <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
-                    <label for="senha" class="labelInput">Confirmar Senha</label>
-                </div>
-                <br><br>
-                 <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
-                    </td>
-                
-
-        </form>
- </div>
+ <footer>
+        <div class="social">
+            <p><span class="logo">WW.ZUZA</span></p>
+            <div class="socialcirc">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+                <p>Copyright © 2022 Todos os <br> direitos reservados</p>
+            </div>
+        </div>
+      <!--   <div class="pagamento">
+            <p>Formas de pagamento:</p>
+            <p>
+                <img src="./img/pagamento-07.png" width="70x">
+                <img src="./img/pagamento-08.png" width="70px">
+            </p>
+        </div> -->
+        <div class="criacao">
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+        </div>
+    </footer>
 
 
 <!---------------------------->

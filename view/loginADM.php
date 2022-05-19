@@ -9,6 +9,7 @@
     <script src="../js/jquery.mask.min.js"></script>
     <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
@@ -111,6 +112,30 @@
             </form>
         </div>
     </div>
+
+    <footer>
+        <div class="social">
+            <p><span class="logo">WW.ZUZA</span></p>
+            <div class="socialcirc">
+                <a href="#" class="fab fa-facebook-f"></a>
+                <a href="#" class="fab fa-twitter"></a>
+                <a href="#" class="fab fa-instagram"></a>
+                <a href="#" class="fab fa-whatsapp"></a>
+                <p>Copyright © 2022 Todos os <br> direitos reservados</p>
+            </div>
+        </div>
+      <!--   <div class="pagamento">
+            <p>Formas de pagamento:</p>
+            <p>
+                <img src="./img/pagamento-07.png" width="70x">
+                <img src="./img/pagamento-08.png" width="70px">
+            </p>
+        </div> -->
+        <div class="criacao">
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+        </div>
+    </footer>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>

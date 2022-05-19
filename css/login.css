@@ -23,11 +23,11 @@ h1{
     color: #0F0059;
     padding-left: 80px;
     padding-top: 30px;
-    background-color: #e6effd;
+    
 }
 .login{
     margin-top: 25px;
-    background-color:#fff;
+    background-color: #e6effd;
     position: absolute;
     top: 55%;
     left: 74%;
@@ -64,10 +64,6 @@ h1{
     font-size: 15px;
     border-radius: 4px;
 }
-body{
-    background-color: #e6effd;
-}
-
 #img-login{
     text-align: center;
     padding-bottom: 30px;

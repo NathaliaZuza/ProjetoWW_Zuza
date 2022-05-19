@@ -23,12 +23,16 @@
 /*-----------CADASTRO-----------*/
 form{
     font-family: kinetika;
+  
 }
 h1{
     font-family: kinetika;
     color: #0F0059;
     padding-left: 60px;
     padding-top: 30px;
+}
+.containerpai{
+    height: 90vh;
 }
 #img-login{
     text-align: center;
@@ -72,15 +76,28 @@ h1{
     cursor: pointer;
     transition: 0.2s;
 }
-.formContainer{
+/* .formContainer{
     position: absolute;
     top: 22%;
     left: 51%;
-    background-color:#fff;
+    background-color: #f0f1ff;
     padding: 40px;
     border-radius: 10px;
     width: 38%;
     color:#0F0059;
+
+} */
+.formContainer{
+    margin-top: 25px;
+    background-color: #f1f6ff;
+    position: absolute;
+    top: 63%;
+    left: 74%;
+    transform: translate(-50%,-50%);
+    color:#0F0059;
+    padding: 30px;
+    border-radius: 10px;
+    width: 38%;
 }
 .inputBox{
     position: relative;   
