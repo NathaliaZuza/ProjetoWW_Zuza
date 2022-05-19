@@ -3,8 +3,9 @@ $categoria_id = $_GET['categoria_id'];
 $arrayImagem = array(
     1 => '../img/banner-panfleto-04.png',
     2 => '../img/3.png',
-    3 => '../img/2.png',
-    4 => '../img/3.jpg',
+    3 => '../img/3-13-13.png',
+    4 => '../img/.jpg',
+    5 => '../img/.jpg',
 ); 
 $pathImagem = $arrayImagem[$categoria_id];
 
@@ -51,7 +52,7 @@ $pathImagem = $arrayImagem[$categoria_id];
             <a href="../view/loginADM.php">
                 Página do Funcionário</a>
         </div>
-        <div class="btn-logar2"><a href="../view/cadastro.php">
+        <div class="btn-logar2"><a href="../view/formCadastrarCliente.php">
                 <p id="cadastro">É novo por aqui? </p>Cadastre-se
             </a></div>
     </div>

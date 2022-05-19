@@ -52,6 +52,12 @@
     }
     ?>
 
+    <script>
+          function confirmarExcluir(){
+            return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
+        } 
+    </script>
+
 
 </body>
 
