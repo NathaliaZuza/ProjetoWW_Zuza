@@ -22,6 +22,7 @@ $pathImagem = $arrayImagem[$categoria_id];
     <title>WWZ | Serviços gráficos pra você.</title>
     <link rel="styleSheet" href="../css/tipoProduto.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
 
 </head>
 

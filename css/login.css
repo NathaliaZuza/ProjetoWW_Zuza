@@ -23,7 +23,12 @@ h1{
     color: #0F0059;
     padding-left: 80px;
     padding-top: 30px;
-    
+}
+#logintitle{
+    font-family: kinetika;
+    color: #F3B700;
+    padding-left: 80px;
+    padding-top: 30px;
 }
 .login{
     margin-top: 25px;
@@ -56,7 +61,51 @@ h1{
     font-size: 15px;
     text-decoration: none;
 }
-
+.botão2:hover,
+.botão2:focus{
+    cursor: pointer; 
+    background-color: #0F0059;
+    transition: 0.1s;
+}
+.botão-adm{
+    background-color: #0F0059;
+    border: none;
+    padding: 15px;
+    width: 100%;
+    border-radius: 10px;
+    color: aliceblue;
+    font-size: 15px;
+    text-decoration: none;
+    font-family: kinetika;
+}
+.botão-adm:hover{
+    cursor: pointer; 
+    background-color: #F3B700;
+    transition: 0.2s;
+}
+.senha:focus{
+    border: 2px solid #0F0059;
+    transition: 0.1s;
+}
+.nome:focus{
+    border: 2px solid #0F0059;
+    transition: 0.1s;
+}
+.senhaL:focus{
+    border: 2px solid #dfa700;
+    transition: 0.1s;
+}
+.nomeL:focus{
+    border: 2px solid #dfa700;
+    transition: 0.1s;
+}
+.nomeL, .senhaL{
+    padding: 15px;
+    border: 2px solid #0f00595e ;
+    outline: none;
+    font-size: 15px;
+    border-radius: 4px;
+}
 .nome, .senha{
     padding: 15px;
     border: 2px solid #0f00595e ;

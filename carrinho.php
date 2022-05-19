@@ -10,6 +10,7 @@
     <link rel="styleSheet" href="./css/carrinho.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
     <link rel="stylesheet" href="../css/headerMenu.css">
 </head>
 

@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
     <title>Cadastro | WWZ</title>
@@ -94,20 +95,20 @@
 
 
     <!-----------LOGIN---------> 
-    <h1>Login</h1>
+    <h1 id="logintitle">Login</h1>
     <div class="img-login1">
-        <img src="../img/login1-01.png">
+        <img src="../img/login1-02.png">
     </div>
    
     <div class="pag">
          
         <div class="login">
-           <div id="img-login"> <img  src="../img/login-03.png" alt=""></div>
+           <div id="img-login"> <img  src="../img/login-03-01.png" width="90px" alt=""></div>
            
            <form action="../controller/loginController.php" method="post">
-            <input type="text" name="email" placeholder="Email" class="nome">
+            <input type="text" name="email" placeholder="Email" class="nomeL">
             <br><br>
-            <input type="password" name="senha" placeholder="Senha" class="senha">
+            <input type="password" name="senha" placeholder="Senha" class="senhaL">
             <br><br>
             <input class="botão2" type="submit" name="submit" value="Entrar">
             </form>

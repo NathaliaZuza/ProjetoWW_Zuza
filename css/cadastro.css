@@ -20,6 +20,7 @@
 #cadastro{
     color: #0F0059;
 }
+
 /*-----------CADASTRO-----------*/
 form{
     font-family: kinetika;
@@ -33,6 +34,9 @@ h1{
 }
 .containerpai{
     height: 90vh;
+}
+p #cadastroativo{
+    color: #0F0059;
 }
 #img-login{
     text-align: center;

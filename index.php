@@ -8,6 +8,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
     <title>WWZ | Serviços gráficos pra você.</title>
     <link rel="styleSheet" href="../css/estilo.css">
     <link rel="stylesheet" href="../css/headerMenu.css">

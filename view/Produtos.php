@@ -8,7 +8,9 @@
     <title>Lista de produtos | WWZUZA</title>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="styleSheet" href="../css/listaProdutos.css">
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <script src="../lib/fontawesome-free-6.1.1-web/js/all.min.js"></script>
+
 
 </head>
 

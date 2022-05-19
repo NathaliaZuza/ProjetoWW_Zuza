@@ -11,6 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
     <title>Cadastro | WWZ</title>
@@ -95,20 +96,20 @@
     <!-----------LOGIN---------> 
     <h1>Login Administrativo</h1>
     <div class="img-login1">
-        <img src="../img/login1-01.png">
+        <img src="../img/adm-01.png">
     </div>
    
     <div class="pag">
          
         <div class="login">
-           <div id="img-login"> <img  src="../img/login-03.png" alt=""></div>
+           <div id="img-login"> <img  src="../img/login-03.png" width="90px" alt=""></div>
            
            <form action="../controller/loginAdmController.php" method="post">
             <input type="text" name="email" placeholder="Email" class="nome">
             <br><br>
             <input type="password" name="senha" placeholder="Senha" class="senha">
             <br><br>
-            <input class="botão2" type="submit" name="submit" value="Entrar">
+            <input class="botão-adm" type="submit" name="submit" value="Entrar">
             </form>
         </div>
     </div>
@@ -139,21 +140,3 @@
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </html>
-
-
-<!-- <main class="form-signin">
-    <form action="../controller/loginAdmController.php" method="post">
-      <h1 class="h3 mb-3 fw-normal">Login</h1>
-
-      <div class="form-floating">
-        <input type="email" name="email" class="form-control" id="floatingInput">
-        <label for="floatingInput">Email</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" name="senha" class="form-control" id="floatingPassword">
-        <label for="floatingPassword">Senha</label>
-      </div>
-      <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
-      <p class="mt-3 mb-3 text-muted">&copy; 2022</p>
-    </form>
-  </main> -->

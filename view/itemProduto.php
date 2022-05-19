@@ -9,6 +9,7 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>WWZ | Serviços gráficos pra você.</title>
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <link rel="styleSheet" href="../css/itemProduto.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
 </head>
@@ -35,6 +36,10 @@
             <a href="../view/login.php">
                 <img id="img-account" src="../img/my account-02.png" alt="">
                 Minha conta</a>
+        </div>
+        <div class="btn-logar">
+            <a href="../view/loginADM.php">
+                Página do Funcionário</a>
         </div>
         <div class="btn-logar2"><a href="../view/cadastro.php">
                 <p id="cadastro">É novo por aqui? </p>Cadastre-se

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/cadastroProduto.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="styleSheet" href="../css/listaProdutos.css">
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <link rel="stylesheet" href="../css/cadastroProduto.css"> 
 
  

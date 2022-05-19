@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.mask.min.js"></script>
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
@@ -86,7 +87,6 @@
                     <span>Carrinho</span>
                 </a>
             </li>
-
         </ul>
     </div>
 
