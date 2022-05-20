@@ -77,14 +77,15 @@
             </div>
         </div>
     </div>
-    <iframe src="" frameborder="0" id="iframe"></iframe>
+    <iframe src="" frameborder="0" class="iframe"></iframe>
 
     <script>
         let btn = document.querySelector("#btn");
         let sidebar = document.querySelector(".sidebar");
-        const iframe = document.querySelector("#iframe");
+        const iframe = document.querySelector(".iframe");
         btn.onclick = function(){
             sidebar.classList.toggle("active")
+            iframe.classList.toggle("activeFrame")
         }
         function confirmarExcluir(){
             return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
