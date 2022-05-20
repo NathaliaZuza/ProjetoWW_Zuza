@@ -133,7 +133,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                                 <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                                 </div>";
                 echo    "<div class='btn-info'>
-                            <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
+                            <a href='../controller/carrinhoController.php' ><p>Adicionar ao carrinho</p></a>
                         </div>";
                 echo "</div>";
                 echo "</div>";

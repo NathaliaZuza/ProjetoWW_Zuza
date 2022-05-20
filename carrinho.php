@@ -16,11 +16,20 @@
 
 <body>
 
-<?php include './view/headerMenu.php'?>
+<?php include './view/headerMenu.php';
+      include_once '../DAO/ProdutoDAO.php';
+      include_once '../DAO/CategoriaDAO.php';
+      include_once '../DTO/ProdutoDTO.php';
+      include_once '../DTO/CategoriaDTO.php';
+?>
 
     <!------------CARRINHO----------->
 
 <h2 id="carrinhotitle">Carrinho</h2>
+<!-- . "(nome, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) " -->
+
+
+
 
 <div class="container">
   <!--  <div class="imgCarrrinho">
