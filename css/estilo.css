@@ -87,12 +87,13 @@
     margin-right: 15px;
     cursor: pointer;
     border-radius: 50%;
+    background-color: none;
 }
 .balls div:hover{
     background: #fff;
 }
 .imgAtual{
-    background: #fff;
+    background-color: #fff;
     transition: all 0.5s;
 }
 

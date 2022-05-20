@@ -4,12 +4,11 @@ var atual = 0
 var imagem = document.getElementById('atual')
 var next = document.getElementById('next')
 var voltar = document.getElementById('voltar')
-
-for (let i=0; i < quant.length; i++) {
-    var div = document.createElement('div')
-    div.id = i
-    balls.appendChild(div)
-}
+// for (let i=0; i < quant.length; i++) {
+//     var div = document.createElement('div')
+//     div.id = i
+//     balls.appendChild(div)
+// }
 
 document.getElementById('0').classList.add('imgAtual')
 
@@ -25,11 +24,13 @@ for (let i=0; i < pos.length; i++) {
 voltar.addEventListener('click', ()=>{
     atual--
     slide()
+    console.log(ball)
 })
 
 next.addEventListener('click', ()=>{
     atual++
     slide()
+    console.log(ball)
 })
 function slide(){
     if(atual >= quant.length){

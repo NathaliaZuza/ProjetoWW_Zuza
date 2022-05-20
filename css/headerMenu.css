@@ -95,7 +95,10 @@
 @media screen and (max-width:600px) {
 
     .box{       
-        flex-wrap: wrap;
+       display: block;
+    }
+    .box li, a{
+        display: block;
     }
   
 }  
@@ -151,8 +154,6 @@ div > ul > li > a{
 
     .nav-list{       
         margin: auto;
-        top: 8vh;
-        right: 0;
         width: 100vw;
         height: 92vh;
         flex-direction: column;
