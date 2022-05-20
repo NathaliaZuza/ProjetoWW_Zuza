@@ -92,6 +92,13 @@
     padding-left: 22px;
     color: #e4ab00;
 }
+@media screen and (max-width:600px) {
+
+    .box{       
+        flex-wrap: wrap;
+    }
+  
+}  
 
 /*-----------MENU------------*/
 .menu {
