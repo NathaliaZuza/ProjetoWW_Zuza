@@ -7,14 +7,17 @@
     <link rel="stylesheet" href="../css/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <title>Document</title>
+    <title>Administrativo | WWZUZA</title>
 </head>
 <body>
 <div class="sidebar">
         <div class="logo_conteudo">
             <div class="logo">
+           
             <i class='bx bxs-home-alt-2'></i>
+                
                <div class="logo_nome">Home</div>
+            
             </div>
             <i class='bx bx-menu' id="btn"></i>
         </div>
@@ -77,6 +80,8 @@
             </div>
         </div>
     </div>
+
+
     <iframe src="" frameborder="0" class="iframe"></iframe>
 
     <script>
@@ -90,6 +95,9 @@
         function confirmarExcluir(){
             return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
         } 
+        function home(){
+            iframe.src="sidebar.php"
+        }
         function produtosCadastro(){
             iframe.src="formCadastrarProduto.php"
         }

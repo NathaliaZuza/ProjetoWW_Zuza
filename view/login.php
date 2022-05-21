@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="../img/lg-03.png"/>
     <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
-    <title>Cadastro | WWZ</title>
+    <title>Login | WWZ</title>
 
 </head>
 

@@ -153,6 +153,7 @@ body{
     padding: 10px 6px;
     height: 60px;
     background: #ffffff0c;
+  
 }
 .profile_content .profile .profile_details{
     display: flex;
@@ -178,14 +179,16 @@ body{
     border-radius: 7px;
     cursor: pointer;
     text-align: center;
+    color: #fff;
 }
+
 .sidebar.active  .profile #log_out{
     left: 88%;
 }
 
 .iframe {
-    width: calc(100% - 240px);
-    left: 240px;
+    width: calc(100% - 170px);
+    left: 170px;
     position: relative;
     min-height: 100vh;
     transition: all 0.5s ease;
@@ -193,4 +196,18 @@ body{
 
 .activeFrame {
     width: calc(100% - 78px)
+}
+
+.dashboard{
+    width: 100vw;
+    align-items: center;
+    display: flex;
+    align-content: center;
+
+    padding: 200px 100px 0px 200px;
+}
+.dashboard  img{
+    width: 50%;
+    display: flex;
+
 }
