@@ -96,7 +96,7 @@
 
     <div class="pai">
 
-        <?php
+       <?php
        require_once '../dao/ProdutoDAO.php';
 
        $produto_id = $_GET['id'];

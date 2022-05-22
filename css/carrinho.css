@@ -26,20 +26,24 @@ h2{
 }
 #produtos{
     margin: 0; 
-    padding: 0 2%;
-    display: flex; 
-    gap: 50px;
+    gap: 5px;
 }
 
-.produto-single{
-    width: 33.33%;   
-    padding: 22px 22px 22px 22px;
+.produto-single2{
+    width: 60%;   
     border: 1px solid #F3B700;
     box-shadow: 5px 5px 5px #fff2ce;
     border-radius: 5px;
-    margin-left: 10px; 
+    margin-bottom: 10px;
+    padding-bottom: 10px;
 }
-.produto-single img{
+.pai{
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    display: flex;
+ }
+.produto-single2 img{
     width: 100%;
 }
 .nome_produto{
@@ -78,7 +82,7 @@ h2{
     padding: 12px 5px 12px 5px;
 }
 .btn-carrinho:hover{
-    background-color: #e4ab00;
+    background-color: #cf9b00;
     cursor: pointer;
 }
 .btn-carrinho a {
@@ -93,7 +97,6 @@ h2{
         display: flex; 
         flex-direction: column;
         gap: 50px;
-       
     }
     #carrinho{
         margin: 0; 

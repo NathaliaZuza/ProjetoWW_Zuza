@@ -28,7 +28,7 @@ values
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
-  `preco` VARCHAR(20) NOT NULL,
+  `preco` DECIMAL(10,2) NOT NULL,
   `cores` VARCHAR(40) NOT NULL,
   `material` VARCHAR(45) NOT NULL,
   `tamanho` VARCHAR(15) NOT NULL,
