@@ -30,6 +30,7 @@
     echo "<table border='1'>";
     echo "<tr><th>Nome</th>";   
     echo "<th>CPF</th>";
+    echo "<th>Telefone</th>";
     echo "<th>Excluir</th>";
     echo "<th>Editar</th></tr>";
    
@@ -37,6 +38,7 @@
         echo "<tr>";
         echo "<td >{$cliente["nome"]}</td>";
         echo "<td >{$cliente["cpf"]}</td>";
+        echo "<td >{$cliente["telefone"]}</td>";
         echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
         echo "<td align='center'><a href='formAlterarCliente.php?id={$cliente["id"]}'><i class='bx bx-edit icone'></a></i></td>";
         echo "</tr>";

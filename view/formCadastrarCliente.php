@@ -108,7 +108,12 @@
                     <br><br>
                     <div class="inputBox">
                         <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                        <label for="cidade" class="labelInput">Cpf</label> <br>
+                        <label for="cpf" class="labelInput">Cpf</label> <br>
+                    </div>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label> <br>
                     </div>
                     <br><br>
                     <div class="inputBox">
@@ -169,7 +174,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
     <script>
         $(document).ready(function() {
             $('#cpf').mask('000.000.000-00');
-            $('#tel').mask('(00) 00000-0000');
+            $('#telefone').mask('(00) 00000-0000');
         });
     </script>
     <script>
