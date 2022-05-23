@@ -82,9 +82,9 @@
                 foreach ( $_SESSION['carrinho'] as $key => $qtde ) {
                     $produto = $produtoDAO->findById( $key );
                     $total += $produto["preco"] * $qtde;
-                    echo "<div class='container'>";
+                    echo "<div class='carrinho'>";
                     
-                    echo "  <div class='nome_carrinho'>
+                    echo "  <div class='nomeCarrinho'>
                                 {$produto["nome"]}
                             </div>";
 
@@ -92,7 +92,7 @@
                                 {$qtde}
                             </div>";
 
-                    echo "  <div class='preco_carrinho'> 
+                    echo "  <div class='preco_carrinho'>  
                                 R$ {$produto["preco"]}
                             </div>";
 
@@ -105,14 +105,14 @@
                             </div>";
         
                     echo "  <div class='info_carrinho'>
-                                p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
+                                <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
                             </div>";
         
                     echo "  <div class='info_carrinho'>
                                 <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
                             </div>";
 
-                    echo "  <div class='info'>
+                    echo "  <div class='info_carrinho'>
                                 <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                             </div>";
 
@@ -128,7 +128,7 @@
 
                     echo "  <div class='remover_carrinho'>
                                 <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>
-                                    Remover item
+                                    Remover item <i class='bx bx-trash'></i>
                                 </a>
                             </div>";
                 }
