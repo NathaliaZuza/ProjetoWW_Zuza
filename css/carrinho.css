@@ -123,13 +123,13 @@ h2{
 }
 }
 
-/*----------CARRINHO-----------*/
+/*----------CARRINHO----------*/
 
 #carrinho{
     margin-left: 5%; 
     display: flex; 
     flex-direction: column;
-    width: 30%;
+    width: 100%;
     border-radius: 20px;  
 }
 .carrinho{  
@@ -138,7 +138,6 @@ h2{
     width: 100%;
     padding: 10px;    
     margin-top: 0;
-    margin-left: -10px;
     flex-direction: column;
 }
 .remover_carrinho{
@@ -151,7 +150,11 @@ h2{
     border-radius: 5px;
     margin-top: 10px;
 }
-.img-lixo:hover{
+.remover_carrinho a{
+    text-decoration: none;
+    color: #fff;
+}
+.remover_carrinho:hover{
     background-color: #f31c00;
     cursor: pointer;
 }
@@ -177,6 +180,21 @@ h2{
    align-self: center;
    margin-left: 10%;
 }
+.menos1_carrinho{
+    background-color: #e44800;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 20px;
+    text-align: center;
+    align-items: center;
+    align-self: center;
+    margin-left: 10%;
+ }
+.menos1_carrinho a{
+    color: #fff;
+    text-decoration: none;
+ }
 .precoCarrinho{
    font-family: kinetika-light;
    font-weight: bolder;
@@ -189,6 +207,13 @@ h2{
 }
 .imgCarrinho img{
     width: 50vw;
+    padding: 20px;
+}
+.img_produto_carrinho {
+    width: 50%;
+}
+.img_produto_carrinho img{
+    width: 30%;
     padding: 20px;
 }
 
