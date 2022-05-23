@@ -76,14 +76,15 @@ p{
     color: #F3B700;
     font-family: kinetika;  
     border-bottom: 2px solid #F3B700;
-    width: 50%;
+    width: 60%;
 }
 .desc_produto{
     text-align: left;
     padding: 0px 15px 20px 15px; 
-    font-size: 25px;
+    font-size: 18px;
     color: #0F0059;
     font-family: kinetika-light;  
+    font-weight: 900;
 }
 .preco{
     text-align: left;

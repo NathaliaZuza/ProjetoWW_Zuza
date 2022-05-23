@@ -26,7 +26,6 @@
     echo "<h1>Listar produtos</h1>";
     echo "<table border='1'>";
     echo "<tr><th>Nome</th>"; 
-    echo "<th>Descrição</th>";  
     echo "<th>Preço</th>";
     echo "<th>Cores</th>";
     echo "<th>Material</th>";
@@ -39,7 +38,6 @@
    foreach ($produtos as $produto){        
         echo "<tr>";
         echo "<td >{$produto["nome"]}</td>";
-        echo "<td >{$produto["descricao"]}</td>";
         echo "<td >{$produto["preco"]}</td>";
         echo "<td>{$produto["cores"]}</td>";
         echo "<td>{$produto["material"]}</td>";
@@ -51,7 +49,41 @@
         echo "</tr>";
         echo "</main>";
         echo "</div>";
-    }
+   }
+
+    $produtoDAO = new ProdutoDAO();
+    $produtos = $produtoDAO->findAll();
+    echo "<main class='container2'>";
+    echo "<div class='conteudo2'>";
+    echo "<table border='1'>";
+    echo "<tr><th>Nome</th>"; 
+    echo "<th>Foto</th>";    
+    echo "<th>Descrição</th>";  
+    echo "<th>Excluir</th>";
+    echo "<th>Editar</th></tr>";
+   
+   foreach ($produtos as $produto){        
+        echo "<tr>";
+        echo "<td >{$produto["nome"]}</td>";     
+    ?>   
+        <td><div class='img_produto'>
+                <p> <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112" /></p>
+            </div>
+        </td>
+    <?php
+        echo "<td >{$produto["descricao"]}</td>";
+        echo "<td align=center><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
+        echo "  <td align='center'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='bx bx-edit icone'></a></i></td>";
+        echo "</tr>";
+        echo "</main>";
+        echo "</div>";
+
+
+   }
+
+
+
+
     ?>
 
     <script>
