@@ -19,11 +19,12 @@ class ClienteDAO {
             $stmt->execute();
             $usuario_id = $this->pdo->lastInsertId();
             $sql = 'INSERT INTO ' 
-                   . 'cliente(nome,cpf,usuario_id) '
-                   . 'VALUES(:nome,:cpf,:usuario_id)';
+                   . 'cliente(nome,cpf,telefone,usuario_id) '
+                   . 'VALUES(:nome,:cpf,:telefone,:usuario_id)';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $clienteDTO->getNome() );
             $stmt->bindValue( ":cpf", $clienteDTO->getCpf() ); 
+            $stmt->bindValue( ":telefone", $clienteDTO->getTelefone() ); 
             $stmt->bindValue( ":usuario_id", $usuario_id );
             return $stmt->execute();
 
@@ -73,12 +74,13 @@ class ClienteDAO {
 public function update( ClienteDTO $clienteDTO ) {
     try {
         $sql = 'UPDATE cliente SET '
-            . 'nome=?, cpf=? '
+            . 'nome=?, cpf=?, telefone=?, '
             . 'WHERE id=?';
         $stmt = $this->pdo->prepare( $sql );
         $stmt->bindValue( 1, $clienteDTO->getNome() );
-        $stmt->bindValue( 2, $clienteDTO->getCpf() );   
-        $stmt->bindValue( 3, $clienteDTO->getId() );
+        $stmt->bindValue( 2, $clienteDTO->getCpf() ); 
+        $stmt->bindValue( 3, $clienteDTO->getTelefone() );  
+        $stmt->bindValue( 4, $clienteDTO->getId() );
         return $stmt->execute();
         
      

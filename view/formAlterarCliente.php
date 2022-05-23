@@ -30,6 +30,11 @@ $cliente = $clienteDAO->findById( $idCliente );
                         <label for="cpf">Cpf</label>
                     </div>
                 <br><br>
+                <div class="inputbox">
+                        <input type="text" name="telefone" id="telefone" value="<?php echo $cliente["telefone"] ?>">
+                        <label for="telefone">Telefone</label>
+                    </div>
+                <br><br>
                  <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
                     </td>
                 
