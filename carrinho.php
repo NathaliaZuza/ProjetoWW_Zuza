@@ -68,54 +68,81 @@
 </div>
 
    
+<!---------CARRINHO---------->
+
 <div class="container mt-3">
         <?php
-           
             require_once './dao/ProdutoDAO.php';
             $produtoDAO = new ProdutoDAO();
             $total      = 0;
         
             echo "<div>";
             if ( isset( $_SESSION['carrinho'] ) && !empty( $_SESSION['carrinho'] ) ) {
-                echo "<table class='table table-striped table-bordered'>";
-                echo "<thead>";
-                echo "  <tr>";
-                echo "      <th>Nome</th>";
-                echo "      <th>Preço</th>";
-                echo "      <th>Qtde</th>";
-                echo "      <th>Subtotal</th>";
-                echo "      <th>Menos um</th>";
-                echo "      <th class='text-center'>Remover</th>";
-                echo "  </tr>";
-                echo "</thead>";
-                echo "<tbody>";
+
                 foreach ( $_SESSION['carrinho'] as $key => $qtde ) {
                     $produto = $produtoDAO->findById( $key );
                     $total += $produto["preco"] * $qtde;
-                    echo "<tr>";
-                    echo "  <td> {$produto["nome"]}</td>";
-                    echo "  <td> {$produto["preco"]}</td>";
-                    echo "  <td> {$qtde}</td>";
-                    echo "  <td> R$ ", number_format(  ( $produto["preco"] * $qtde ), 2, ",", "." ), "</td>";
-                    echo "  <td class='text-center'>";
-                    echo "      <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del1'>Menos 1</a> </td>" ;
-                    echo "  <td class='text-center'>";
-                    echo "      <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>Remover do carrinho</a>";
-                    echo "  </td>";
+                    echo "<div class='container'>";
+                    
+                    echo "  <div class='nome_carrinho'>
+                                {$produto["nome"]}
+                            </div>";
 
-                    echo "</tr>";
+                    echo "  <div class='qtde'> 
+                                {$qtde}
+                            </div>";
+
+                    echo "  <div class='preco_carrinho'> 
+                                R$ {$produto["preco"]}
+                            </div>";
+
+                    echo "  <div class='info_carrinho'>
+                                <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
+                            </div>";
+    
+                    echo "  <div class='info_carrinho'>
+                                <p>Material: <span class='descricao'>{$produto['material']}</span></p>
+                            </div>";
+        
+                    echo "  <div class='info_carrinho'>
+                                p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
+                            </div>";
+        
+                    echo "  <div class='info_carrinho'>
+                                <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
+                            </div>";
+
+                    echo "  <div class='info'>
+                                <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
+                            </div>";
+
+                    echo "  <div class='subtotal_carrinho'>
+                                Subtotal: R$ ", number_format(($produto["preco"] * $qtde ), 2, ",", "." ), 
+                         "   </div>";
+
+                    echo "  <div class='menos1_carrinho'>
+                                <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del1'>
+                                    -
+                                </a>
+                            </div>" ;
+
+                    echo "  <div class='remover_carrinho'>
+                                <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>
+                                    Remover item
+                                </a>
+                            </div>";
                 }
-                echo "</tbody>";
-                echo "</table>";
-                echo "<div>";
-                echo "TOTAL R$ ", number_format( $total, 2, ",", "." );
-                echo "</div>";
+                    echo "</div>";
+                    echo "  <div class='total_carrinho'>
+                                Total R$ ", number_format( $total, 2, ",", "." ),
+                            "</div>";
             } else {
                 echo "Não existe produtos no carrinho!";
             }
         ?>
     </div>
 
+<!---------FOOTER---------->
 
 <div class="container">
   <!--  <div class="imgCarrrinho">

@@ -124,3 +124,14 @@ h2{
 }
 
 /*----------CARRINHO-----------*/
+
+table{
+    border: 1px solid #0F0059;
+}
+th{
+    border: 1px solid #0F0059;
+}
+
+.table-carrinho{
+    width: 60vw;
+}
