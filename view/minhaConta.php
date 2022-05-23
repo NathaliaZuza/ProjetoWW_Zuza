@@ -43,7 +43,6 @@
         <div class="btn-logar2"><a href="formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
     </div>
 
-
     <!------------MENU----------->
 
     <div class="menu">

@@ -28,7 +28,6 @@
             <div class="btn" id="next">
                 <i class="fas fa-chevron-right"></i>
             </div>
-
             <div class="image" id="atual">
                 <img src="../img/bannerteste-01.png" alt="">
             </div>

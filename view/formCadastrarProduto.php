@@ -78,6 +78,7 @@
                         <input type="file" name="foto" id="foto">
                         <label for="foto">Imagem produto</label>
                     </div>
+                    
                 </div>
                 <div class="row">
                     <input type="submit" value="Cadastrar produto" id="cadastrar">

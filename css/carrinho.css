@@ -141,7 +141,6 @@ h2{
     margin-left: -10px;
     flex-direction: column;
 }
-
 .remover_carrinho{
     background-color: #f35900;
     color: #fff;
@@ -156,7 +155,6 @@ h2{
     background-color: #f31c00;
     cursor: pointer;
 }
-
 .nomeCarrinho{
     width: 95.5%;
     padding: 15px;
