@@ -39,7 +39,7 @@
    foreach ($produtos as $produto){        
         echo "<tr>";
         echo "<td >{$produto["nome"]}</td>";
-        echo "<td >{$produto["desc"]}</td>";
+        echo "<td >{$produto["descricao"]}</td>";
         echo "<td >{$produto["preco"]}</td>";
         echo "<td>{$produto["cores"]}</td>";
         echo "<td>{$produto["material"]}</td>";

@@ -81,8 +81,8 @@
                 </div>
                 <div class="row">
                     <div class="inputbox">
-                        <input type="textarea" name="desc" class="desc" id="desc" placeholder="Escreva aqui a descrição do produto...">
-                        <label for="desc">Descrição do produto</label>
+                        <input type="textarea" name="descricao" class="desc" id="desc" placeholder="Escreva aqui a descrição do produto...">
+                        <label for="descricao">Descrição do produto</label>
                     </div>
                 </div>
                 <div class="row">

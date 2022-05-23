@@ -115,6 +115,10 @@
                         {$produto["nome"]}
                     </div>";
 
+        echo "      <div class='desc_produto'>
+                        {$produto["descricao"]}
+                    </div>";
+
         echo "      <div class='preco'> 
                         R$ {$produto["preco"]}
                     </div>";

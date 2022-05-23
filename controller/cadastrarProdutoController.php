@@ -9,7 +9,7 @@ define( 'DIR_FOTO', $_SERVER['DOCUMENT_ROOT'] . "/img/produto/foto/" );
 
 $categoriaId = $_POST["categoria"];
 $nome        = $_POST["nome"];
-$desc        = $_POST["desc"];
+$descricao   = $_POST["descricao"];
 $preco       = $_POST["preco"];
 $cores       = $_POST["cores"];
 $material    = $_POST["material"];
@@ -23,7 +23,7 @@ $upload = new Upload( $foto );
 $produtoDTO = new ProdutoDTO();
 $produtoDTO->setCategoriaId( $categoriaId );
 $produtoDTO->setNome( $nome );
-$produtoDTO->setDesc( $desc );
+$produtoDTO->setDesc( $descricao );
 $produtoDTO->setPreco( $preco );
 $produtoDTO->setCores( $cores );
 $produtoDTO->setMaterial( $material );

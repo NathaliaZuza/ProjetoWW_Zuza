@@ -74,7 +74,7 @@
             </div>
         <?php
             echo
-            "<div class='nome_produto'>
+                    "<div class='nome_produto'>
                             {$produto["nome"]}
                      </div>";
 

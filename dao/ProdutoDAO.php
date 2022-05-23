@@ -12,7 +12,7 @@ class ProdutoDAO {
     public function salvar( ProdutoDTO $produtoDTO ) {
         try {
             $sql = "INSERT INTO produto "
-                . "(nome, desc, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) "
+                . "(nome, descricao, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) "
                 . "VALUES(?,?,?,?,?,?,?,?,?,?)";
 
             $stmt = $this->pdo->prepare( $sql );
@@ -82,7 +82,7 @@ class ProdutoDAO {
     public function update( ProdutoDTO $produtoDTO ) {
         try {
             $sql = "UPDATE produto SET "
-                . "nome=?, desc=?, preco=?, cores=?, material=?, tamanho=?, prazo=?, qtd=?, foto=? "
+                . "nome=?, descricao=?, preco=?, cores=?, material=?, tamanho=?, prazo=?, qtd=?, foto=? "
                 . "WHERE id=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $produtoDTO->getNome() );
