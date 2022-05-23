@@ -16,129 +16,23 @@
     margin: 0;
     padding: 0;   
 }
-/*----------PRODUTOS-----------*/
-
-h2{
-    text-align: center;
-    padding: 20px;
-    color: #0F0059;
-    font-family: kinetika;
-}
-#produtos{
-    margin: 0; 
-    gap: 5px;
-}
-
-.produto-single2{
-    width: 60%;   
-    border: 1px solid #F3B700;
-    box-shadow: 5px 5px 5px #fff2ce;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    padding-bottom: 10px;
-}
-.pai{
-    align-items: center;
-    align-self: center;
-    justify-content: center;
-    display: flex;
- }
-.produto-single2 img{
-    width: 100%;
-}
-.nome_produto{
-    font-family: kinetika;
-    text-align: center;
-    padding: 7px;
-    font-size: 20px;
-    color: #F3B700;
-}
-.info{
-    font-family: kinetika-light;
-    font-weight: bolder;
-    padding: 5px;
-    text-align: center;
-}
-.preco{
-    font-family: kinetika;
-    font-size: 22px;
-    text-align: center;
-    color: #e4ab00;
-}
-#preco2{
-    font-family: kinetika-light;
-    text-align: center;
-    font-size: 15px;
-}
-.btn-carrinho{
-    font-family: kinetika-light;
-    font-weight:900;
-    background-color: #F3B700;
-    text-align: center;
-    width: 200px;
-    border-radius: 5px;
-    align-items: center;
-    margin: auto;
-    padding: 12px 5px 12px 5px;
-}
-.btn-carrinho:hover{
-    background-color: #cf9b00;
-    cursor: pointer;
-}
-.btn-carrinho a {
-    text-decoration: none;
-    color: #0F0059;
-    font-size: 18px;
-}
-@media screen and (max-width:600px) {
-    #produtos{
-        margin: 0; 
-        padding: 0 2%;
-        display: flex; 
-        flex-direction: column;
-        gap: 50px;
-    }
-    #carrinho{
-        margin: 0; 
-        padding: 0 2%;
-        display: flex; 
-        gap: 10px; 
-        flex-direction: column;
-    }
-    .carrinho{
-        background-color: #0f00593f;
-        font-family: kinetika;
-        display: flex;
-        flex-direction: column;
-    }
-    .produto-single{
-        width: 80%;   
-        padding: 22px 22px 22px 22px;
-        border: 1px solid #F3B700;
-        border-radius: 5px;
-        margin-left: 10px;    
-}  
-.produto-single img{
-    width: 100%;
-}
-}
 
 /*----------CARRINHO----------*/
 
 #carrinho{
-    margin-left: 5%; 
     display: flex; 
     flex-direction: column;
-    width: 100%;
+    width: 50%;
     border-radius: 20px;  
+    background-color: #e4ab002c;
 }
-.carrinho{  
+.carrinho-container{  
     font-family: kinetika;
     display: flex;
     width: 100%;
     padding: 10px;    
     margin-top: 0;
-    flex-direction: column;
+
 }
 .remover_carrinho{
     background-color: #f35900;

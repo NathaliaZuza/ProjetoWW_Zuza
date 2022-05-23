@@ -39,7 +39,7 @@ $produtoDAO = new ProdutoDAO();
 
 if ( $produtoDAO->update( $produtoDTO ) ) {
     $upload->salvar($_FILES["foto"], DIR_FOTO);
-    header( "Location: ../view/formCadastrarProduto.php" );
+    header( "Location: ../view/Produtos.php" );
 }
 
 ?>

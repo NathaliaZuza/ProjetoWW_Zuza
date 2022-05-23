@@ -29,48 +29,16 @@
 <h2 id="carrinhotitle">Carrinho</h2>
 <!-- . "(nome, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) " -->
 
-
-
-<!-- <div class="pai">
-
     <?php
      session_start();
         require_once './dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
         $produtos   = $produtoDAO->findAll();
-
-
-        foreach ($produtos as $produto) {
-            echo "<div id='produtos'>";
-            echo    "<div class='produto-single2'>";
-
     ?>
-            <div class='img_produto'>
-                <p> <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112" /></p>
-            </div>
-    <?php
-            echo
-            "<div class='nome_produto'>
-                            {$produto["nome"]}
-                    </div>";
 
-            echo   "<div class='preco'>
-                        R$ {$produto["preco"]}<span id='undIndex'>/{$produto["qtd"]}</span>
-                    </div>";
-
-            echo    "<div class='btn-carrinho'>
-                        <a href='./controller/carrinhoController.php?id={$produto["id"]}&acao=add'><p>Adicionar ao carrinho</p></a>
-                    </div>";
-            echo "</div>";
-            echo "</div>";
-        }
-    ?>
-</div> -->
-
-   
 <!---------CARRINHO---------->
 
-<div class="carrinho">
+<div class="carrinho-container">
         <?php
             require_once './dao/ProdutoDAO.php';
             $produtoDAO = new ProdutoDAO();
@@ -84,7 +52,7 @@
                     $total += $produto["preco"] * $qtde;
 
 
-                    echo "<div id='carrinho'>";
+
                     
                     echo "  <div class='nomeCarrinho'>
                                 {$produto["nome"]}
@@ -99,9 +67,9 @@
                                 {$qtde}
                             </div>";
 
-                    echo "  <div class='precoCarrinho'>  
-                                R$ {$produto["preco"]}
-                            </div>";
+                    echo "  <div class='preco'> 
+                                R$ ", number_format($produto["preco"], 2, ",", "." );
+                            "</div>";
 
                     echo "  <div class='a'>
                                 <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
@@ -142,7 +110,7 @@
                                 </a>
                             </div>";
                 }
-                    echo "</div>";
+
                     echo "  <div class='total_carrinho'>
                                 Total R$ ", number_format( $total, 2, ",", "." ),
                             "</div>";
@@ -154,7 +122,6 @@
 
 <!---------FOOTER---------->
 
-<div class="container">
   <!--  <div class="imgCarrrinho">
             <img src="../img/carrinho-01.png">
         </div> -->
@@ -178,7 +145,7 @@
             </p>
         </div> -->
         <div class="criacao">
-            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Barbosa</span></p>
         </div>
     </footer>
 </body>
