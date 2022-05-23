@@ -137,16 +137,18 @@ div > ul > li > a{
     border-bottom: 2px solid #F3B700;
 }
 .carrinho{
-    background-color: #F3B700;
     color: #0F0059;
-    border-radius: 5px;
-    width: 100px;
-    height: 20px;
+    width: 50px;
+    height: 40px;
     align-items: center;
 }
-.carrinho:hover{
-    background-color: #e4ab00;
+.carrinho i{
+    font-size: 40px;
+}
+.carrinho i:hover{
     cursor: pointer;
+    color: #e4ab00;
+    transition: 0.2s;
 }
 
 

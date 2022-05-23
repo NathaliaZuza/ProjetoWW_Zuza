@@ -86,7 +86,6 @@
             <li class="carrinho">
                 <a href="../carrinho.php">
                     <i class='bx bx-cart'></i>
-                    <span>Carrinho</span>
                 </a>
             </li>
 
@@ -143,7 +142,7 @@
                     </div>";
 
         echo        "<div class='btn-info'>
-                        <a href='../carrinho.php'><p>Adicionar ao carrinho</p></a>
+                        <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=add'><p> <i class='bx bxs-cart'></i>ADICIONAR AO CARRINHO</p></a>
                     </div>";               
         echo    "</div>";
         echo "</div>";

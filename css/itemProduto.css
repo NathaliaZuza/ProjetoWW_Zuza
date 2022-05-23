@@ -100,6 +100,8 @@ p{
     border-radius: 5px;
     margin-top: 30px;
     margin-left: 15px;
+    align-items: center;
+    align-content: center;
     
     /* transform: translateX(0) scale(0.8); */
 }
@@ -109,7 +111,9 @@ p{
 .btn-info p {
     font-family: kinetika;
 }
-
+.btn-info i {
+    font-size: 30px;
+}
 .btn-info:hover,
 .btn-info:focus{
     cursor: pointer; 

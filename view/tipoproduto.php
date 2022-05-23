@@ -97,7 +97,6 @@ $pathImagem = $arrayImagem[$categoria_id];
             <li class="carrinho">
                 <a href="../carrinho.php">
                     <i class='bx bx-cart'></i>
-                    <span>Carrinho</span>
                 </a>
             </li>
 
@@ -132,8 +131,8 @@ $pathImagem = $arrayImagem[$categoria_id];
                                 <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>                
                                 <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                                 </div>";
-                echo    "<div class='btn-info'>
-                            <a href='../controller/carrinhoController.php' ><p>Adicionar ao carrinho</p></a>
+                echo    "<div class='btn-comprar'>
+                            <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=add'><p><i class='bx bxs-cart'></i><span id='comprar'>COMPRAR</span></p></a>
                         </div>";
                 echo "</div>";
                 echo "</div>";

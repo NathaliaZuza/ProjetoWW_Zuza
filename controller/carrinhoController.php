@@ -17,7 +17,7 @@ if ( $acao == "add" ) {
 if ( $acao == "del1") {
     if ( !isset($_SESSION['carrinho'][$idProduto])){
         $_SESSION['carrinho'][$idProduto] = 1;
-    } else if (($_SESSION['carrinho'][$qtde] == 1)){
+    } else if (($_SESSION['carrinho'][$qtde] == 1)){ 
         unset($_SESSION['carrinho'][$idProduto]);
     } else{
         $_SESSION['carrinho'][$idProduto] -= 1;

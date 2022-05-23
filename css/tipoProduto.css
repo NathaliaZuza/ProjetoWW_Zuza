@@ -97,9 +97,9 @@ p{
 }
 .btn-info{
     text-align: center;
-    padding: 12px;
+    padding: 10px 12px 10px 12px;
     background-color: #F3B700;
-    width: 60%;
+    width: 50%;
     margin: auto;  
     border-radius: 5px;
     margin: auto;
@@ -108,14 +108,42 @@ p{
 }
 .btn-info p {
     font-family: kinetika;
+    font-size: 22px;
 }
-
 .btn-info:hover,
 .btn-info:focus{
     cursor: pointer; 
     background-color: #ffd659;
     transform: translateX(0) scale(1.0);
     transition: 0.5s ease-in;
+}
+.btn-comprar{
+    text-align: center;
+    padding: 10px 12px 10px 12px;
+    background-color: #F3B700;
+    width: 50%;
+    margin: auto;  
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 15px;
+    transform: translateX(0) scale(0.8);
+}
+.btn-comprar p {
+    font-family: kinetika;
+    font-size: 22px;
+}
+.btn-comprar:hover,
+.btn-comprar:focus{
+    cursor: pointer; 
+    background-color: #f36d00;
+}
+p #comprar{
+    padding: 0px 10px 20px 10px;
+    color: #0F0059;
+}
+.btn-comprar i{
+    font-size: 30px;
+    color: #0F0059;
 }
 #undIndex{
     font-family: kinetika-light;
