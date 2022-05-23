@@ -109,6 +109,8 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 2
 DEFAULT CHARACTER SET = utf8;
 
+INSERT INTO `lg_adm`(`id`,`email`,`senha`) VALUES
+(1,'adm@email.com','123123');
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`produto`
@@ -118,6 +120,7 @@ DROP TABLE IF EXISTS `ww_zuza`.`produto` ;
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
+  `desc` VARCHAR(255) NOT NULL,
   `preco` VARCHAR(20) NOT NULL,
   `cores` VARCHAR(10) NOT NULL,
   `material` VARCHAR(45) NOT NULL,
@@ -142,6 +145,15 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
 ENGINE = InnoDB
 AUTO_INCREMENT = 11
 DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO `produto` (`id`, `nome`, `desc`, `preco`, `cores`, `material`, `tamanho`, `prazo`, `qtd`, `foto`, `categoria_id`) VALUES
+(1, 'Panfleto 4x0', 'teste', '70,00', '4x0 (colorido)', 'Papel Offset  90g', '15cm x 10cm', '3 dias úteis', '1000un', '627bfb295a9a0.png', 1),
+(3, 'Panfleto Ofício', 'teste2', '450,00', '4x4', 'Papel Offset  90g', '20cm x 10cm', '3 dias úteis', '10000un', '627c035424952.png', 1),
+(6, 'Cartão de Visita', 'teste3', '80,00', '4x0', 'Papel Couchê 300g', '9cm x 5cm', '3 dias úteis', '1000un', '6282c299b49ff.png', 2),
+(8, 'Cartão de Visita 4x4', 'teste4', '200,00', '4x4', 'Papel Couchê 300g', '9cm x 5cm', '3 dias úteis', '1000un', '6282c3a45923e.png', 2),
+(10, 'Cartão de Visita 4x0', 'teste5', '60,00', '4x0', 'Papel Couchê 300g', '9cm x 5cm', '2 dias úteis', '1000un', '6282c4124e65a.png', 2),
+(11, 'Cardápio', 'teste6', '250,00', '4x4 (colorido)', 'Papel Couchê 95g', '20cm x 10cm', '4 dias úteis', '30un', '6285b5b2ed663.png', 3);
+
 
 
 -- -----------------------------------------------------
