@@ -25,7 +25,8 @@
     echo "<div class='conteudo'>";
     echo "<h1>Listar produtos</h1>";
     echo "<table border='1'>";
-    echo "<tr><th>Nome</th>";   
+    echo "<tr><th>Nome</th>"; 
+    echo "<th>Descrição</th>";  
     echo "<th>Preço</th>";
     echo "<th>Cores</th>";
     echo "<th>Material</th>";
@@ -38,6 +39,7 @@
    foreach ($produtos as $produto){        
         echo "<tr>";
         echo "<td >{$produto["nome"]}</td>";
+        echo "<td >{$produto["desc"]}</td>";
         echo "<td >{$produto["preco"]}</td>";
         echo "<td>{$produto["cores"]}</td>";
         echo "<td>{$produto["material"]}</td>";

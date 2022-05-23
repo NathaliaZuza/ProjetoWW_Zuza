@@ -6,6 +6,7 @@ require_once '../util/Upload.php';
 define( 'DIR_FOTO', $_SERVER['DOCUMENT_ROOT'] . "/img/produto/foto/" );
 
 $nome = $_POST["nome"];
+$desc = $_POST["desc"];
 $preco = $_POST["preco"];
 $cores = $_POST["cores"];
 $material = $_POST["material"];
@@ -17,6 +18,7 @@ $idProduto = $_POST["idProduto"];
 
 $produtoDTO = new ProdutoDTO();
 $produtoDTO->setNome($nome);
+$produtoDTO->setDesc( $desc );
 $produtoDTO-> setPreco($preco);
 $produtoDTO->setCores($cores);
 $produtoDTO->setMaterial($material);

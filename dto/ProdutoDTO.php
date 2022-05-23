@@ -3,6 +3,7 @@
 class ProdutoDTO {
     private $id;
     private $nome;
+    private $desc;
     private $cores;
     private $material;
     private $tamanho;
@@ -24,6 +25,12 @@ class ProdutoDTO {
     }
     public function setNome( $nome ) {
         $this->nome = $nome;
+    }
+    public function getDesc() {
+        return $this->desc;
+    }
+    public function setDesc( $desc ) {
+        $this->desc = $desc;
     }
     public function getPreco() {
         return $this->preco;

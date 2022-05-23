@@ -83,6 +83,12 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="inputbox">
+                        <input type="textarea" name="desc" class="desc" id="desc" value="<?php echo $produto["desc"] ?>">
+                        <label for="desc">Descrição do produto</label>
+                    </div>
+                </div>
+                <div class="row">
                     <input type="submit" value="Alterar produto" id="cadastrar">
                 </div>
             </form>

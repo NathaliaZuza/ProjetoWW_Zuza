@@ -12,19 +12,20 @@ class ProdutoDAO {
     public function salvar( ProdutoDTO $produtoDTO ) {
         try {
             $sql = "INSERT INTO produto "
-                . "(nome, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) "
-                . "VALUES(?,?,?,?,?,?,?,?,?)";
+                . "(nome, desc, preco, cores, material, tamanho, prazo, qtd, foto, categoria_id) "
+                . "VALUES(?,?,?,?,?,?,?,?,?,?)";
 
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $produtoDTO->getNome() );
-            $stmt->bindValue( 2, $produtoDTO->getPreco() );
-            $stmt->bindValue( 3, $produtoDTO->getCores() );
-            $stmt->bindValue( 4, $produtoDTO->getMaterial() );
-            $stmt->bindValue( 5, $produtoDTO->getTamanho() );
-            $stmt->bindValue( 6, $produtoDTO->getPrazo() );
-            $stmt->bindValue( 7, $produtoDTO->getQtd() );
-            $stmt->bindValue( 8, $produtoDTO->getFoto() );
-            $stmt->bindValue( 9, $produtoDTO->getCategoriaId() );
+            $stmt->bindValue( 2, $produtoDTO->getDesc() );
+            $stmt->bindValue( 3, $produtoDTO->getPreco() );
+            $stmt->bindValue( 4, $produtoDTO->getCores() );
+            $stmt->bindValue( 5, $produtoDTO->getMaterial() );
+            $stmt->bindValue( 6, $produtoDTO->getTamanho() );
+            $stmt->bindValue( 7, $produtoDTO->getPrazo() );
+            $stmt->bindValue( 8, $produtoDTO->getQtd() );
+            $stmt->bindValue( 9, $produtoDTO->getFoto() );
+            $stmt->bindValue( 10, $produtoDTO->getCategoriaId() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo $e->getMessage();
@@ -81,18 +82,19 @@ class ProdutoDAO {
     public function update( ProdutoDTO $produtoDTO ) {
         try {
             $sql = "UPDATE produto SET "
-                . "nome=?, preco=?, cores=?, material=?, tamanho=?, prazo=?, qtd=?, foto=? "
+                . "nome=?, desc=?, preco=?, cores=?, material=?, tamanho=?, prazo=?, qtd=?, foto=? "
                 . "WHERE id=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $produtoDTO->getNome() );
-            $stmt->bindValue( 2, $produtoDTO->getPreco() );
-            $stmt->bindValue( 3, $produtoDTO->getCores() );
-            $stmt->bindValue( 4, $produtoDTO->getMaterial() );
-            $stmt->bindValue( 5, $produtoDTO->getTamanho() );
-            $stmt->bindValue( 6, $produtoDTO->getPrazo() );
-            $stmt->bindValue( 7, $produtoDTO->getQtd() );
-            $stmt->bindValue( 8, $produtoDTO->getFoto() );
-            $stmt->bindValue( 9, $produtoDTO->getId() );
+            $stmt->bindValue( 2, $produtoDTO->getDesc() );
+            $stmt->bindValue( 3, $produtoDTO->getPreco() );
+            $stmt->bindValue( 4, $produtoDTO->getCores() );
+            $stmt->bindValue( 5, $produtoDTO->getMaterial() );
+            $stmt->bindValue( 6, $produtoDTO->getTamanho() );
+            $stmt->bindValue( 7, $produtoDTO->getPrazo() );
+            $stmt->bindValue( 8, $produtoDTO->getQtd() );
+            $stmt->bindValue( 9, $produtoDTO->getFoto() );
+            $stmt->bindValue( 10, $produtoDTO->getId() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {
