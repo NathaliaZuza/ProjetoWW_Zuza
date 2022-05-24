@@ -19,64 +19,41 @@
 }
 
 /*----------CARRINHO----------*/
-body{
-    background-color: rgb(238, 238, 238);
-}
+
 h2{
     font-family: kinetika;
     padding: 20px;
 }
 
-div.endereco{
-    background-color: #fff;
-    height: 45vh;
-    width: 50vw;
-    border-radius: 7px;
-    padding: 30px;
-    margin: 20px;
-}
-div.linha{
-    width: 50vw;
-    height: 1px;
-    background-color: #e44800;
-}
-div.container {
-    height: 100%;
-    border: 1px solid rgb(0, 0, 0);  
-    width: 80%;
-}
-div.div-img {
-    width: 20%;
-    display: inline-block;
-    border: 1px solid red;  
-    text-align: center;
-    padding: 5vw 0vw 5vw 0vw;
-    min-width:20vw;
 
+.container {
+    display: grid;
+    grid-template-areas: 'endereco endereco endereco resumo'
+                         'endereco endereco endereco resumo'   
+                         'item1 item2 item2 resumo'
+                         'item1 item2 item2 resumo'
+                         ;
+    border: 1px solid #f31c00;
+    max-width: 80%;
+    margin: 0 auto;
+    margin: 20px auto;
+    grid-gap: 10px ;
 }
-div.div-img img {
-    width: 85%;
-    text-align: center;
-    height: 100%;
+.endereco{
+    grid-area: endereco;
+    background-color: #e4ab00;
 }
-div.div-info {
-    width: 25%;
-    border: 1px solid green;  
-    display: inline-block;
-    text-align: left;
-    padding: 5vw 0vw 5vw 0vw;
-    min-width:25vw;
-    height: 50vh;
-    align-content: center;
+.resumo{
+    grid-area: resumo;
+    background-color: #00e400;
 }
-div.resumo {
-    width: 20%;
-    display: inline-block;
-    border: 1px solid rgb(0, 247, 255);  
-    text-align: center;
-    padding: 5vw 0vw 5vw 0vw;
-    min-width:20vw;
-    background-color: aqua;
+.item1{
+    grid-area: item1;
+    background-color: #00e4d9;
+}
+.item2{
+    grid-area: item2;
+    background-color: #000000;
 }
 .remover_carrinho{
     background-color: #f35900;
@@ -86,7 +63,7 @@ div.resumo {
     align-self: center;
     border-radius: 5px;
     margin-top: 10px;
-    width: 15%;
+    width: 40%;
     text-align: center;
 }
 .remover_carrinho a{
