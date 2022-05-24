@@ -26,7 +26,7 @@
     ?>
 
     <main class="container">
-        <div class="conteudo">
+        <div class="conteudo-cadastro">
             <h1>Cadastrando produto</h1>
 
             <form action="../controller/cadastrarProdutoController.php" method="post" enctype="multipart/form-data">
