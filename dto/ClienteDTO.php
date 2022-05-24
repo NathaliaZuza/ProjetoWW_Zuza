@@ -4,7 +4,13 @@ class ClienteDTO {
     private $id;
     private $nome;
     private $cpf;   
-    private $telefone; 
+    private $telefone;
+    private $cep;
+    private $endereco;
+    private $num_casa;
+    private $complemento;
+    private $cidade;
+    private $uf;
     private $usuario_id;
 
     public function getId() {
@@ -52,4 +58,76 @@ class ClienteDTO {
         $this->telefone = $telefone;
         return $this;
 }
+
+    public function getCep()
+    {
+        return $this->cep;
+    }
+
+    public function setCep($cep)
+    {
+        $this->cep = $cep;
+
+        return $this;
+    }
+
+    public function getEndereco()
+    {
+        return $this->endereco;
+    }
+
+    public function setEndereco($endereco)
+    {
+        $this->endereco = $endereco;
+
+        return $this;
+    }
+ 
+    public function getNum_casa()
+    {
+        return $this->num_casa;
+    }
+
+    public function setNum_casa($num_casa)
+    {
+        $this->num_casa = $num_casa;
+
+        return $this;
+    }
+
+    public function getComplemento()
+    {
+        return $this->complemento;
+    }
+
+    public function setComplemento($complemento)
+    {
+        $this->complemento = $complemento;
+
+        return $this;
+    }
+
+    public function getCidade()
+    {
+        return $this->cidade;
+    }
+
+    public function setCidade($cidade)
+    {
+        $this->cidade = $cidade;
+
+        return $this;
+    }
+
+    public function getUf()
+    {
+        return $this->uf;
+    }
+
+    public function setUf($uf)
+    {
+        $this->uf = $uf;
+
+        return $this;
+    }
 }
