@@ -17,7 +17,6 @@
 <body>
 
     <?php include './view/headerMenu.php' ?>
-
     <!------------CARROSSEL DE IMAGENS----------->
 
     <div class="slide">
@@ -79,7 +78,7 @@
                      </div>";
 
             echo   "<div class='preco'>
-                        <p>A partir de: </p>R$ {$produto["preco"]}<span id='undIndex'>/{$produto["qtd"]}</span>
+                        <p>A partir de: </p>R$ ", number_format(($produto["preco"]), 2, ",", "." ),"<span id='undIndex'>/{$produto["qtd"]}</span>
                      </div>";
 
             echo    "<div class='btn-info'>
