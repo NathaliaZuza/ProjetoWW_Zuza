@@ -19,18 +19,12 @@ class ClienteDAO {
             $stmt->execute();
             $usuario_id = $this->pdo->lastInsertId();
             $sql = 'INSERT INTO ' 
-                   . 'cliente(nome,cpf,telefone,cep,endereco,num_casa,complemento,cidade,uf,usuario_id) '
-                   . 'VALUES(:nome,:cpf,:telefone,:cep,:endereco,:num_casa,:complemento,:cidade,:uf,:usuario_id)';
+                   . 'cliente(nome,cpf,telefone,usuario_id) '
+                   . 'VALUES(:nome,:cpf,:telefone,:usuario_id)';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":nome", $clienteDTO->getNome() );
             $stmt->bindValue( ":cpf", $clienteDTO->getCpf() ); 
-            $stmt->bindValue( ":telefone", $clienteDTO->getTelefone() );
-            $stmt->bindValue( ":cep", $clienteDTO->getCep() );
-            $stmt->bindValue( ":endereco", $clienteDTO->getEndereco() );
-            $stmt->bindValue( ":num_casa", $clienteDTO->getNum_casa() );
-            $stmt->bindValue( ":complemento", $clienteDTO->getComplemento() );
-            $stmt->bindValue( ":cidade", $clienteDTO->getCidade() );
-            $stmt->bindValue( ":uf", $clienteDTO->getUf() ); 
+            $stmt->bindValue( ":telefone", $clienteDTO->getTelefone() ); 
             $stmt->bindValue( ":usuario_id", $usuario_id );
             return $stmt->execute();
 

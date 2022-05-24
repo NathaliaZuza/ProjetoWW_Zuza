@@ -117,36 +117,6 @@
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="cep" id="cep" class="inputUser" required>
-                        <label for="cep" class="labelInput">Cep</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                        <label for="endereco" class="labelInput">Endereço</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="num_casa" id="num_casa" class="inputUser" required>
-                        <label for="num_casa" class="labelInput">N° da casa</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="complemento" id="complemento" class="inputUser" required>
-                        <label for="complemento" class="labelInput">Complemento</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                        <label for="cidade" class="labelInput">Cidade</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
-                        <input type="text" name="uf" id="uf" class="inputUser" required>
-                        <label for="uf" class="labelInput">UF</label> <br>
-                    </div>
-                    <br><br>
-                    <div class="inputBox">
                     <input type="text" name="email" id=email class="inputUser" required>
                         <label for="email" class="labelInput">E-mail</label>
                     </div>
@@ -154,8 +124,8 @@
                     <div class="inputBox">
                         <input type="password" name="senha" id="senha" class="inputUser" required>
                         <label for="senha" class="labelInput">Senha</label><br>
-                    </div>
                     <br><br>
+                    </div>
                     <div class="inputBox">
                         <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
                         <label for="senha" class="labelInput">Confirmar Senha</label>
@@ -205,7 +175,6 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
         $(document).ready(function() {
             $('#cpf').mask('000.000.000-00');
             $('#telefone').mask('(00) 00000-0000');
-            $('#cep').mask('00000-000');
         });
     </script>
     <script>
