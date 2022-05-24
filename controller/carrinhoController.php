@@ -27,7 +27,6 @@ if ( $acao == "del1") {
 // echo print_r('($_SESSION["carrinho"][$qtde])') ;
 // die();
 
-
 if ( $acao == "del" ) {
     if ( isset($_SESSION['carrinho'][$idProduto])){
         unset($_SESSION['carrinho'][$idProduto]);

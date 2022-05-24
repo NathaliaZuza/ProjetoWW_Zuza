@@ -15,26 +15,79 @@
 *{
     margin: 0;
     padding: 0;   
+    font-family: kinetika;
 }
 
 /*----------CARRINHO----------*/
-
-.carrinho-container{  
+body{
+    background-color: rgb(238, 238, 238);
+}
+h2{
     font-family: kinetika;
-    display: flex;
-    width: 50%;
-    padding: 10px;    
-    margin-top: 0;
+    padding: 20px;
+}
+
+div.endereco{
+    background-color: #fff;
+    height: 45vh;
+    width: 50vw;
+    border-radius: 7px;
+    padding: 30px;
+    margin: 20px;
+}
+div.linha{
+    width: 50vw;
+    height: 1px;
+    background-color: #e44800;
+}
+div.container {
+    height: 100%;
+    border: 1px solid rgb(0, 0, 0);  
+    width: 80%;
+}
+div.div-img {
+    width: 20%;
+    display: inline-block;
+    border: 1px solid red;  
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+    min-width:20vw;
+
+}
+div.div-img img {
+    width: 85%;
+    text-align: center;
+    height: 100%;
+}
+div.div-info {
+    width: 25%;
+    border: 1px solid green;  
+    display: inline-block;
+    text-align: left;
+    padding: 5vw 0vw 5vw 0vw;
+    min-width:25vw;
+    height: 50vh;
+    align-content: center;
+}
+div.resumo {
+    width: 20%;
+    display: inline-block;
+    border: 1px solid rgb(0, 247, 255);  
+    text-align: center;
+    padding: 5vw 0vw 5vw 0vw;
+    min-width:20vw;
+    background-color: aqua;
 }
 .remover_carrinho{
     background-color: #f35900;
     color: #fff;
     padding: 15px;
-    margin: auto;
     align-items: center;
     align-self: center;
     border-radius: 5px;
     margin-top: 10px;
+    width: 15%;
+    text-align: center;
 }
 .remover_carrinho a{
     text-decoration: none;
@@ -43,16 +96,6 @@
 .remover_carrinho:hover{
     background-color: #f31c00;
     cursor: pointer;
-}
-.nomeCarrinho{
-    width: 95.5%;
-    padding: 15px;
-    border-bottom: 2px solid #0F0059;
-    text-transform: uppercase;
-    font-size: 18px;
-    display: flex;
-    background-color: #0f005911;
-    color: #0F0059;
 }
 .qtd{
    background-color: #e4ab00;
@@ -65,6 +108,7 @@
    align-items: center;
    align-self: center;
    margin-left: 10%;
+   display: inline-block;
 }
 .menos1_carrinho{
     background-color: #e44800;
@@ -76,35 +120,9 @@
     align-items: center;
     align-self: center;
     margin-left: 10%;
+    display: inline-block;
  }
 .menos1_carrinho a{
     color: #fff;
     text-decoration: none;
  }
-.precoCarrinho{
-   font-family: kinetika-light;
-   font-weight: bolder;
-   padding: 15px;
-   color: #0F0059;
-}
-.total{
-   font-size: 18px;
-   padding: 15px;
-}
-.imgCarrinho img{
-    width: 50vw;
-    padding: 20px;
-}
-.img_produto_carrinho {
-    width: 50%;
-}
-.img_produto_carrinho img{
-    width: 30%;
-    padding: 20px;
-}
-#carrinhotitle{
-    padding: 30px;
-    text-align: right;
-    margin-right: 320px;
-    font-size: 24px;
-}
