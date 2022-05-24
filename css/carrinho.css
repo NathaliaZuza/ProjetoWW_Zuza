@@ -19,20 +19,12 @@
 
 /*----------CARRINHO----------*/
 
-#carrinho{
-    display: flex; 
-    flex-direction: column;
-    width: 50%;
-    border-radius: 20px;  
-    background-color: #e4ab002c;
-}
 .carrinho-container{  
     font-family: kinetika;
     display: flex;
-    width: 100%;
+    width: 50%;
     padding: 10px;    
     margin-top: 0;
-
 }
 .remover_carrinho{
     background-color: #f35900;
@@ -109,10 +101,6 @@
 .img_produto_carrinho img{
     width: 30%;
     padding: 20px;
-}
-
-.container{
-    display: flex;
 }
 #carrinhotitle{
     padding: 30px;
