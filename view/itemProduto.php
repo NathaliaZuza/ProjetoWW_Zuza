@@ -118,10 +118,9 @@
                         {$produto["descricao"]}
                     </div>";
 
-        echo        "<div class='preco'>
-                        <p>A partir de: </p>R$ ", number_format(($produto["preco"]), 2, ",", "." ), "<span id='undIndex'>/{$produto["qtd"]}</span>
+        echo "      <div class='preco'> 
+                        R$ {$produto["preco"]}
                     </div>";
-                    
         echo "      <div class='info'>
                         <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
                     </div>";

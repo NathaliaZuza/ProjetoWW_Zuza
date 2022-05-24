@@ -38,12 +38,6 @@ body{
     padding: 15px;
     width: 65%;
 }
-.conteudo-cadastro{
-    position: absolute;
-    padding: 15px;
-    width: 65%;
-    border-radius: 7px;
-}
 .sidebar.active ~ .container{
     width: calc(100% - 300px);
     left: 240px;
@@ -98,7 +92,7 @@ input{
 h1{
     text-align: center;
     font-size: 27px;
-    color: #e6ac00;
+    color: #0F0059;
     margin-top: 20px;
     margin-bottom: 30px;
 }
@@ -107,15 +101,16 @@ h1{
     width: 100%;
     height: 50px;
     font-size: 18px;
-    background-color: #e6ac00;
-    color: #0F0059;
+    background-color: #0F0059;
+    color: white;
     border: none;
     border-radius: 5px;
     font-family:'kinetika';
     cursor: pointer;
 }
 #cadastrar:hover{
-    border: 2px solid #130072
+    background-color: #090038;
+    border: 2px solid #1a0099
 }
 .categoria {
     width: 100%;
