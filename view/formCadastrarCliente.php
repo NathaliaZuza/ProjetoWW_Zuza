@@ -7,13 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jquery-3.6.0.min.js"></script>
     <script src="../js/jquery.mask.min.js"></script>
+    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../css/cadastro.css">
     <link rel="stylesheet" href="../css/headerMenu.css">
-    <link rel="stylesheet" href="../css/cadastroProduto.css">
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
     <title>Cadastro | WWZ</title>
 </head>
 
@@ -92,88 +91,54 @@
     </div>
 
 <!----------CADASTRO---------->
-<main class="container">
-    <div class="conteudo">
-        <h1>Cadastro</h1>
-            <!-- <div class="img-login1">
-                <img src="../img/cadastro-02.png">
-            </div> -->
+<div class="containerpai">
+    <h1>Cadastro</h1>
+        <div class="img-login1">
+            <img src="../img/cadastro-02.png">
+        </div>
     
 
-        <!-- <div class="container">
-            <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div> -->
-            <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
-            <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="nome" id="nome">
-                        <label for="nome">Nome completo</label>
+    <div class="formContainer">
+        <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
+        <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
+                    <div class="inputBox">
+                        <input type="text" name="nome" id="nome" class="inputUser" required>
+                        <label for="nome" class="labelInput">Nome Completo</label>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="cpf" id="cpf">
-                        <label for="cpf">Cpf</label>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
+                        <label for="cpf" class="labelInput">Cpf</label> <br>
                     </div>
-                    <div class="inputbox">
-                        <input type="text" name="telefone" id="telefone">
-                        <label for="telefone">Telefone</label>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
+                        <label for="telefone" class="labelInput">Telefone</label> <br>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="cep" id="cep">
-                        <label for="cep">Cep</label>
+                    <br><br>
+                    <div class="inputBox">
+                    <input type="text" name="email" id=email class="inputUser" required>
+                        <label for="email" class="labelInput">E-mail</label>
                     </div>
-                    <div class="inputbox">
-                        <input type="text" name="endereco" id="endereco">
-                        <label for="endereco">endereço</label>
+                    <br><br>
+                    <div class="inputBox">
+                        <input type="password" name="senha" id="senha" class="inputUser" required>
+                        <label for="senha" class="labelInput">Senha</label><br>
+                    <br><br>
                     </div>
-                    <div class="inputbox">
-                        <input type="text" name="num_casa" id="num_casa">
-                        <label for="num_casa">N° casa</label>
+                    <div class="inputBox">
+                        <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
+                        <label for="senha" class="labelInput">Confirmar Senha</label>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="complemento" id="complemento">
-                        <label for="complemento">Complemento</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="cidade" id="cidade">
-                        <label for="cidade">cidade</label>
-                    </div>
-                    <div class="inputbox">
-                        <input type="text" name="uf" id="uf">
-                        <label for="uf">uf</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="email" id="email">
-                        <label for="email">email</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="password" name="senha" id="senha">
-                        <label for="senha">Senha</label>
-                    </div>
-                    <div class="inputbox">
-                        <input type="password" name="senhaC" id="senhaC">
-                        <label for="senhaC">Confirmar senha</label>
-                    </div>
-                </div>
-                        <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
-                            </td>
-                </form>
-        </div>
+                    <br><br>
+                    <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                        </td>
+            </form>
     </div>
-</main>
+</div>
  <!---------FOOTER------------->
 
- <!-- <footer>
+ <footer>
         <div class="social">
             <p><span class="logo">WW.ZUZA</span></p>
             <div class="socialcirc">
@@ -183,7 +148,7 @@
                 <a href="#" class="fab fa-whatsapp"></a>
                 <p>Copyright © 2022 Todos os <br> direitos reservados</p>
             </div>
-        </div> -->
+        </div>
       <!--   <div class="pagamento">
             <p>Formas de pagamento:</p>
             <p>
@@ -191,10 +156,10 @@
                 <img src="./img/pagamento-08.png" width="70px">
             </p>
         </div> -->
-        <!-- <div class="criacao">
+        <div class="criacao">
             <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
         </div>
-    </footer> -->
+    </footer>
 
 
 <!---------------------------->
@@ -210,7 +175,6 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
         $(document).ready(function() {
             $('#cpf').mask('000.000.000-00');
             $('#telefone').mask('(00) 00000-0000');
-            $('#cep').mask('00000-000');
         });
     </script>
     <script>
