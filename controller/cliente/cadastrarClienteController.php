@@ -1,6 +1,6 @@
 <?php
 require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ClienteDAO.php';
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ClienteDTO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/ClienteDTO.php';
 
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];

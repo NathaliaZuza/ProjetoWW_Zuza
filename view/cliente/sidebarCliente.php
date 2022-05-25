@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
     <title>Minha Conta | WWZUZA</title>
 </head>
 <body>
@@ -82,13 +82,13 @@
             return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
         } 
         function home(){
-            iframe.src="sidebarCliente.php"
+            iframe.src="/view/cliente/sidebarCliente.php"
         }
         function AtualizarCadastro(){
-            iframe.src="cadastrarEndereco.php"
+            iframe.src="/view/cliente/cadastrarEndereco.php"
         }
         function geral(){
-            iframe.src="minhaConta.php"
+            iframe.src="/view/pagsCentral/minhaConta.php"
         }
         function log_out(){
             return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");

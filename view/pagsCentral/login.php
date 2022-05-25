@@ -103,8 +103,7 @@
          
         <div class="login">
            <div id="img-login"> <img  src="/img/login-03-01.png" width="90px" alt=""></div>
-           
-           <form action="../controller/loginController.php" method="post">
+           <form action="/controller/cliente/loginController.php" method="post">
             <input type="text" name="email" placeholder="Email" class="nomeL">
             <br><br>
             <input type="password" name="senha" placeholder="Senha" class="senhaL">

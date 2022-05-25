@@ -16,9 +16,10 @@ $idCliente = $_GET['id'];
 $clienteDAO = new ClienteDAO();
 $cliente = $clienteDAO->findById( $idCliente );
 ?>
+
     <div class="formContainer">
     <div id="img-login"> <img  src="/img/cadastro-05.png" alt=""></div>
-    <form id="formCadastroCliente" action="../controller/alterarClienteController.php" method="post">
+    <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
     <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
                     <div class="inputbox">
                         <input type="text" name="nome" id="nome" value="<?php echo $cliente["nome"] ?>">

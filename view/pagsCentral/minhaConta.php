@@ -10,8 +10,8 @@
     <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <link rel="stylesheet" href="../css/menuConta.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
+    <link rel="stylesheet" href="/css/menuConta.css">
     <!-- <link rel="stylesheet" href="../css/headerMenu.css"> -->
     <title>Minha conta | WWZ</title>
 </head>

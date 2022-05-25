@@ -1,6 +1,6 @@
 <?php
-require_once '../dto/ClienteDTO.php';
-require_once '../dao/ClienteDAO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ClienteDAO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/ClienteDTO.php';
 
 $idCliente = $_POST["idCliente"];
 $nome = $_POST["nome"];

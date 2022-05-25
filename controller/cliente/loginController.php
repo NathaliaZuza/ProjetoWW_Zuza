@@ -1,5 +1,6 @@
 <?php
-require_once "../dao/LoginDAO.php";
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/loginDAO.php';
+
 session_start();
 
 $email = $_POST["email"];
@@ -12,9 +13,9 @@ if ( !empty( $login ) ) {
     $_SESSION["idCliente"] = $login['idCliente'];
 
     if ( $login['perfil'] == 'Administrador' ) {
-        header( "Location: ../view/sidebar.php" );
+        header( "Location: /view/pagsCentral/sidebar.php" );
     } else if ( $login['perfil'] == 'Cliente' ) {
-        header( "Location: ../view/sidebarCliente.php" );
+        header( "Location: /view/cliente/sidebarCliente.php" );
     }
 
 } else {
