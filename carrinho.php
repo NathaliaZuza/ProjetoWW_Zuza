@@ -40,6 +40,7 @@
             <div class="editar">NOVO ENDEREÇO</div> 
         </div>
     </div>
+
 <?php
     require_once './dao/ProdutoDAO.php';
     $produtoDAO = new ProdutoDAO();
@@ -65,7 +66,7 @@
                     </div>";
                     
         echo "  <div class='menos1_carrinho'>
-                    <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del1'>
+                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del1'>
                         - 
                     </a>
                 </div>";
@@ -75,7 +76,7 @@
                 </div>";
 
         echo    "<div class='menos1_carrinho'>
-                    <a href='./controller/carrinhoController.php?id={$produto["id"]}&acao=add'>
+                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'>
                         +
                     </a>
                  </div>";
@@ -111,7 +112,7 @@
         "       </div>";
 
         echo "  <div class='remover_carrinho'>
-                    <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>
+                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del'>
                         REMOVER ITEM <i class='bx bx-trash'></i>
                     </a>";           
         echo    "</div>";

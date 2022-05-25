@@ -12,7 +12,7 @@ if ( $acao == "add" ) {
     } else{
         $_SESSION['carrinho'][$idProduto] += 1;
     }
-    header ("Location: ../carrinho.php");
+    header ("Location: /carrinho.php");
 }
 if ( $acao == "del1") {
     if ( !isset($_SESSION['carrinho'][$idProduto])){
@@ -22,7 +22,7 @@ if ( $acao == "del1") {
     }else{
         $_SESSION['carrinho'][$idProduto] -= 1;
     }
-    header ("Location: ../carrinho.php");
+    header ("Location: /carrinho.php");
 }  
 // echo print_r('($_SESSION["carrinho"][$qtde])') ;
 // die();
@@ -33,7 +33,7 @@ if ( $acao == "del" ) {
     } else{
         $_SESSION['carrinho'][$idProduto] += 1;
     }
-    header ("Location: ../carrinho.php");
+    header ("Location: /carrinho.php");
 }
 
 

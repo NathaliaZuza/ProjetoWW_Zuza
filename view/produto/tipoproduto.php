@@ -132,7 +132,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                                 <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                                 </div>";
                 echo    "<div class='btn-comprar'>
-                            <a href='./controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'><p><i class='bx bxs-cart'></i><span id='comprar'>COMPRAR</span></p></a>
+                            <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'><p><i class='bx bxs-cart'></i><span id='comprar'>COMPRAR</span></p></a>
                         </div>";
                 echo "</div>";
                 echo "</div>";
@@ -141,7 +141,6 @@ $pathImagem = $arrayImagem[$categoria_id];
             echo "Não existe produtos cadastrados";
         }
         ?>
- 
    
         </div> 
     </div>

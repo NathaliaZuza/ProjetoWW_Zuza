@@ -72,7 +72,7 @@
         </td>
     <?php
         echo "<td >{$produto["descricao"]}</td>";
-        echo "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash'></a></i></td>";
+        echo "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='/controller/produto/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash'></a></i></td>";
         echo "<td align='center' class='icone'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='bx bx-edit'></a></i></td>";
         echo "</tr>";
         echo "</main>";

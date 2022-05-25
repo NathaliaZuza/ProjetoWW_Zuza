@@ -139,7 +139,7 @@
                     </div>";
 
         echo        "<div class='btn-info'>
-                        <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=add'><p> <i class='bx bxs-cart'></i>ADICIONAR AO CARRINHO</p></a>
+                        <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'><p> <i class='bx bxs-cart'></i>ADICIONAR AO CARRINHO</p></a>
                     </div>";               
         echo    "</div>";
         echo "</div>";
@@ -148,7 +148,6 @@
            echo "Não existe produtos cadastrados";
        }
        ?>
-
 
 
     </div>
