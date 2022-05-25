@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Clientes | WWZUZA</title>
-    <link rel="stylesheet" href="../css/cadastroProduto.css">
+    <link rel="stylesheet" href="/css/cadastroProduto.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="styleSheet" href="../css/listaProdutos.css">
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <link rel="stylesheet" href="../css/cadastroProduto.css"> 
+    <link rel="styleSheet" href="/css/listaProdutos.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
+    <link rel="stylesheet" href="/css/cadastroProduto.css"> 
 
  
     <script src="../lib/fontawesome-free-6.1.1-web/js/all.min.js"></script>
@@ -20,7 +20,7 @@
 <body>  
 
     <?php
-    require_once '../dao/ClienteDAO.php';
+    require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ClienteDAO.php';
 
     $clienteDAO = new ClienteDAO();
     $clientes = $clienteDAO->findAll();

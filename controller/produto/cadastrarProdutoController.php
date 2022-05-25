@@ -1,9 +1,9 @@
 <?php
-require_once '../dto/ProdutoDTO.php';
-require_once '../dao/ProdutoDAO.php';
-require_once '../dao/CategoriaDAO.php';
-require_once '../dto/CategoriaDTO.php';
-require_once '../util/Upload.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/ProdutoDTO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/CategoriaDTO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
+require_once '/Documentos/GitHub/ProjetoWW_Zuza/util/Upload.php';
 
 define( 'DIR_FOTO', $_SERVER['DOCUMENT_ROOT'] . "/img/produto/foto/" );
 
@@ -36,9 +36,9 @@ $produtoDAO = new ProdutoDAO();
 if ( $produtoDAO->salvar( $produtoDTO ) ) {
     $msg = true;
     $upload->salvar( $foto, DIR_FOTO );
-    header( "Location: ../view/formCadastrarProduto.php?sucesso=$msg" );
+    header( "Location: /view/produto/formCadastrarProduto.php?sucesso=$msg" );
 } else {
     $msg2 = false;
-    header( "Location: ../view/formCadastrarProduto.php?sucesso=$msg2" );
+    header( "Location: /view/produto/formCadastrarProduto.php?sucesso=$msg2" );
 }
 ?>

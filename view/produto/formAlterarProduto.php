@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alterar produto | WWZUZA</title>
-    <link rel="stylesheet" href="../css/cadastroProduto.css">
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
+    <link rel="stylesheet" href="/css/cadastroProduto.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -15,8 +15,8 @@
 <body>
 
     <?php
-   
-    require_once '../dao/ProdutoDAO.php';
+        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
     $idProduto = $_GET["id"];
     $produtoDAO = new ProdutoDAO();
     $produto = $produtoDAO->findById($idProduto);
@@ -26,7 +26,7 @@
         <div class="conteudo">
             <h1>Alterando produto</h1>
 
-            <form action="../controller/alterarProdutoController.php" method="post" enctype="multipart/form-data">
+            <form action="/controller/produto/alterarProdutoController.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="idProduto" value="<?php echo $produto["id"] ?>">
                 <div class="row">
                     <div class="categoriadiv">
@@ -75,10 +75,9 @@
                         <label for="qtd">Quantidade</label>
                     </div>
                     <div class="inputbox">
-                        <img src="../img/produto/foto/<?php echo $produto["foto"] ?>" width="112" />
+                        <img src="/img/produto/foto/<?php echo $produto["foto"] ?>" width="112" />
                         <input type="hidden" name="fotoOriginal" value="<?php echo $produto["foto"] ?>">
                         <input type="file" name="foto" id="foto">
-
                         <label for="foto">Imagem</label>
                     </div>
                 </div>

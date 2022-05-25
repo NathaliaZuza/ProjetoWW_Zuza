@@ -29,7 +29,7 @@
         <div class="conteudo">
             <h1>Cadastrando produto</h1>
 
-            <form action="../controller/cadastrarProdutoController.php" method="post" enctype="multipart/form-data">
+            <form action="/controller/produto/cadastrarProdutoController.php" method="post" enctype="multipart/form-data">
                 <div class="row">
                     <div class="categoriadiv">
                         <label for="nome">Categoria do produto</label>

@@ -74,9 +74,7 @@
                        <div class="job">Serviços gráficos</div>
                    </div>
                 </div>
-               <a href="../index.php"><i class='bx bx-log-out' id="log_out" onclick="log_out()"></i></a>
-                
-                
+               <a href="/index.php"><i class='bx bx-log-out' id="log_out" onclick="log_out()"></i></a>
             </div>
         </div>
     </div>
@@ -111,7 +109,6 @@
             iframe.src="/view/pagsCentral/painelAdministrativo.php"
         }
         function log_out(){
-            
             return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");
         }
     </script>

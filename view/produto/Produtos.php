@@ -38,13 +38,13 @@
    foreach ($produtos as $produto){        
         echo "<tr>";
         echo "<td class='nome-lista'>{$produto["nome"]}</td>";
-        echo "<td >{$produto["preco"]}</td>";
+        echo "<td >",number_format(($produto['preco']), 2, ',', '.' ),"</td>";
         echo "<td>{$produto["cores"]}</td>";
         echo "<td>{$produto["material"]}</td>";
         echo "<td>{$produto["tamanho"]}</td>";
         echo "<td>{$produto["qtd"]}</td>";
         echo "<td>{$produto["prazo"]}</td>";
-        echo "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash'></a></i></td>";
+        echo "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='/controller/produto/excluirProdutoController.php?excluirId={$produto["id"]}'><i class='bx bxs-trash'></a></i></td>";
         echo "  <td align='center' class='icone'><a href='formAlterarProduto.php?id={$produto["id"]}'><i class='bx bx-edit'></a></i></td>";
         echo "</tr>";
         echo "</main>";
@@ -77,8 +77,6 @@
         echo "</tr>";
         echo "</main>";
         echo "</div>";
-
-
    }
 
 
