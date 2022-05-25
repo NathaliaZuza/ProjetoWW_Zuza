@@ -123,7 +123,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                 echo "      <div class='img_produto'>";
                 echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
                 echo "      </div>";
-                echo "      <div class='preco'> R$ {$produto["preco"]} </div>
+                echo "      <div class='preco'> R$ ", number_format(($produto["preco"]), 2, ",", "." ), "</div>
                             <div class='info'>                           
                                 <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
                                 <p>Material: <span class='descricao'>{$produto['material']}</span></p>
