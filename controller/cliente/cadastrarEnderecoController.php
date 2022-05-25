@@ -22,7 +22,7 @@ $enderecoDTO->setCliente_id( $cliente_id );
 $clienteDAO = new ClienteDAO();
 
 if ( empty( $cliente ) ) {
-    if ( $clienteDAO->salvar( $clienteDTO, $email, $senha ) ) {
+    if ( $clienteDAO->salvar( $clienteDTO ) ) {
         header( "Location: ../view/formCadastrarCliente.php?msg={$error[1]}" );
     }
 } else {
