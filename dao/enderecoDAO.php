@@ -27,4 +27,17 @@ class ClienteDAO {
             echo $e->getMessage();
         }
     }
+
+    public function findById( $id ) {
+        try {
+            $sql = 'SELECT * FROM endereco_cliente WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $id );
+            $stmt->execute();
+            $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $cliente;
+        } catch ( PDOException $e ) {
+            echo 'Erro ao listar um cliente: ', $e->getMessage();
+        }
+    }
 }
