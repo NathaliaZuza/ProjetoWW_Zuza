@@ -111,6 +111,7 @@
             iframe.src="painelAdministrativo.php"
         }
         function log_out(){
+            
             return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");
         }
     </script>
