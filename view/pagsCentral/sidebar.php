@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sidebar.css">
+    <link rel="stylesheet" href="/css/sidebar.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
     <title>Administrativo | WWZUZA</title>
 </head>
 <body>
@@ -96,19 +96,19 @@
             return confirm("Você está apagando um produto do catálogo. Tem certeza que deseja excluir?");
         } 
         function home(){
-            iframe.src="sidebar.php"
+            iframe.src="/view/pagsCentral/sidebar.php"
         }
         function produtosCadastro(){
-            iframe.src="formCadastrarProduto.php"
+            iframe.src="/view/produto/formCadastrarProduto.php"
         }
         function produtosLista(){
-            iframe.src="Produtos.php"
+            iframe.src="/view/produto/Produtos.php"
         }
         function ListarClientes(){
-            iframe.src="listarTodoscLientes.php"
+            iframe.src="/view/cliente/listarTodosClientes.php"
         }
         function geral(){
-            iframe.src="painelAdministrativo.php"
+            iframe.src="/view/pagsCentral/painelAdministrativo.php"
         }
         function log_out(){
             

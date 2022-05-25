@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar produto | WWZUZA</title>
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <link rel="stylesheet" href="../css/cadastroProduto.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
+    <link rel="stylesheet" href="/css/cadastroProduto.css">
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
 
 </head>
@@ -15,9 +15,9 @@
 <body>
 
     <?php
-        require_once '../dao/ProdutoDAO.php';
+        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
-        require_once '../dao/CategoriaDAO.php';
+        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
         $categoriaDAO = new CategoriaDAO();
         $categorias   = $categoriaDAO->findAll();
         // var_dump($categorias);
