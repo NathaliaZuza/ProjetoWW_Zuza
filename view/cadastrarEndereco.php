@@ -17,6 +17,12 @@
 </head>
 
 <body>
+<?php
+require_once '../dao/ClienteDAO.php';
+$idCliente = $_GET['id'];
+$clienteDAO = new ClienteDAO();
+$cliente = $clienteDAO->findById( $idCliente );
+?>
 <!----------CADASTRO---------->
 <div class="containerpai">
     <h1>Cadastro</h1>
@@ -52,10 +58,33 @@
                         <label for="uf" class="labelInput">UF</label>
                     </div>
                     <br><br>
+                    <input type="hidden" name="cliente_id" value="<?= $cliente["id"] ?>">
                     <button type="submit" class="botão">Enviar</button>
             </form>
     </div>
 </div>
+<form id="formCadastroCliente" action="../controller/alterarClienteController.php" method="post">
+    <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
+                    <div class="inputbox">
+                        <input type="text" name="nome" id="nome" value="<?php echo $cliente["nome"] ?>">
+                        <label for="nome">Nome Completo</label>
+                    </div>
+                <br><br>
+                <div class="inputbox">
+                        <input type="text" name="cpf" id="cpf" value="<?php echo $cliente["cpf"] ?>">
+                        <label for="cpf">Cpf</label>
+                    </div>
+                <br><br>
+                <div class="inputbox">
+                        <input type="text" name="telefone" id="telefone" value="<?php echo $cliente["telefone"] ?>">
+                        <label for="telefone">Telefone</label>
+                    </div>
+                <br><br>
+                 <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                    </td>
+                
+
+        </form>
  
     <div style="text-align: center;">
         <?php
