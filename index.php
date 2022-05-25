@@ -16,7 +16,7 @@
 
 <body>
 
-    <?php include './view/headerMenu.php' ?>
+    <?php include './view/pagsCentral/headerMenu.php' ?>
 
     <!------------CARROSSEL DE IMAGENS----------->
 

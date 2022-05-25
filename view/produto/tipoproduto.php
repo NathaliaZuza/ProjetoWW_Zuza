@@ -1,11 +1,11 @@
 <?php
 $categoria_id = $_GET['categoria_id'];
 $arrayImagem = array(
-    1 => '../img/banner-panfleto-04.png',
-    2 => '../img/3.png',
-    3 => '../img/3-13-13.png',
-    4 => '../img/.jpg',
-    5 => '../img/.jpg',
+    1 => '/img/banner-panfleto-04.png',
+    2 => '/img/3.png',
+    3 => '/img/3-13-13.png',
+    4 => '/img/.jpg',
+    5 => '/img/.jpg',
 ); 
 $pathImagem = $arrayImagem[$categoria_id];
 
@@ -21,9 +21,9 @@ $pathImagem = $arrayImagem[$categoria_id];
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <title>WWZ | Serviços gráficos pra você.</title>
-    <link rel="styleSheet" href="../css/tipoProduto.css">
-    <link rel="stylesheet" href="../css/headerMenu.css">
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
+    <link rel="styleSheet" href="/css/tipoProduto.css">
+    <link rel="stylesheet" href="/css/headerMenu.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
 
 </head>
 
@@ -45,7 +45,7 @@ $pathImagem = $arrayImagem[$categoria_id];
         </ul>
         <div class="btn-logar">
             <a href="../view/login.php">
-                <img id="img-account" src="../img/my account-02.png" alt="">
+                <img id="img-account" src="/img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
         <div class="btn-logar">
@@ -70,27 +70,27 @@ $pathImagem = $arrayImagem[$categoria_id];
             </li>
 
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=1">
+                <a href="/view/produto/tipoproduto.php?categoria_id=1">
                     <span class="nomelink">Panfleto</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=2">
+                <a href="/view/produto/tipoproduto.php?categoria_id=2">
                     <span class="nomelink">Cartão de visita</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=3">
+                <a href="/view/produto/tipoproduto.php?categoria_id=3">
                     <span class="nomelink">Cardápio</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=4">
+                <a href="/view/produto/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=5">
+                <a href="/view/produto/tipoproduto.php?categoria_id=5">
                     <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>
@@ -111,7 +111,7 @@ $pathImagem = $arrayImagem[$categoria_id];
     <div class="pai">
   
         <?php
-        require_once '../dao/ProdutoDAO.php';
+        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php'  ;
         $produtoDAO = new ProdutoDAO();
         $produtos   = $produtoDAO->findByCategoria($categoria_id);
 
@@ -121,7 +121,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                 echo "  <div class='produto-single'>";
                 echo "      <div class='nome_produto'> {$produto["nome"]} </div>";
                 echo "      <div class='img_produto'>";
-                echo "          <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
+                echo "          <p><img src='/img/produto/foto/{$produto["foto"]}' width='112'/></p>";
                 echo "      </div>";
                 echo "      <div class='preco'> R$ ", number_format(($produto["preco"]), 2, ",", "." ), "</div>
                             <div class='info'>                           
@@ -132,7 +132,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                                 <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                                 </div>";
                 echo    "<div class='btn-comprar'>
-                            <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=add'><p><i class='bx bxs-cart'></i><span id='comprar'>COMPRAR</span></p></a>
+                            <a href='./controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'><p><i class='bx bxs-cart'></i><span id='comprar'>COMPRAR</span></p></a>
                         </div>";
                 echo "</div>";
                 echo "</div>";
@@ -141,7 +141,7 @@ $pathImagem = $arrayImagem[$categoria_id];
             echo "Não existe produtos cadastrados";
         }
         ?>
-
+ 
    
         </div> 
     </div>

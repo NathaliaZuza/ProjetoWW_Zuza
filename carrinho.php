@@ -15,7 +15,7 @@
 
 <body>
 
-    <?php include './view/headerMenu.php';
+    <?php include './view/pagsCentral/headerMenu.php';
     include_once './DAO/ProdutoDAO.php';
     include_once './DAO/CategoriaDAO.php';
     include_once './DTO/ProdutoDTO.php';
