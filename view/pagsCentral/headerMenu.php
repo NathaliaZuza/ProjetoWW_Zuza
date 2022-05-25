@@ -32,7 +32,7 @@
             <a href="/view/pagsCentral/loginADM.php">
                 Página do Funcionário</a>
         </div>
-        <div class="btn-logar2"><a href="../view/formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
+        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
     </div>
 
     <!------------MENU----------->
