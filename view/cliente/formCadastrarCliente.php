@@ -97,10 +97,9 @@
             <img src="/img/cadastro-02.png">
         </div>
     
-
     <div class="formContainer">
         <div id="img-login"> <img  src="/img/cadastro-05.png" alt=""></div>
-        <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
+        <form id="formCadastroCliente" action="/controller/cliente/cadastrarClienteController.php" method="post">
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" required>
                         <label for="nome" class="labelInput">Nome Completo</label>
