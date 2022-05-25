@@ -14,7 +14,7 @@ class ClienteDAO {
                 . "(cep, endereco, numero_casa, complemento, cidade, uf, cliente_id) "
                 . "VALUES(:cep,:endereco,:numero_casa,:complemento,:cidade,:uf,:cliente_id)";
             $cliente_id = $this->pdo->lastInsertId();
-            $stmt = $this->pdo->prepare( $sql );
+            $stmt       = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":cep", $enderecoDTO->getCep() );
             $stmt->bindValue( ":endereco", $enderecoDTO->getEndereco() );
             $stmt->bindValue( ":numero_casa", $enderecoDTO->getNumero_casa() );
@@ -30,7 +30,7 @@ class ClienteDAO {
 
     public function findById( $id ) {
         try {
-            $sql = 'SELECT * FROM endereco_cliente WHERE id = ?';
+            $sql  = 'SELECT * FROM endereco_cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();
