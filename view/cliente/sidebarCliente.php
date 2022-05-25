@@ -60,8 +60,7 @@
                        <div class="job">Serviços gráficos</div>
                    </div>
                 </div>
-               <a href="../index.php"><i class='bx bx-log-out' id="log_out" onclick="log_out()"></i></a>
-                
+               <a href="/index.php"><i class='bx bx-log-out' id="log_out" onclick="log_out()"></i></a>
                 
             </div>
         </div>
