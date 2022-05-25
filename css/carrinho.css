@@ -28,8 +28,8 @@ h2{
     display: grid;
     grid-template-areas: 'endereco endereco endereco  resumo resumo'
                          'endereco endereco endereco resumo resumo'   
-                         'item1 item1 item2 resumo resumo'
-                         'item1 item1 item2 resumo resumo'
+                         'itens itens itens resumo resumo'
+                         'itens itens itens resumo resumo'
                          ;
     /* border: 1px solid #f31c00; */
     max-width: 93%;
@@ -38,6 +38,13 @@ h2{
     margin: 20px auto;
     grid-gap: 20px ;
 } 
+.itens{
+    display: grid;
+    grid-template-areas: 'item1 item1 item1 item2'
+                         'item1 item1 item1 item2'
+                         ;    
+    grid-gap: 20px ;                                     
+}
 .nome_produto{
     font-family: kinetika;
     font-size: 20px;
@@ -116,6 +123,7 @@ h2{
     align-self: center;
     align-content: center;
     text-align: center;
+    width: 400px;
 }
 .item1 img{
     width: 350px;

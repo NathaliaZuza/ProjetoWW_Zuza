@@ -51,7 +51,8 @@
         foreach ($_SESSION['carrinho'] as $key => $qtde) {
             $produto = $produtoDAO->findById($key);
             $total += $produto["preco"] * $qtde;
-            
+        
+        echo "<div class='itens'>";
         echo "<div class='item1'>";
         echo "  <div class='div-img'>";
         echo "      <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
@@ -116,7 +117,7 @@
         echo    "</div>";
 
         echo "</div>";
-
+        echo "</div>";
         echo "  <div class='total_carrinho'>
                     Total: R$ ", number_format($total, 2, ",", "."),
              "  </div>";

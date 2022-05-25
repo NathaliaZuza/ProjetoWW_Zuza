@@ -58,6 +58,7 @@ $cliente = $clienteDAO->findById( $idCliente );
                         <label for="uf" class="labelInput">UF</label>
                     </div>
                     <br><br>
+                    
                     <input type="hidden" name="cliente_id" value="<?= $cliente["id"] ?>">
                     <button type="submit" class="botão">Enviar</button>
             </form>
