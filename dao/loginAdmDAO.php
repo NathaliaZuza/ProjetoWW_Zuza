@@ -10,8 +10,9 @@ class LoginDAO {
 
     public function findByEmailSenha( $email, $senha ) {
         try {
-            $sql = "SELECT * FROM lg_adm " .
-                "WHERE email = ? AND senha = ?";
+            $sql = "SELECT u.email, c.id as idCliente, u.perfil FROM usuario u" .
+                "INNER JOIN cliente c ON (c.usuario_id = u.id) " .
+                "WHERE u.email = ? AND u.senha = ?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $email );
             $stmt->bindValue( 2, $senha );
