@@ -26,23 +26,20 @@
     <?php
     session_start();
     ?>
-<div class='pai'>
+<div class='container'>
     <div class="endereco">
         <h2> <i class='bx bxs-map'></i>SELECIONE O ENDEREÇO</h2>
-        <p>Endereço 1</p>
-        <p>NOME COMPLETO</p>
-        <p>ENDEREÇO/RUA</p>
-        <p>BAIRRO/CIDADE</p>
-        <p>ESTADO/CEP</p>
         <div class="linha"></div>
-        <p>Endereço 2</p>
-        <p>NOME COMPLETO</p>
-        <p>ENDEREÇO/RUA</p>
-        <p>BAIRRO/CIDADE</p>
-        <p>ESTADO/CEP</p>
-        <div class="linha"></div>
+        <div class="dados-endereco">
+            <span id="principal"><p>Endereço principal</p></span>
+            <p>QNM 05 conj P 06</p>
+            <p>CEP 72215066 - Brasília, DF</p>
+        </div>
+        <div class="editar-endereco">
+            <div class="editar">EDITAR</div>
+            <div class="editar">NOVO ENDEREÇO</div> 
+        </div>
     </div>
-    
 <?php
     require_once './dao/ProdutoDAO.php';
     $produtoDAO = new ProdutoDAO();
@@ -55,16 +52,13 @@
             $produto = $produtoDAO->findById($key);
             $total += $produto["preco"] * $qtde;
             
-             echo "<div class='container'>";
-?>
-    
-<?php
-
+        echo "<div class='item1'>";
         echo "  <div class='div-img'>";
         echo "      <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
         echo "  </div>";
+        echo "  </div>";
 
-        echo "  <div class='div-info'>";
+        echo "<div class='item2'>";
         echo "      <div class='nome_produto'>
                         {$produto["nome"]}
                     </div>";
@@ -83,13 +77,13 @@
                     <a href='./controller/carrinhoController.php?id={$produto["id"]}&acao=add'>
                         +
                     </a>
-                </div>";
+                 </div>";
 
         echo "      <div class='desc_produto'>
                         {$produto["descricao"]}
                     </div>";
 
-        echo    "<div class='preco'>
+        echo        "<div class='preco'>
                         <p>R$ ", number_format(($produto["preco"]), 2, ",", "." ), "<span id='undIndex'></span></p>
                     </div>";
         echo "      <div class='info'>
@@ -111,33 +105,38 @@
         echo        "<div class='info'>
                         <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
                     </div>";
-                    echo "  <div class='subtotal_carrinho'>
+        echo "  <div class='subtotal_carrinho'>
                     Subtotal: R$ ", number_format(($produto["preco"] * $qtde), 2, ",", "."),
         "       </div>";
 
         echo "  <div class='remover_carrinho'>
                     <a href='../controller/carrinhoController.php?id={$produto["id"]}&acao=del'>
-                        Remover item <i class='bx bx-trash'></i>
+                        REMOVER ITEM <i class='bx bx-trash'></i>
                     </a>";           
         echo    "</div>";
+
         echo "</div>";
-        
+
+        echo "  <div class='total_carrinho'>
+                    Total: R$ ", number_format($total, 2, ",", "."),
+             "  </div>";
         }  ?>
         
         <div class="resumo">
             <h3><i class='bx bxs-notepad'></i>RESUMO</h3>
+            <?php
+                        echo "  <div class='total_carrinho'>
+                        Total R$ ", number_format($total, 2, ",", "."),
+                 "  </div>";
+            ?>
         </div>
     <?php    
-        echo "  <div class='total_carrinho'>
-                    Total R$ ", number_format($total, 2, ",", "."),
-             "  </div>";
+      
     } else {
         echo "Não existe produtos no carrinho!";
     }
     ?>
 </div>
-
-
 <!---------FOOTER---------->
 
     <!--  <div class="imgCarrrinho">
