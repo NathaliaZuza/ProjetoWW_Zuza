@@ -33,7 +33,7 @@ h1{
     padding-top: 30px;
 }
 .containerpai{
-    height: 90vh;
+    height: 100vh;
 }
 p #cadastroativo{
     color: #0F0059;
@@ -92,7 +92,7 @@ p #cadastroativo{
 
 } */
 .formContainer{
-    margin-top: 25px;
+    margin-top: 65px;
     background-color: #f1f6ff;
     position: absolute;
     top: 63%;

@@ -43,7 +43,7 @@
             <a href="loginADM.php">
                 Página do Funcionário</a>
         </div>
-        <div class="btn-logar2"><a href="formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
+        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
     </div>
 
 
@@ -59,27 +59,27 @@
             </li>
 
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=1">
+                <a href="/view/produto/tipoproduto.php?categoria_id=1">
                     <span class="nomelink">Panfleto</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=2">
+                <a href="/view/produto/tipoproduto.php?categoria_id=2">
                     <span class="nomelink">Cartão de visita</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=3">
+                <a href="/view/produto/tipoproduto.php?categoria_id=3">
                     <span class="nomelink">Cardápio</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=4">
+                <a href="/view/produto/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=5">
+                <a href="/view/produto/tipoproduto.php?categoria_id=5">
                     <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>

@@ -5,14 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../js/jquery-3.6.0.min.js"></script>
-    <script src="../js/jquery.mask.min.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/jquery.mask.min.js"></script>
     <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <script src="../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="/js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="../css/cadastro.css">
-    <link rel="stylesheet" href="../css/headerMenu.css">
+    <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/headerMenu.css">
     <title>Cadastro | WWZ</title>
 </head>
 
@@ -33,12 +33,12 @@
             </li>
         </ul>
         <div class="btn-logar">
-            <a href="login.php">
-                <img id="img-account" src="../img/my account-02.png" alt="">
+            <a href="/view/pagsCentral/login.php">
+                <img id="img-account" src="/img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
         <div class="btn-logar">
-            <a href="loginADM.php">
+            <a href="/view/pagsCentral/loginADM.php">
                 Página do Funcionário</a>
         </div>
         <div class="btn-logar2"><a href="formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
@@ -57,32 +57,32 @@
             </li>
 
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=1">
+                <a href="/view/produto/tipoproduto.php?categoria_id=1">
                     <span class="nomelink">Panfleto</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=2">
+                <a href="/view/produto/tipoproduto.php?categoria_id=2">
                     <span class="nomelink">Cartão de visita</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=3">
+                <a href="/view/produto/tipoproduto.php?categoria_id=3">
                     <span class="nomelink">Cardápio</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=4">
+                <a href="/view/produto/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="tipoproduto.php?categoria_id=5">
+                <a href="/view/produto/tipoproduto.php?categoria_id=5">
                     <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>
             <li class="carrinho">
-                <a href="../carrinho.php">
+                <a href="/carrinho.php">
                     <i class='bx bx-cart'></i>
                
                 </a>
@@ -94,12 +94,12 @@
 <div class="containerpai">
     <h1>Cadastro</h1>
         <div class="img-login1">
-            <img src="../img/cadastro-02.png">
+            <img src="/img/cadastro-02.png">
         </div>
     
 
     <div class="formContainer">
-        <div id="img-login"> <img  src="../img/cadastro-05.png" alt=""></div>
+        <div id="img-login"> <img  src="/img/cadastro-05.png" alt=""></div>
         <form id="formCadastroCliente" action="../controller/cadastrarClienteController.php" method="post">
                     <div class="inputBox">
                         <input type="text" name="nome" id="nome" class="inputUser" required>
