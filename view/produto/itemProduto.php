@@ -9,9 +9,9 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>WWZ | Serviços gráficos pra você.</title>
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
-    <link rel="styleSheet" href="../css/itemProduto.css">
-    <link rel="stylesheet" href="../css/headerMenu.css">
+    <link rel="shortcut icon" href="/img/lg-03.png"/>
+    <link rel="styleSheet" href="/css/itemProduto.css">
+    <link rel="stylesheet" href="/css/headerMenu.css">
 </head>
 
 <body>
@@ -59,27 +59,27 @@
             </li>
 
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=1">
+                <a href="/view/produto/tipoproduto.php?categoria_id=1">
                     <span class="nomelink">Panfleto</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=2">
+                <a href="/view/produto/tipoproduto.php?categoria_id=2">
                     <span class="nomelink">Cartão de visita</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=3">
+                <a href="/view/produto/tipoproduto.php?categoria_id=3">
                     <span class="nomelink">Cardápio</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=4">
+                <a href="/view/produto/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
                 </a>
             </li>
             <li class="produtoshover">
-                <a href="/view/tipoproduto.php?categoria_id=5">
+                <a href="/view/produto/tipoproduto.php?categoria_id=5">
                     <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>
@@ -96,7 +96,7 @@
     <div class="pai">
 
        <?php
-       require_once '../dao/ProdutoDAO.php';
+       require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
 
        $produto_id = $_GET['id'];
        $produtoDAO = new ProdutoDAO();
@@ -106,7 +106,7 @@
 
         echo "<div class='container'>";
         echo "  <div class='div-img'>";
-        echo "      <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
+        echo "      <p><img src='/img/produto/foto/{$produto["foto"]}' width='112'/></p>";
         echo "  </div>";
 
         echo "  <div class='div-info'>";

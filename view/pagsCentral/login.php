@@ -84,7 +84,7 @@
                 </a>
             </li>
             <li class="carrinho">
-                <a href="../carrinho.php">
+                <a href="/carrinho.php">
                     <i class='bx bx-cart'></i>
                 </a>
             </li>
