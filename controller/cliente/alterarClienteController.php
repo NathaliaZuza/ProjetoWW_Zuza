@@ -7,16 +7,11 @@ $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
 $telefone = $_POST["telefone"];
 
-
-
 $clienteDTO = new ClienteDTO();
 $clienteDTO->setId( $idCliente );
 $clienteDTO->setNome( $nome );
 $clienteDTO->setCpf( $cpf );
 $clienteDTO->setTelefone( $telefone );
-
-
-
 
 $clienteDAO = new ClienteDAO();
 

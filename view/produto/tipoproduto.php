@@ -111,7 +111,7 @@ $pathImagem = $arrayImagem[$categoria_id];
     <div class="pai">
   
         <?php
-        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php'  ;
+       require_once '../../dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
         $produtos   = $produtoDAO->findByCategoria($categoria_id);
 

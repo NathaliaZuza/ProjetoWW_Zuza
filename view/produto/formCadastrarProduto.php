@@ -15,9 +15,9 @@
 <body>
 
     <?php
-        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+        require_once '../../dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
-        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
+        require_once '../../dao/CategoriaDAO.php';
         $categoriaDAO = new CategoriaDAO();
         $categorias   = $categoriaDAO->findAll();
         // var_dump($categorias);

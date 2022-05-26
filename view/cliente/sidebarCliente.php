@@ -84,10 +84,10 @@
             iframe.src="/view/cliente/sidebarCliente.php"
         }
         function AtualizarCadastro(){
-            iframe.src="/view/cliente/cadastrarEndereco.php"
+            iframe.src="/view/cliente/AtualizarDadosCliente.php"
         }
         function geral(){
-            iframe.src="/view/pagsCentral/minhaConta.php"
+            iframe.src="/view/cliente/minhaConta.php"
         }
         function log_out(){
             return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");

@@ -20,7 +20,7 @@
 <body>  
 
     <?php
-    require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ClienteDAO.php';
+       require_once '../../dao/ClienteDAO.php';
 
     $clienteDAO = new ClienteDAO();
     $clientes = $clienteDAO->findAll();

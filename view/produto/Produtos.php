@@ -10,14 +10,11 @@
     <link rel="styleSheet" href="/css/listaProdutos.css">
     <link rel="shortcut icon" href="/img/lg-03.png"/>
     <script src="../lib/fontawesome-free-6.1.1-web/js/all.min.js"></script>
-
-
 </head>
 
 <body>  
-
     <?php
-    require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+       require_once '../../dao/ProdutoDAO.php';
 
     $produtoDAO = new ProdutoDAO();
     $produtos = $produtoDAO->findAll();
@@ -78,10 +75,6 @@
         echo "</main>";
         echo "</div>";
    }
-
-
-
-
     ?>
 
     <script>

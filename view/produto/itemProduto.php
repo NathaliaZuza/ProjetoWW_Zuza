@@ -85,15 +85,13 @@
                     <i class='bx bx-cart'></i>
                 </a>
             </li>
-
         </ul>
     </div>
-
 
     <div class="pai">
 
        <?php
-       require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+       require_once '../../dao/ProdutoDAO.php';
 
        $produto_id = $_GET['id'];
        $produtoDAO = new ProdutoDAO();
@@ -148,8 +146,6 @@
            echo "Não existe produtos cadastrados";
        }
        ?>
-
-
     </div>
 
     <footer>
