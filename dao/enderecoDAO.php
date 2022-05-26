@@ -1,7 +1,7 @@
 <?php
 require_once 'conexao/Conexao.php';
 
-class ClienteDAO {
+class EnderecoDAO {
     private $pdo;
 
     public function __construct() {
@@ -13,7 +13,7 @@ class ClienteDAO {
             $sql = "INSERT INTO endereco_cliente "
                 . "(cep, endereco, numero_casa, complemento, cidade, uf, cliente_id) "
                 . "VALUES(:cep,:endereco,:numero_casa,:complemento,:cidade,:uf,:cliente_id)";
-            $cliente_id = $this->pdo->lastInsertId();
+            // $cliente_id = $this->pdo->lastInsertId();
             $stmt       = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":cep", $enderecoDTO->getCep() );
             $stmt->bindValue( ":endereco", $enderecoDTO->getEndereco() );
@@ -21,7 +21,7 @@ class ClienteDAO {
             $stmt->bindValue( ":complemento", $enderecoDTO->getComplemento() );
             $stmt->bindValue( ":cidade", $enderecoDTO->getCidade() );
             $stmt->bindValue( ":uf", $enderecoDTO->getUf() );
-            $stmt->bindValue( ":cliente_id", $cliente_id );
+            $stmt->bindValue( ":cliente_id", $enderecoDTO->getCliente_id() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo $e->getMessage();
