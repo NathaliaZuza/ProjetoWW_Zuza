@@ -13,8 +13,8 @@ class EnderecoDAO {
             $sql = "INSERT INTO endereco_cliente "
                 . "(cep, endereco, numero_casa, complemento, cidade, uf, cliente_id) "
                 . "VALUES(:cep,:endereco,:numero_casa,:complemento,:cidade,:uf,:cliente_id)";
-            // $cliente_id = $this->pdo->lastInsertId();
-            $stmt       = $this->pdo->prepare( $sql );
+
+                $stmt       = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":cep", $enderecoDTO->getCep() );
             $stmt->bindValue( ":endereco", $enderecoDTO->getEndereco() );
             $stmt->bindValue( ":numero_casa", $enderecoDTO->getNumero_casa() );
@@ -59,6 +59,17 @@ class EnderecoDAO {
 
         } catch ( PDOException $e ) {
             echo 'Erro ao atualizar o endereço: ', $e->getMessage();
+        }
+    }
+    
+    public function deleteById( $idCliente ) {
+        try {
+            $sql  = 'DELETE FROM endereco_cliente WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $idCliente );
+            return $stmt->execute();
+        } catch ( PDOException $e ) {
+            echo 'Erro ao excluir o endereço ', $e->getMessage();
         }
     }
 }
