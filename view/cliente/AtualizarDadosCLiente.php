@@ -20,53 +20,57 @@
     <?php
         session_start();
         require_once '../../dao/ClienteDAO.php';
+        require_once '../../dao/enderecoDAO.php';
+        
         $idCliente = $_SESSION["idCliente"];
         echo "id", $idCliente;
         $clienteDAO = new ClienteDAO();
         $cliente    = $clienteDAO->findById( $idCliente );
+        
+        $enderecoDAO = new EnderecoDAO();
+        $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
-    <!----------CADASTRO---------->
-    <div class="containerpai">
-        <h1>Cadastro</h1>
-        <div class="formContainer">
-            <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
-                method="post">
-                <div class="inputBox">
-                    <input type="text" name="cep" id="cep" class="inputUser" required>
-                    <label for="cep" class="labelInput">cep</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">Endereço</label> <br>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="numero_casa" id="numero_casa" class="inputUser" required>
-                    <label for="numero_casa" class="labelInput">N° Casa</label> <br>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="complemento" id="complemento" class="inputUser" required>
-                    <label for="complemento" class="labelInput">Complemento</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade</label><br>
-                    <br><br>
-                </div>
-                <div class="inputBox">
-                    <input type="text" name="uf" id="uf" class="inputUser" required>
-                    <label for="uf" class="labelInput">UF</label>
-                </div>
-                <br><br>
-
-                <input type="hidden" name="cliente_id" value="<?=$cliente["id"]?>">
-                <button type="submit" class="botão">Enviar</button>
-            </form>
+    <!-- ENDEREÇO -->
+    <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
+        <input type="hidden" name="idCliente" value="<?php echo $endereco["id"] ?>">
+        <div class="inputbox">
+            <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
+            <label for="cep">Cep</label>
         </div>
-    </div>
+        <br><br>
+        <div class="inputbox">
+            <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
+            <label for="endereco">Endereço</label>
+        </div>
+        <br><br>
+        <div class="inputbox">
+            <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
+            <label for="numero_casa">N° casa</label>
+        </div>
+        <br><br>
+        <div class="inputbox">
+            <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
+            <label for="complemento">complemento</label>
+        </div>
+        <br><br>
+        <div class="inputbox">
+            <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
+            <label for="cidade">Cidade</label>
+        </div>
+        <br><br>
+        <div class="inputbox">
+            <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
+            <label for="uf">UF</label>
+        </div>
+        <br><br>
+        <button type="submit" class="botão">Enviar</button>
+        </td>
+
+
+    </form>
+
+    <!-- LOGIN -->
+
     <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
         <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
         <div class="inputbox">
