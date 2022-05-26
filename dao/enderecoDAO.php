@@ -13,7 +13,6 @@ class EnderecoDAO {
             $sql = "INSERT INTO endereco_cliente "
                 . "(cep, endereco, numero_casa, complemento, cidade, uf, cliente_id) "
                 . "VALUES(:cep,:endereco,:numero_casa,:complemento,:cidade,:uf,:cliente_id)";
-            // $cliente_id = $this->pdo->lastInsertId();
             $stmt       = $this->pdo->prepare( $sql );
             $stmt->bindValue( ":cep", $enderecoDTO->getCep() );
             $stmt->bindValue( ":endereco", $enderecoDTO->getEndereco() );

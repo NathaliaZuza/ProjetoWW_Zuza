@@ -11,8 +11,6 @@ $complemento = $_POST["complemento"];
 $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
 
-
-
 $enderecoDTO = new EnderecoDTO();
 $enderecoDTO->setId( $idEndereco );
 $enderecoDTO->setCep( $cep );
@@ -22,9 +20,6 @@ $enderecoDTO->setCliente_id( $cliente_id );
 $enderecoDTO->setComplemento( $complemento );
 $enderecoDTO->setCidade( $cidade );
 $enderecoDTO->setUf( $uf );
-
-
-
 
 $enderecoDAO = new EnderecoDAO();
 

@@ -31,6 +31,10 @@
         $idCliente = $_SESSION["idCliente"];
         $clienteDAO = new ClienteDAO();
         $cliente    = $clienteDAO->findById( $idCliente );
+
+        require_once '../../dao/enderecoDAO.php';
+        $enderecoDAO = new EnderecoDAO();
+        $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
 
     <div class="containerpai">
@@ -58,6 +62,37 @@
         echo   "</div>";
         ?>
     </div>
+
+    <div class='conteudo'>
+
+        <table>
+            <tr>
+            <th>CEP</th>
+            <th>Endereço</th>
+            <th>Nº casa</th>
+            <th>Complemento</th>
+            <th>Cidade</th>
+            <th>UF</th>
+            <th>Excluir</th>
+            <th>Editar</th></tr>
+            <tr>
+
+        <?php
+        echo "<td>{$endereco["cep"]}</td>";
+        echo   "<td>{$endereco["endereco"]}</td>";
+        echo   "<td>{$endereco["numero_casa"]}</td>";
+        echo   "<td>{$endereco["complemento"]}</td>";
+        echo   "<td>{$endereco["cidade"]}</td>";
+        echo   "<td>{$endereco["uf"]}</td>";       
+        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirEnderecoController.php?excluirId={$endereco["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
+        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosendereco.php?id={$endereco["id"]}'><i class='bx bx-edit'></a></i></td>";
+        echo   "</tr>";
+        echo   "</main>";
+        echo   "</div>";
+        ?>
+    </div>
+
+    </main>
 </body>
 
 </html>

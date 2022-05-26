@@ -23,7 +23,7 @@
         require_once '../../dao/enderecoDAO.php';
         
         $idCliente = $_SESSION["idCliente"];
-        echo "id", $idCliente;
+        // echo "id", $idCliente;
         $clienteDAO = new ClienteDAO();
         $cliente    = $clienteDAO->findById( $idCliente );
         
@@ -31,7 +31,7 @@
         $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
     <!-- ENDEREÇO -->
-    <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
+    <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
         <input type="hidden" name="idCliente" value="<?php echo $endereco["id"] ?>">
         <div class="inputbox">
             <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
