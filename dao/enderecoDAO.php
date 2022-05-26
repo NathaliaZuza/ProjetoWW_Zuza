@@ -40,4 +40,25 @@ class EnderecoDAO {
             echo 'Erro ao listar um cliente: ', $e->getMessage();
         }
     }
+
+    public function update( EnderecoDTO $enderecoDTO ) {
+        try {
+            $sql = 'UPDATE endereco_cliente SET '
+                . 'cep=?, endereco=?, numero_casa=?, cliente_id=?, complemento=?, cidade-?, uf=?, '
+                . 'WHERE id=?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $enderecoDTO->getCep() );
+            $stmt->bindValue( 2, $enderecoDTO->getEndereco() );
+            $stmt->bindValue( 3, $enderecoDTO->getNumero_casa() );
+            $stmt->bindValue( 4, $enderecoDTO->getCliente_id() );
+            $stmt->bindValue( 5, $enderecoDTO->getComplemento() );
+            $stmt->bindValue( 6, $enderecoDTO->getCidade() );
+            $stmt->bindValue( 7, $enderecoDTO->getUf() );
+            $stmt->bindValue( 8, $enderecoDTO->getId() );
+            return $stmt->execute();
+
+        } catch ( PDOException $e ) {
+            echo 'Erro ao atualizar o endereço: ', $e->getMessage();
+        }
+    }
 }
