@@ -114,3 +114,15 @@
         </div>
     </footer>
 </html>
+
+
+<!-- {
+    "editor.wordWrap": "on",
+    "workbench.editor.untitled.hint": "hidden",
+    "workbench.colorTheme": "Dracula Pure",
+    "vscode-edge-devtools.mirrorEdits": true,
+    "window.zoomLevel": 1,
+    "files.autoSave": "afterDelay",
+    "phpserver.phpConfigPath": "C:\\xampp\\php\\php.ini",
+    "phpserver.phpPath": "C:\\xampp\\php\\php.exe",
+} -->

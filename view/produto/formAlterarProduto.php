@@ -15,7 +15,7 @@
 <body>
 
     <?php
-        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+        require_once '../../dao/ProdutoDAO.php';
         require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
     $idProduto = $_GET["id"];
     $produtoDAO = new ProdutoDAO();
