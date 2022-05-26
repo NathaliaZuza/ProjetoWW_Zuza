@@ -16,7 +16,7 @@
 
     <?php
         require_once '../../dao/ProdutoDAO.php';
-        require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
+        require_once '../../dao/CategoriaDAO.php';
     $idProduto = $_GET["id"];
     $produtoDAO = new ProdutoDAO();
     $produto = $produtoDAO->findById($idProduto);
@@ -26,7 +26,7 @@
         <div class="conteudo">
             <h1>Alterando produto</h1>
 
-            <form action="/controller/produto/alterarProdutoController.php" method="post" enctype="multipart/form-data">
+            <form action="../../controller/produto/alterarProdutoController.php" method="post" enctype="multipart/form-data">
                 <input type="hidden" name="idProduto" value="<?php echo $produto["id"] ?>">
                 <div class="row">
                     <div class="categoriadiv">
