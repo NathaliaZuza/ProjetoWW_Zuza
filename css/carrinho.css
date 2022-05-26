@@ -24,15 +24,9 @@ h2{
     padding: 20px;
 }
 
-.container {
-    display: grid;
-    grid-template-areas: 'endereco endereco endereco  resumo resumo'
-                         'endereco endereco endereco resumo resumo'   
-                         'itens itens itens resumo resumo'
-                         'itens itens itens resumo resumo'
-                         ;
+.container {                 
     /* border: 1px solid #f31c00; */
-    max-width: 93%;
+    max-width: 80%;
     height: 100%;
     margin: 0 auto;
     margin: 20px auto;
@@ -43,13 +37,20 @@ h2{
     grid-template-areas: 'item1 item1 item1 item2'
                          'item1 item1 item1 item2'
                          ;    
-    grid-gap: 20px ;                                     
+    grid-gap: 20px ;     
+    margin-top: 40px;      
+    background-color: #ebebeb;   
+    padding: 30px;   
+    border-radius: 10px;  
+    border-bottom: 3px solid #e44800;             
 }
 .nome_produto{
     font-family: kinetika;
-    font-size: 20px;
+    font-size: 23px;
     color: #e44800;
     display: inline-block;
+    margin-right: 250px;
+    margin-bottom: 10px;
 }
 .desc_produto{
     font-family: kinetika-light;
@@ -111,10 +112,40 @@ h2{
     display: inline-block;
 }
 .resumo{
-    grid-area: resumo;
     background-color: #ebebeb;
     border-radius: 10px;
-    width: 300px;
+    width: 40%;
+    padding: 30px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.totalresum{
+    font-family: kinetika-light;
+    font-weight: 900;
+}
+.total_resumo{
+    font-size: 16px;
+    font-weight: 900;
+    font-family: kinetika;
+}
+.resum{
+    font-family: kinetika;
+    background-color: #ebebeb;
+    font-size: 25px;
+}
+.resum i{
+    color: #e44800;
+    margin-right: 7px;
+}
+.resumo p{
+    font-family: kinetika-light;
+}
+.resumoFrete{
+    font-family: kinetika;
 }
 .item1{
     grid-area: item1;
@@ -127,11 +158,13 @@ h2{
 }
 .item1 img{
     width: 350px;
+    border-radius: 7px;
 }
 .item2{
     grid-area: item2;
     /* background-color: #ff6565; */
     border-radius: 10px;
+    width: 600px;
 }
 .remover_carrinho{
     background-color: #f31c00;
@@ -186,8 +219,74 @@ h2{
 .total_carrinho{
     font-family: kinetika;
     font-size: 25px;
-    border-top: 2px solid #e44800;
+    padding: 20px;
 }
-.resumo{
+.pagamento-btn{
+    font-family: kinetika;
+    width: 50%;
+    border: 1px solid #e44800;
+    border-radius: 7px;
+    color: #e44800;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.pagamento-btn:hover{
+    border: 1px solid #e4ab00;
+    color: #e4ab00;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.continuarComprando-btn{
+    font-family: kinetika;
+    width: 50%;
+    background-color: #e44800;
+    border-radius: 7px;
+    text-transform: uppercase;
+    padding: 15px;
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+}
+.continuarComprando-btn p{
+    text-align: center;
     font-family: kinetika;
 }
+.continuarComprando-btn a{
+    text-decoration: none;
+     color: #ffffff;
+}
+.pagamento-btn p{
+    text-align: center;
+    font-family: kinetika;
+}
+.continuarComprando-btn:hover{
+    background-color: #e4ab00;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.vazio{
+    font-family: kinetika;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+#vazio{
+    padding: 20px;
+}
+/* .resumo{
+    font-family: kinetika;
+} */

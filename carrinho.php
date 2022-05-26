@@ -22,10 +22,14 @@
     include_once './DTO/CategoriaDTO.php';
     ?>
 
-<!------------CARRINHO----------->
+
     <?php
     session_start();
     ?>
+
+
+<!------------ENDERECO----------->
+
 <div class='container'>
     <div class="endereco">
         <h2> <i class='bx bxs-map'></i>SELECIONE O ENDEREÇO</h2>
@@ -40,6 +44,8 @@
             <div class="editar">NOVO ENDEREÇO</div> 
         </div>
     </div>
+
+<!------------CARRINHO----------->   
 
 <?php
     require_once './dao/ProdutoDAO.php';
@@ -119,31 +125,44 @@
 
         echo "</div>";
         echo "</div>";
+    
+        }  ?>
+
+<!------------TOTAL-----------> 
+
+        <?php
         echo "  <div class='total_carrinho'>
                     Total: R$ ", number_format($total, 2, ",", "."),
              "  </div>";
-        }  ?>
-        
+        ?>
+
+<!------------RESUMO----------->   
         <div class="resumo">
-            <h3><i class='bx bxs-notepad'></i>RESUMO</h3>
+            <h3 class="resum"><i class='bx bxs-notepad'></i>RESUMO</h3>
             <?php
-                        echo "  <div class='total_carrinho'>
-                        Total R$ ", number_format($total, 2, ",", "."),
+                        echo "  <div class='total_resumo'>
+                        <span class='totalresum'>Total:</span> R$ ", number_format($total, 2, ",", "."),
                  "  </div>";
             ?>
+            <p class='resumoFrete'> <span >Frete:</span> R$ 0,00</p>
+
+            <div class="pagamento-btn"><p>Ir para o pagamento</p></div>
+            <div class="continuarComprando-btn"><p><a href="index.php">Continuar comprando</a></p></div>
         </div>
-    <?php    
-      
+    <?php   
+
+//<!------------SE NÃO EXISTIR PRODUTOS----------->  
     } else {
-        echo "Não existe produtos no carrinho!";
+        echo "<div class='vazio'>";
+        echo "<p id='vazio'>O seu carrinho está vazio!</p>";
+        echo "<div class='continuarComprando-btn'><p><a href='index.php'>Continuar comprando</a></p></div>";
+        echo "</div>";
     }
     ?>
 </div>
-<!---------FOOTER---------->
 
-    <!--  <div class="imgCarrrinho">
-            <img src="../img/carrinho-01.png">
-        </div> -->
+
+<!---------FOOTER---------->
 
     <footer>
         <div class="social">
@@ -156,17 +175,9 @@
                 <p>Copyright © 2022 Todos os <br> direitos reservados</p>
             </div>
         </div>
-        <!--   <div class="pagamento">
-            <p>Formas de pagamento:</p>
-            <p>
-                <img src="./img/pagamento-07.png" width="70x">
-                <img src="./img/pagamento-08.png" width="70px">
-            </p>
-        </div> -->
         <div class="criacao">
             <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Barbosa</span></p>
         </div>
     </footer>
 </body>
-
 </html>
