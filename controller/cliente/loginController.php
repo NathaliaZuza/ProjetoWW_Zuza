@@ -1,5 +1,5 @@
 <?php
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/loginDAO.php';
+require_once '../../dao/loginDAO.php';
 
 session_start();
 

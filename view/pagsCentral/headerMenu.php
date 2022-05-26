@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../img/lg-03.png"/>
+    <link rel="shortcut icon" href="../img/lg-03.png" />
     <title>Document</title>
 </head>
+
 <body>
 
-  <div class="box">
+    <div class="box">
         <ul class="nav-logar">
             <li>
                 <a href="index.php">
@@ -28,11 +30,9 @@
                 <img id="img-account" src="../img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
-        <div class="btn-logar">
-            <a href="/view/pagsCentral/loginADM.php">
-                Página do Funcionário</a>
-        </div>
-        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
+        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php">
+                <p id="cadastro">É novo por aqui? </p>Cadastre-se
+            </a></div>
     </div>
 
     <!------------MENU----------->
@@ -81,4 +81,5 @@
     </div>
 
 </body>
+
 </html>

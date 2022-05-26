@@ -1,6 +1,6 @@
 <?php
-require_once '../dto/EnderecoDTO.php';
-require_once '../dao/enderecoDAO.php';
+require_once '../../dto/EnderecoDTO.php';
+require_once '../../dao/enderecoDAO.php';
 
 $cep = $_POST["cep"];
 $endereco = $_POST["endereco"];
