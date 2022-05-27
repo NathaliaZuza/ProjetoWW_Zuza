@@ -118,7 +118,7 @@
         "       </div>";
 
         echo "  <div class='remover_carrinho'>
-                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del'>
+                    <a onclick='return confirmarExcluir();' href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del'>
                         REMOVER ITEM <i class='bx bx-trash'></i>
                     </a>";           
         echo    "</div>";
@@ -128,6 +128,11 @@
     
         }  ?>
 
+    <script>
+          function confirmarExcluir(){
+            return confirm("Você tem certeza que deseja remover esse produto do carrinho?");
+        } 
+    </script>
 <!------------TOTAL-----------> 
 
         <?php
@@ -146,7 +151,7 @@
             ?>
             <p class='resumoFrete'> <span >Frete:</span> R$ 0,00</p>
 
-            <div class="pagamento-btn"><p>Ir para o pagamento</p></div>
+            <div class="pagamento-btn"><p><a href="/controller/produto/finalizarCompraController.php">Ir para o pagamento</p></a></div>
             <div class="continuarComprando-btn"><p><a href="index.php">Continuar comprando</a></p></div>
         </div>
     <?php   

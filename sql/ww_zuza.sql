@@ -154,7 +154,7 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`pedido` (
   `data` DATETIME NOT NULL,
   `valor` DECIMAL(9,2) NOT NULL,
   `quantidade` INT(11) NOT NULL,
-  `situacao` TINYINT(4) NOT NULL,
+  -- `situacao` TINYINT(4) NOT NULL,
   `produto_id` INT(11) NOT NULL,
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
