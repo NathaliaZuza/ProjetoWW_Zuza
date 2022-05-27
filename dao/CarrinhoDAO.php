@@ -26,7 +26,7 @@ class CarrinhoDAO {
             $idPedido = $this->pdo->lastInsertId();
 
             $sql = 'INSERT INTO '
-                . 'pedido_temm_produto(produto,pedido,quantidade,preco) '
+                . 'pedido_tem_produto(produto_id,pedido_id,quantidade,preco) '
                 . 'VALUES(?,?,?,?)';
 
             foreach ( $produtos as $key => $quantidade ) {
