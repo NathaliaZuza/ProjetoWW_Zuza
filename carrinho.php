@@ -46,7 +46,7 @@
     </div>
 
 <!------------CARRINHO----------->   
-
+    <div class="container-itens">
 <?php
     require_once './dao/ProdutoDAO.php';
     $produtoDAO = new ProdutoDAO();
@@ -127,7 +127,7 @@
         echo "</div>";
     
         }  ?>
-
+    </div>
     <script>
           function confirmarExcluir(){
             return confirm("Você tem certeza que deseja remover esse produto do carrinho?");
