@@ -58,7 +58,7 @@ h2{
     font-size: 23px;
     color: #e44800;
     display: inline-block;
-    margin-right: 250px;
+    margin-right: 5%;
     margin-bottom: 10px;
 }
 .desc_produto{
@@ -127,7 +127,7 @@ h2{
     align-items: center;
     align-content: center;
     position: sticky;
-    top: 10px;
+    top: 20px;
     grid-area: resumo;
     height: 300px;
 }
@@ -184,14 +184,16 @@ h2{
     text-align: center;
     font-family: kinetika;
 }
+.remover_carrinho:hover{
+    background-color: #f31c00e0;
+    cursor: pointer;
+    transition: 0,2s;
+}
 .remover_carrinho a{
     text-decoration: none;
     color: #fff;
 }
-.remover_carrinho:hover{
-    color: #f31c00;
-    cursor: pointer;
-}
+
 .qtd{
    background-color: #e4ab00;
    border-radius: 50%;
@@ -235,11 +237,12 @@ h2{
     border-radius: 7px;
     color: #e44800;
     text-transform: uppercase;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     align-items: center;
     align-content: center;
     margin: auto;
+    margin-top: 10px;
 }
 .pagamento-btn:hover{
     border: 1px solid #e4ab00;
@@ -254,11 +257,12 @@ h2{
     background-color: #e44800;
     border-radius: 7px;
     text-transform: uppercase;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
     align-items: center;
     align-content: center;
     margin: auto;
+    margin-top: 10px;
 }
 .continuarComprando-btn p{
     text-align: center;
@@ -266,16 +270,21 @@ h2{
 }
 .continuarComprando-btn a{
     text-decoration: none;
-     color: #ffffff;
+    color: #ffffff;
 }
 .pagamento-btn p{
     text-align: center;
     font-family: kinetika;
 }
+.pagamento-btn a {
+    text-decoration: none;
+    color: #e44800;
+}
 .continuarComprando-btn:hover{
     background-color: #e4ab00;
     cursor: pointer;
     transition: 0.2s;
+    
 }
 .vazio{
     font-family: kinetika;
