@@ -91,6 +91,26 @@
         ?>
     </div>
 
+    <!---------COMENTÁRIOS---------->
+
+    <div class="comentario">
+            <h1>Envie aqui sua dúvida</h1>
+            <form action="#" method="post">
+                <div class="row">
+                    <div class="inputbox">
+                        <label for="comentario">Dúvida ou sugestão? Escreva aqui</label><br>
+                        <textarea name="comentario" id="comentario" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <input type="submit" value="Enviar pergunta" id="cadastrar">
+                </div>
+            </form>
+    </div>
+
+
+      <!--------FOOTER---------->
+
     <footer>
         <div class="social">
             <p><span class="logo">WW.ZUZA</span></p>
