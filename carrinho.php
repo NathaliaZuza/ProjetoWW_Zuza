@@ -153,10 +153,10 @@
 
             <div class="pagamento-btn"><p><a href="/controller/produto/finalizarCompraController.php">Ir para o pagamento</p></a></div>
             <div class="continuarComprando-btn"><p><a href="index.php">Continuar comprando</a></p></div>
-        </div>
-    <?php   
-
-//<!------------SE NÃO EXISTIR PRODUTOS----------->  
+        </div>     
+</div>
+<!------------SE NÃO EXISTIR PRODUTOS----------->  
+    <?php 
     } else {
         echo "<div class='vazio'>";
         echo "<p id='vazio'>O seu carrinho está vazio!</p>";
@@ -164,8 +164,6 @@
         echo "</div>";
     }
     ?>
-</div>
-
 
 <!---------FOOTER---------->
 

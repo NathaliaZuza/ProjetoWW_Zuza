@@ -72,7 +72,7 @@ class ClienteDAO {
     public function update( ClienteDTO $clienteDTO ) {
         try {
             $sql = 'UPDATE cliente SET '
-                . 'nome=?, cpf=?, telefone=?, '
+                . 'nome=?, cpf=?, telefone=? '
                 . 'WHERE id=?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $clienteDTO->getNome() );

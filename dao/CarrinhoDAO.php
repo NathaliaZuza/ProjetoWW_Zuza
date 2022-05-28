@@ -17,7 +17,7 @@ class CarrinhoDAO {
         try {
             $this->pdo->beginTransaction();
             $sql = 'INSERT INTO '
-                . 'pedido(cliente_id,valor) '
+                . 'pedido(cliente_id,valor_total) '
                 . 'VALUES(?,?)';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idcliente );
