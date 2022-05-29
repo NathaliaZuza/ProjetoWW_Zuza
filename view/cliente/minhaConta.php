@@ -62,7 +62,7 @@
         echo   "</div>";
         ?>
     </div>
-
+        
     <div class='conteudo'>
 
         <table>
@@ -91,7 +91,9 @@
         echo   "</div>";
         ?>
     </div>
-
+<div>
+            <button><a href="../cliente/cadastrarEndereco.php">Adicionar Endereço.</a></button>
+        </div>
     </main>
 </body>
 

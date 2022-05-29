@@ -13,38 +13,38 @@
     
     <div class="formContainer">
        
-        <form id="formCadastroCliente" action="/controller/cliente/cadastrarClienteController.php" method="post">
+        <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php" method="post">
                     <div class="inputBox">
-                        <input type="text" name="nome" id="nome" class="inputUser" required>
-                        <label for="nome" class="labelInput">Nome Completo</label>
+                        <input type="text" name="cep" id="cep" class="inputUser" required>
+                        <label for="cep" class="labelInput">Cep</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="cpf" id="cpf" class="inputUser" required>
-                        <label for="cpf" class="labelInput">Cpf</label> <br>
+                        <input type="text" name="endereco" id="endereco" class="inputUser" required>
+                        <label for="endereco" class="labelInput">Endereço</label> <br>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="text" name="telefone" id="telefone" class="inputUser" required>
-                        <label for="telefone" class="labelInput">Telefone</label> <br>
+                        <input type="text" name="numero_casa" id="numero_casa" class="inputUser" required>
+                        <label for="numero_casa" class="labelInput">N° casa</label> <br>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                    <input type="text" name="email" id=email class="inputUser" required>
-                        <label for="email" class="labelInput">E-mail</label>
+                    <input type="text" name="complemento" id="complemento" class="inputUser" required>
+                        <label for="complemento" class="labelInput">E-Complemento</label>
                     </div>
                     <br><br>
                     <div class="inputBox">
-                        <input type="password" name="senha" id="senha" class="inputUser" required>
-                        <label for="senha" class="labelInput">Senha</label><br>
+                        <input type="text" name="cidade" id="cidade" class="inputUser" required>
+                        <label for="cidade" class="labelInput">Cidade</label><br>
                     <br><br>
                     </div>
                     <div class="inputBox">
-                        <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
-                        <label for="senha" class="labelInput">Confirmar Senha</label>
+                        <input type="text" name="uf" id="uf" class="inputUser" required>
+                        <label for="uf" class="labelInput">UF</label>
                     </div>
                     <br><br>
-                    <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                    <button type="submit" class="botão">Enviar</button>
                         </td>
             </form>
     </div>
