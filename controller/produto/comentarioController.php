@@ -8,15 +8,17 @@ require_once '../../dto/ClienteDTO.php';
 require_once '../../dto/ComentarioDTO.php';
 require_once '../../dao/ComentarioDAO.php';
 
+$clienteId = $_POST["cliente_id"];
+$comentario = $_POST["comentario"];
+
+
 $comentarioDTO = new ComentarioDTO();
 $comentarioDTO->setClienteId( $clienteId );
 $comentarioDTO->setComent( $comentario );
 
-$clienteId = $_POST["cliente_id"];
-$comentario        = $_POST["comentario"];
-$idComentario = $_POST["idComentario"];
 
 $comentarioDAO = new ComentarioDAO();
+$comentarioDAO->salvar( $comentarioDTO );
 if ( $comentarioDAO->salvar( $comentarioDTO ) ) {
     $msg = true;
     header( "Location: ../../index.php?sucesso=$msg" );

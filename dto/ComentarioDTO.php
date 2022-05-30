@@ -17,11 +17,14 @@ class ComentarioDTO {
     public function setComent($comentario) {
         $this->comentario = $comentario;
     }
+    
     public function getClienteId() {
         return $this->cliente_id;
     }
-    public function setClienteId( $cliente_id ) {
-        $this->$cliente_id = $cliente_id;
+    
+    public function setClienteId( $cliente_id ) 
+    {
+        $this->cliente_id = $cliente_id;
     }
 } 
 
