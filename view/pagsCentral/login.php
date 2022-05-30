@@ -11,7 +11,7 @@
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/cadastro.css">
-    <link rel="shortcut icon" href="/img/lg-03.png"/>
+    <link rel="shortcut icon" href="/img/lg-03.png" />
     <link rel="stylesheet" href="/css/login.css">
     <link rel="stylesheet" href="/css/headerMenu.css">
     <title>Login | WWZ</title>
@@ -20,7 +20,7 @@
 
 <body>
 
-<div class="box">
+    <div class="box">
         <ul class="nav-logar">
             <li>
                 <a href="/index.php">
@@ -39,11 +39,9 @@
                 <img id="img-account" src="/img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
-        <div class="btn-logar">
-            <a href="loginADM.php">
-                Página do Funcionário</a>
-        </div>
-        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php"><p id="cadastro">É novo por aqui? </p>Cadastre-se</a></div>
+        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php">
+                <p id="cadastro">É novo por aqui? </p>Cadastre-se
+            </a></div>
     </div>
 
 
@@ -93,22 +91,22 @@
     </div>
 
 
-    <!-----------LOGIN---------> 
+    <!-----------LOGIN--------->
     <h1 id="logintitle">Login</h1>
     <div class="img-login1">
         <img src="/img/login1-02.png">
     </div>
-   
+
     <div class="pag">
-         
+
         <div class="login">
-           <div id="img-login"> <img  src="/img/login-03-01.png" width="90px" alt=""></div>
-           <form action="/controller/cliente/loginController.php" method="post">
-            <input type="text" name="email" placeholder="Email" class="nomeL">
-            <br><br>
-            <input type="password" name="senha" placeholder="Senha" class="senhaL">
-            <br><br>
-            <input class="botão2" type="submit" name="submit" value="Entrar">
+            <div id="img-login"> <img src="/img/login-03-01.png" width="90px" alt=""></div>
+            <form action="/controller/cliente/loginController.php" method="post">
+                <input type="text" name="email" placeholder="Email" class="nomeL">
+                <br><br>
+                <input type="password" name="senha" placeholder="Senha" class="senhaL">
+                <br><br>
+                <input class="botão2" type="submit" name="submit" value="Entrar">
             </form>
         </div>
     </div>
@@ -116,30 +114,29 @@
 
 <!----------FOOTER--------->
 
-    <footer>
-        <div class="social">
-            <p><span class="logo">WW.ZUZA</span></p>
-            <div class="socialcirc">
-                <a href="#" class="fab fa-facebook-f"></a>
-                <a href="#" class="fab fa-twitter"></a>
-                <a href="#" class="fab fa-instagram"></a>
-                <a href="#" class="fab fa-whatsapp"></a>
-                <p>Copyright © 2022 Todos os <br> direitos reservados</p>
-            </div>
+<footer>
+    <div class="social">
+        <p><span class="logo">WW.ZUZA</span></p>
+        <div class="socialcirc">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-whatsapp"></a>
+            <p>Copyright © 2022 Todos os <br> direitos reservados</p>
         </div>
-      <!--   <div class="pagamento">
+    </div>
+    <!--   <div class="pagamento">
             <p>Formas de pagamento:</p>
             <p>
                 <img src="./img/pagamento-07.png" width="70x">
                 <img src="./img/pagamento-08.png" width="70px">
             </p>
         </div> -->
-        <div class="criacao">
-            <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
-        </div>
-    </footer>
+    <div class="criacao">
+        <p id="criado">Criado por: <span id="autores">Nathália Zuza, Weskley Borges e Wendel Daniel</span></p>
+    </div>
+</footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
 </html>
-
-

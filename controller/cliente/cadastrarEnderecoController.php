@@ -27,6 +27,6 @@ if ( empty( $cliente ) ) {
         header( "Location: ../view/cliente/sidebarCliente.php?msg={$error[1]}" );
     }
 } else {
-    header( "Location: ../view/formCadastrarCliente.php?msg={$error[2]}" );
+    header( "Location: ../view/cliente/cadastrarEndereco.php?msg={$error[2]}" );
 }
 ?>

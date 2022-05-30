@@ -20,3 +20,15 @@ $pagamentoDTO->setCpf( $cpf );
 $pagamentoDTO->setData_nasc( $data_nasc );
 $pagamentoDTO->setParcelamento( $parcelamento );
 $pagamentoDTO->setPedido_id( $pedido_id );
+
+
+$pagamentoDAO = new PagamentoDAO();
+
+if ( empty( $pagamento ) ) {
+    if ( $pagamentoDAO->salvar( $pagamentoDTO ) ) {
+        header( "Location: ../view/cliente/sidebarCliente.php?msg={$error[1]}" );
+    }
+} else {
+    header( "Location: ../view/cliente/cadastrarEndereco.php?msg={$error[2]}" );
+}
+?>

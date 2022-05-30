@@ -16,5 +16,5 @@ $clienteDTO->setTelefone( $telefone );
 $clienteDAO = new ClienteDAO();
 
 if ( $clienteDAO->update( $clienteDTO ) ) {
-    header( "Location: ../view/listarTodosClientes.php" );
+    header( "Location: ../../view/cliente/AtualizarDadosCLiente.php" );
 }
