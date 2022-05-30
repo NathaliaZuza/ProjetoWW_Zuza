@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="/css/headerMenu.css">
 
     <script>
-        $(document).ready(function() {
-            $('#cep').mask('00000-000');
-        });
+    $(document).ready(function() {
+        $('#cep').mask('00000-000');
+    });
     </script>
 
     <title>Minha conta | WWZ</title>
@@ -35,23 +35,29 @@
         require_once '../../dao/enderecoDAO.php';
         $enderecoDAO = new EnderecoDAO();
         $endereco    = $enderecoDAO->findById( $idCliente );
+        
+        require_once '../../dao/PagamentoDAO.php';
+        $pagamentoDAO = new PagamentoDAO();
+        $pagamento    = $pagamentoDAO->findById( $idCliente );
+
     ?>
 
     <div class="containerpai">
 
         <main class='container'>
-        <div class='conteudo'>
-        <h1>Listar os dados do cliente</h1>
-        <table>
-            <tr>
-            <th>Nome</th>
-            <th>CPF</th>
-            <th>Telefone</th>
-            <th>Excluir</th>
-            <th>Editar</th></tr>
-            <tr>
+            <div class='conteudo'>
+                <h1>Listar os dados do cliente</h1>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>CPF</th>
+                        <th>Telefone</th>
+                        <th>Excluir</th>
+                        <th>Editar</th>
+                    </tr>
+                    <tr>
 
-        <?php
+                        <?php
         echo "<td>{$cliente["nome"]}</td>";
         echo   "<td>{$cliente["cpf"]}</td>";
         echo   "<td>{$cliente["telefone"]}</td>";
@@ -61,23 +67,24 @@
         echo   "</main>";
         echo   "</div>";
         ?>
-    </div>
-        
-    <div class='conteudo'>
+            </div>
 
-        <table>
-            <tr>
-            <th>CEP</th>
-            <th>Endereço</th>
-            <th>Nº casa</th>
-            <th>Complemento</th>
-            <th>Cidade</th>
-            <th>UF</th>
-            <th>Excluir</th>
-            <th>Editar</th></tr>
-            <tr>
+            <div class='conteudo'>
 
-        <?php
+                <table>
+                    <tr>
+                        <th>CEP</th>
+                        <th>Endereço</th>
+                        <th>Nº casa</th>
+                        <th>Complemento</th>
+                        <th>Cidade</th>
+                        <th>UF</th>
+                        <th>Excluir</th>
+                        <th>Editar</th>
+                    </tr>
+                    <tr>
+
+                        <?php
         echo "<td>{$endereco["cep"]}</td>";
         echo   "<td>{$endereco["endereco"]}</td>";
         echo   "<td>{$endereco["numero_casa"]}</td>";
@@ -90,11 +97,35 @@
         echo   "</main>";
         echo   "</div>";
         ?>
-    </div>
-<div>
-            <button><a href="../cliente/cadastrarEndereco.php">Adicionar Endereço.</a></button>
-        </div>
-    </main>
+            </div>
+            <div>
+                <button><a href="../cliente/cadastrarEndereco.php">Adicionar Endereço.</a></button>
+                <button><a href="../cliente/pagamento.php">Adicionar cartão.</a></button>
+            </div>
+
+            <div class='conteudo'>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Numero do cartão</th>
+                        <th>validade</th>
+                        <th>Excluir</th>
+                        <th>Editar</th>
+                    </tr>
+                    <tr>
+
+                        <?php
+        echo "<td>{$pagamento["nome"]}</td>";
+        echo   "<td>{$pagamento["numero_cartao"]}</td>";
+        echo   "<td>{$pagamento["validade"]}</td>";
+        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
+        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
+        echo   "</tr>";
+        echo   "</main>";
+        echo   "</div>";
+        ?>
+            </div>
+        </main>
 </body>
 
 </html>

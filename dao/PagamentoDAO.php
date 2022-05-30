@@ -28,4 +28,18 @@ class PagamentoDAO {
         } catch ( PDOException $e ) {
             echo $e->getMessage();
         }
-    }}
+    }
+    public function findById( $id ) {
+        try {
+            $sql  = 'SELECT * FROM pagamento WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $id );
+            $stmt->execute();
+            $pagamento = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $pagamento;
+        } catch ( PDOException $e ) {
+            echo 'Erro ao listar um cartão: ', $e->getMessage();
+        }
+    }
+
+}

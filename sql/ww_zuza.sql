@@ -5,8 +5,12 @@ SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 
 -- -----------------------------------------------------
+-- Schema mydb
+-- -----------------------------------------------------
+-- -----------------------------------------------------
 -- Schema ww_zuza
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `ww_zuza` ;
 
 -- -----------------------------------------------------
 -- Schema ww_zuza
@@ -15,8 +19,29 @@ CREATE SCHEMA IF NOT EXISTS `ww_zuza` DEFAULT CHARACTER SET utf8mb4 ;
 USE `ww_zuza` ;
 
 -- -----------------------------------------------------
+-- Table `ww_zuza`.`categoria`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`categoria` ;
+
+CREATE TABLE IF NOT EXISTS `ww_zuza`.`categoria` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `nome` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+AUTO_INCREMENT = 11
+DEFAULT CHARACTER SET = utf8mb4;
+
+INSERT INTO `categoria` (`id`, `nome`) VALUES
+(1, 'Panfleto'),
+(2, 'Cartão'),
+(3, 'Cardápio'),
+(4, 'Banner'),
+(5, 'Papel Timbrado');
+-- -----------------------------------------------------
 -- Table `ww_zuza`.`usuario`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`usuario` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`usuario` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `email` VARCHAR(45) NOT NULL,
@@ -24,13 +49,15 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`usuario` (
   `perfil` VARCHAR(20) NOT NULL DEFAULT 'Cliente',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 3
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`cliente`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`cliente` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(100) NOT NULL,
@@ -46,17 +73,19 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 5
 DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`comentario`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`comentario` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `comentario` VARCHAR(1200) NULL,
-  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `comentario` VARCHAR(1200) NULL DEFAULT NULL,
+  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_comentario_cliente_idx` (`cliente_id` ASC),
@@ -65,39 +94,24 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
     REFERENCES `ww_zuza`.`cliente` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-USE `ww_zuza` ;
-
--- -----------------------------------------------------
--- Table `ww_zuza`.`categoria`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `ww_zuza`.`categoria` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `nome` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 11
 DEFAULT CHARACTER SET = utf8mb4;
-INSERT INTO `categoria` (`id`, `nome`) VALUES
-(1, 'Panfleto'),
-(2, 'Cartão'),
-(3, 'Cardápio'),
-(4, 'Banner'),
-(5, 'Papel Timbrado');
+
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`endereco_cliente`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`endereco_cliente` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`endereco_cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `cep` INT(10) NOT NULL,
   `endereco` VARCHAR(255) NOT NULL,
   `numero_casa` VARCHAR(45) NOT NULL,
-  `cliente_id` INT(11) NOT NULL,
   `complemento` VARCHAR(45) NOT NULL,
   `cidade` VARCHAR(45) NOT NULL,
   `uf` VARCHAR(45) NOT NULL,
+  `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_endereco_cliente_cliente_idx` (`cliente_id` ASC),
   CONSTRAINT `fk_endereco_cliente_cliente`
@@ -112,9 +126,11 @@ DEFAULT CHARACTER SET = utf8mb4;
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`pedido`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`pedido` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`pedido` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
+  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `valor_total` DECIMAL(10,2) NOT NULL,
   `situacao` TINYINT(4) NULL DEFAULT NULL,
   `cliente_id` INT(11) NOT NULL,
@@ -133,6 +149,8 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`pagamento`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`pagamento` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`pagamento` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `n_cartao` VARCHAR(45) NOT NULL,
@@ -143,11 +161,18 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`pagamento` (
   `cpf` VARCHAR(45) NOT NULL,
   `data_nasc` VARCHAR(45) NOT NULL,
   `parcelamento` VARCHAR(45) NOT NULL,
+  `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_pagamento_pedido1_idx` (`pedido_id` ASC),
+  INDEX `fk_pagamento_cliente1_idx` (`cliente_id` ASC),
   CONSTRAINT `fk_pagamento_pedido1`
     FOREIGN KEY (`pedido_id`)
     REFERENCES `ww_zuza`.`pedido` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_pagamento_cliente1`
+    FOREIGN KEY (`cliente_id`)
+    REFERENCES `ww_zuza`.`cliente` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -157,6 +182,8 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`produto`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`produto` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,
@@ -191,6 +218,8 @@ INSERT INTO `produto` (`id`, `nome`, `descricao`, `preco`, `cores`, `material`, 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`pedido_tem_produto`
 -- -----------------------------------------------------
+DROP TABLE IF EXISTS `ww_zuza`.`pedido_tem_produto` ;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`pedido_tem_produto` (
   `quantidade` INT(11) NOT NULL,
   `preco` DECIMAL(10,2) NOT NULL,

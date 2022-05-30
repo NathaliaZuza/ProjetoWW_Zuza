@@ -34,8 +34,8 @@ class EnderecoDAO {
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();
-            $cliente = $stmt->fetch( PDO::FETCH_ASSOC );
-            return $cliente;
+            $endereco = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $endereco;
         } catch ( PDOException $e ) {
             echo 'Erro ao listar um cliente: ', $e->getMessage();
         }
@@ -44,16 +44,16 @@ class EnderecoDAO {
     public function update( EnderecoDTO $enderecoDTO ) {
         try {
             $sql = 'UPDATE endereco_cliente SET '
-                . 'cep=?, endereco=?, numero_casa=?, cliente_id=?, complemento=?, cidade-?, uf=?, '
+                . 'cep=?, endereco=?, numero_casa=?, complemento=?, cidade-?, uf=?, cliente_id=?, '
                 . 'WHERE id=?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $enderecoDTO->getCep() );
             $stmt->bindValue( 2, $enderecoDTO->getEndereco() );
             $stmt->bindValue( 3, $enderecoDTO->getNumero_casa() );
-            $stmt->bindValue( 4, $enderecoDTO->getCliente_id() );
-            $stmt->bindValue( 5, $enderecoDTO->getComplemento() );
-            $stmt->bindValue( 6, $enderecoDTO->getCidade() );
-            $stmt->bindValue( 7, $enderecoDTO->getUf() );
+            $stmt->bindValue( 4, $enderecoDTO->getComplemento() );
+            $stmt->bindValue( 5, $enderecoDTO->getCidade() );
+            $stmt->bindValue( 6, $enderecoDTO->getUf() );
+            $stmt->bindValue( 7, $enderecoDTO->getCliente_id() );
             $stmt->bindValue( 8, $enderecoDTO->getId() );
             return $stmt->execute();
 

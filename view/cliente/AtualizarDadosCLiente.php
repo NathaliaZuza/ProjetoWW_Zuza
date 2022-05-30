@@ -26,9 +26,8 @@
         echo "id", $idCliente;
         $clienteDAO = new ClienteDAO();
         $cliente    = $clienteDAO->findById( $idCliente );
-        
         $enderecoDAO = new EnderecoDAO();
-        $endereco    = $enderecoDAO->findById( $idEndereco );
+        $endereco    = $enderecoDAO->findById( $Cliente_id );
     ?>
     <!-- ENDEREÇO -->
     <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
