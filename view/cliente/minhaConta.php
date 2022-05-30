@@ -35,7 +35,7 @@
         require_once '../../dao/enderecoDAO.php';
         $enderecoDAO = new EnderecoDAO();
         $endereco    = $enderecoDAO->findById( $idCliente );
-        
+
         require_once '../../dao/PagamentoDAO.php';
         $pagamentoDAO = new PagamentoDAO();
         $pagamento    = $pagamentoDAO->findById( $idCliente );
@@ -54,6 +54,7 @@
                         <th>Telefone</th>
                         <th>Excluir</th>
                         <th>Editar</th>
+                        <th>Enereço</th>
                     </tr>
                     <tr>
 
@@ -63,6 +64,7 @@
         echo   "<td>{$cliente["telefone"]}</td>";
         echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
         echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
+        echo "<td><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>Atualizar endereço</a></td>";
         echo   "</tr>";
         echo   "</main>";
         echo   "</div>";
@@ -91,15 +93,15 @@
         echo   "<td>{$endereco["complemento"]}</td>";
         echo   "<td>{$endereco["cidade"]}</td>";
         echo   "<td>{$endereco["uf"]}</td>";       
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirEnderecoController.php?excluirId={$endereco["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosendereco.php?id={$endereco["id"]}'><i class='bx bx-edit'></a></i></td>";
+        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
+        echo   "<td align='center' class='icone'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
         echo   "</tr>";
         echo   "</main>";
         echo   "</div>";
         ?>
             </div>
             <div>
-                <button><a href="../cliente/cadastrarEndereco.php">Adicionar Endereço.</a></button>
+                <button><a href='../cliente/cadastrarEndereco.php?id={$endereco["id"]}'>Adicionar Endereço.</a></button>
                 <button><a href="../cliente/pagamento.php">Adicionar cartão.</a></button>
             </div>
 

@@ -10,6 +10,7 @@ $cliente_id = $_POST["cliente_id"];
 $complemento = $_POST["complemento"];
 $cidade = $_POST["cidade"];
 $uf = $_POST["uf"];
+$idCliente = $_POST["idCliente"];
 
 $enderecoDTO = new EnderecoDTO();
 $enderecoDTO->setId( $idEndereco );
@@ -20,6 +21,7 @@ $enderecoDTO->setCliente_id( $cliente_id );
 $enderecoDTO->setComplemento( $complemento );
 $enderecoDTO->setCidade( $cidade );
 $enderecoDTO->setUf( $uf );
+$enderecoDTO->setUf( $idCliente );
 
 $enderecoDAO = new EnderecoDAO();
 

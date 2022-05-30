@@ -31,7 +31,7 @@ class PagamentoDAO {
     }
     public function findById( $id ) {
         try {
-            $sql  = 'SELECT * FROM pagamento WHERE id = ?';
+            $sql  = 'SELECT * FROM pagamento WHERE cliente_id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();
