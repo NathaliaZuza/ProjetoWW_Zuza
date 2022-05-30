@@ -23,11 +23,10 @@
         require_once '../../dao/enderecoDAO.php';
         
         $idCliente = $_SESSION["idCliente"];
-        echo "id", $idCliente;
         $clienteDAO = new ClienteDAO();
         $cliente    = $clienteDAO->findById( $idCliente );
         $enderecoDAO = new EnderecoDAO();
-        $endereco    = $enderecoDAO->findById( $Cliente_id );
+        $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
     <!-- ENDEREÇO -->
     <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">

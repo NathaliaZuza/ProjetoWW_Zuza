@@ -37,7 +37,7 @@
                <span class="tooltip">Atualizar Cadastro</span>
             </li>
             <li>
-                <a href="#">
+                <a onclick="compras()">
                     <i class='bx bxs-shopping-bags'></i>
                     <span class="links_name">Compras</span>
                 </a>
@@ -89,8 +89,11 @@
         function geral(){
             iframe.src="/view/cliente/minhaConta.php"
         }
+        function compras(){
+            iframe.src="/view/cliente/compras.php"
+        }
         function log_out(){
-            return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");
+            return confirm("Você está saindo da sua conta. Tem certeza que deseja sair?");
         }
     </script>
 </body>

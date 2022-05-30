@@ -30,7 +30,7 @@ class EnderecoDAO {
 
     public function findById( $id ) {
         try {
-            $sql  = 'SELECT * FROM endereco_cliente WHERE id = ?';
+            $sql  = 'SELECT * FROM endereco_cliente WHERE cliente_id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();
@@ -44,8 +44,8 @@ class EnderecoDAO {
     public function update( EnderecoDTO $enderecoDTO ) {
         try {
             $sql = 'UPDATE endereco_cliente SET '
-                . 'cep=?, endereco=?, numero_casa=?, complemento=?, cidade-?, uf=?, cliente_id=?, '
-                . 'WHERE id=?';
+                . 'cep=?, endereco=?, numero_casa=?, complemento=?, cidade-?, uf=?, '
+                . 'WHERE cliente_id=?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $enderecoDTO->getCep() );
             $stmt->bindValue( 2, $enderecoDTO->getEndereco() );
@@ -54,7 +54,6 @@ class EnderecoDAO {
             $stmt->bindValue( 5, $enderecoDTO->getCidade() );
             $stmt->bindValue( 6, $enderecoDTO->getUf() );
             $stmt->bindValue( 7, $enderecoDTO->getCliente_id() );
-            $stmt->bindValue( 8, $enderecoDTO->getId() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {
@@ -64,7 +63,7 @@ class EnderecoDAO {
     
     public function deleteById( $idCliente ) {
         try {
-            $sql  = 'DELETE FROM endereco_cliente WHERE id = ?';
+            $sql  = 'DELETE FROM endereco_cliente WHERE cliente_id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $idCliente );
             return $stmt->execute();
