@@ -11,6 +11,8 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema ww_zuza
 -- -----------------------------------------------------
+DROP SCHEMA IF EXISTS `ww_zuza`;
+
 CREATE SCHEMA IF NOT EXISTS `ww_zuza` DEFAULT CHARACTER SET utf8mb4 ;
 USE `ww_zuza` ;
 
@@ -157,6 +159,9 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`produto`
 -- -----------------------------------------------------
+
+DROP TABLE IF EXISTS `ww_zuza`.`produto`;
+
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`produto` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NOT NULL,

@@ -12,10 +12,10 @@ $produtoDAO = new ProdutoDAO();
 
 $total = 0;
 
-foreach ($produtos as $key => $qtde){
+foreach ($produtos as $key => $quantidade){
     $produto = $produtoDAO->findById($key);
-    $total +- $produto["preco"] * $qtde;
-} 
+    $total +- $produto["preco"] * $quantidade;
+}
 
 $carrinhoDAO = new CarrinhoDAO();
 
