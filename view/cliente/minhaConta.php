@@ -51,12 +51,14 @@
         <?php
             echo "<div class='nome'>{$cliente["nome"]}</div>";
             echo   "<div class='light'>Telefone: {$cliente["telefone"]} </div>";
-            echo   "<div>{$cliente["cpf"]} </div>";
+            echo   "<div class='light'>{$cliente["cpf"]} </div>";
 
-            echo   "<div><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
-        
-            echo   "<div><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
-            echo "<div><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>Atualizar endereço</a></div>";
+            echo   "<div><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir</a></div>";
+            // echo   "<div><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
+            echo   "<div class='nome'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Atualizar dados</a></div>";
+            // echo   "<div><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
+            echo "<div class='endereco'><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'><div class='mais'>+</div>
+            Adicionar endereço</a></div>";
             echo "<div>{$endereco["cep"]}</div>";
             echo   "<div>{$endereco["endereco"]}</div>";
             echo   "<div>{$endereco["numero_casa"]}</div>";
