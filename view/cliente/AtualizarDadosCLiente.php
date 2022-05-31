@@ -12,6 +12,7 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/cadastro.css">
+    <link rel="stylesheet" href="/css/alterarDadosCliente.css">
     <link rel="stylesheet" href="/css/headerMenu.css">
     <title>Cadastro | WWZ</title>
 </head>
@@ -29,45 +30,48 @@
         $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
     <!-- ENDEREÇO -->
-    <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
-        <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
-        <input type="hidden" name="id" value="<?=$_GET['id'];?>">
-        <div class="inputbox">
-            <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
-            <label for="cep">Cep</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
-            <label for="endereco">Endereço</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
-            <label for="numero_casa">N° casa</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
-            <label for="complemento">complemento</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
-            <label for="cidade">Cidade</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
-            <label for="uf">UF</label>
-        </div>
-        <br><br>
-        <button type="submit" class="botão">Enviar</button>
-        </td>
 
+    <div class="container">
 
-    </form>
-
+        
+        <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
+            
+            <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
+            <!-- <input type="hidden" name="id" value="<?=$_GET['id'];?>"> -->
+            <div class="inputbox">
+                <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
+                <label for="cep">Cep</label>
+            </div>
+            <br><br>
+            <div class="inputbox">
+                <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
+                <label for="endereco">Endereço</label>
+            </div>
+            <br><br>
+            <div class="inputbox">
+                <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
+                <label for="numero_casa">N° casa</label>
+            </div>
+            <br><br>
+            <div class="inputbox">
+                <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
+                <label for="complemento">complemento</label>
+            </div>
+            <br><br>
+            <div class="inputbox">
+                <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
+                <label for="cidade">Cidade</label>
+            </div>
+            <br><br>
+            <div class="inputbox">
+                <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
+                <label for="uf">UF</label>
+            </div>
+            <br><br>
+            <button type="submit" class="botão">Atualizar</button>
+            </td>
+        </form>
+   
     <!-- LOGIN -->
 
     <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
@@ -87,12 +91,12 @@
             <label for="telefone">Telefone</label>
         </div>
         <br><br>
-        <button type="submit" class="botão">Enviar</button>
+        <button type="submit" class="botão">Atualizar</button>
         </td>
 
 
     </form>
-
+ </div>
     <div style="text-align: center;">
         <?php
             if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
