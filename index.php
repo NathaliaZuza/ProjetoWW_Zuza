@@ -108,10 +108,15 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="inputbox">
+                        <label for="resposta_comentario">Resposta do comentario</label><br>
+                        <textarea name="resposta_comentario" id="resposta_comentario" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <input type="submit" value="Enviar pergunta" id="cadastrar">
                 </div>
             </form>
-
         <?php
          
             require_once './dao/ComentarioDAO.php';
@@ -126,20 +131,20 @@
             $comentarios   = $comentarioDAO->findAll();
             // $comentario    = $comentarioDAO->findById( $id );
 
-            echo "id", $idCliente;
+            // echo "id", $idCliente;
     
             if (!empty($comentarios)) {
                 foreach ($comentarios as $comentario) {
                     echo "<div id='comentarios'>";
-                    echo "      <div> {$comentario["id"]} </div>";  
-                    echo "      <div> {$comentario["comentario"]} </div>";                 
+                    // echo "      <div> {$comentario["id"]} </div>";  
+                    echo "      <div> {$comentario["comentario"]} </div>";   
+                    // echo "      <div> {$comentario["resposta_comentario"]} </div>";               
                     echo "</div>";
                 }
             } else {
                 echo "Não existe comentarios";
             }
         ?>
-        
     </div>
 
 

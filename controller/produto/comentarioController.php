@@ -10,20 +10,20 @@ require_once '../../dao/ComentarioDAO.php';
 
 $clienteId = $_POST["cliente_id"];
 $comentario = $_POST["comentario"];
-
+$comentario = $_POST["resposta_comentario"];
 
 $comentarioDTO = new ComentarioDTO();
 $comentarioDTO->setClienteId( $clienteId );
 $comentarioDTO->setComent( $comentario );
-
+$comentarioDTO->setRespostaComent( $resposta_comentario );
 
 $comentarioDAO = new ComentarioDAO();
-$comentarioDAO->salvar( $comentarioDTO );
+// $comentarioDAO->salvar( $comentarioDTO );
 if ( $comentarioDAO->salvar( $comentarioDTO ) ) {
     $msg = true;
     header( "Location: ../../index.php?sucesso=$msg" );
 } else {
-    $msg2 = false;
-    header( "Location: ../../index.php?sucesso=$msg2" );
+    $msg = false;
+    header( "Location: ../../index.php?sucesso=$msg" );
 }
 ?>

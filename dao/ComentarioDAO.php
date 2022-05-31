@@ -12,12 +12,13 @@ class ComentarioDAO {
     public function salvar( ComentarioDTO $comentarioDTO ) {
         try {
             $sql = "INSERT INTO comentario "
-                . "(comentario, cliente_id) "
-                . "VALUES(?,?)";
+                . "(comentario, resposta_comentario, cliente_id) "
+                . "VALUES(?,?,?)";
 
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $comentarioDTO->getComent() );
-            $stmt->bindValue( 2, $comentarioDTO->getClienteId() );
+            $stmt->bindValue( 2, $comentarioDTO->getRespostaComent() );
+            $stmt->bindValue( 3, $comentarioDTO->getClienteId() );
             return $stmt->execute();
         } catch ( PDOException $e ) {
             echo $e->getMessage();
@@ -61,11 +62,12 @@ class ComentarioDAO {
     public function update( ComentarioDTO $comentarioDTO ) {
         try {
             $sql = "UPDATE comentario SET "
-                . "comentario=? "
+                . "comentario=? resposta_comentario=? "
                 . "WHERE id=?";
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $comentarioDTO->getComent() );
-            $stmt->bindValue( 2, $comentarioDTO->getId() );
+            $stmt->bindValue( 2, $comentarioDTO->getRespostaComent() );
+            $stmt->bindValue( 3, $comentarioDTO->getId() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {
