@@ -34,10 +34,10 @@
     <div class="container">
 
         
-        <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
+        <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
             
             <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
-            <!-- <input type="hidden" name="id" value="<?=$_GET['id'];?>"> -->
+            <input type="hidden" name="id" value="<?=$_GET['id'];?>">
             <div class="inputbox">
                 <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
                 <label for="cep">Cep</label>
@@ -93,8 +93,10 @@
         <br><br>
         <button type="submit" class="botão">Atualizar</button>
         </td>
-
-        <button><a href="../cliente/alterarSenha.php">Alterar senha</a></button>
+        <br><br>
+    <?php
+       echo "<button><a href='../cliente/alterarSenha.php?id=" . $cliente["id"] . "'>Alterar senha</a></button>"
+        ?>
     </form>
  </div>
     <div style="text-align: center;">
