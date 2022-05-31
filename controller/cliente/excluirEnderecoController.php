@@ -1,5 +1,5 @@
 <?php
-require_once '../../dao/enderecoDAO.php';
+require_once '../../dao/EnderecoDAO.php';
 $idCliente = $_GET['excluirId'];
 $enderecoDAO = new EnderecoDAO();
 
