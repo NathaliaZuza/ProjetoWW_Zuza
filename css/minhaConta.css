@@ -23,25 +23,40 @@
     font-family: kinetika-light;
 }
 .endereco{
-    width: 270px;
+    width: 200px;
     height: 100px;
     background-color: rgba(255, 255, 255, 0.795);
     border-radius:7px;
     border: dashed 2px rgb(194, 194, 194);
     font-family: kinetika-light;
     font-weight: 900;
-}
-a .endereco{
-    margin: 0;
-    color: blue;
-    background-color: #000;
-    font-style: none;
-    height: 100px;
+    text-align: center;
+
 }
 .mais{
-    font-family: kinetika;
-    font-size: 20px;
-    font-style: none;
-    color: #000;
+    font-family: kinetika-light;
+    font-size: 70px;
+    margin-top: -20px;
+    text-align: center;
 }
-
+a .mais {
+    text-decoration: none;
+}
+.div1{
+    border: 1px solid black;
+    width: 40%;
+    padding: 30px;
+    border-radius: 7px;
+}
+.atualizar{
+    display: flex;
+    font-family: kinetika;
+}
+.atualizar2{
+    display: flex;
+    margin-right: 25px;
+    
+}
+.atualizar a{
+    color: rgb(27, 0, 145);
+}

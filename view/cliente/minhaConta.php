@@ -49,13 +49,16 @@
             <div class='conteudo'>
                 <h1>Listar os dados do cliente</h1>                       
         <?php
+            echo "<div class='div1'>";
             echo "<div class='nome'>{$cliente["nome"]}</div>";
             echo   "<div class='light'>Telefone: {$cliente["telefone"]} </div>";
             echo   "<div class='light'>{$cliente["cpf"]} </div>";
 
-            echo   "<div><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir</a></div>";
-            // echo   "<div><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
-            echo   "<div class='nome'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Atualizar dados</a></div>";
+            echo "<div class='atualizar'>";
+                echo   "<div class='atualizar2'><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir </a></div>";
+                echo   "<div class='atualizar'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Alterar</a></div>"; 
+            echo   "</div>";
+            echo   "</div>";
             // echo   "<div><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
             echo "<div class='endereco'><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'><div class='mais'>+</div>
             Adicionar endereço</a></div>";
@@ -69,6 +72,7 @@
             echo   "<div align='center' class='icone'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
             echo   "</main>";
             echo   "</div>";
+           
         ?>
             </div>
         </main>
