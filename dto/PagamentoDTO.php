@@ -4,13 +4,14 @@ class PagamentoDTO {
 
     private $id;
     private $n_cartao;
+    private $pedido_id;
     private $nome_cartao;
     private $validade;
     private $verificacao;
     private $cpf;
     private $data_nasc;
     private $parcelamento;
-    private $pedido_id;
+    private $cliente_id;
 
     public function getId(){
         return $this->id;
@@ -65,5 +66,17 @@ class PagamentoDTO {
     }
     public function setPedido_id($pedido_id){
         $this->pedido_id = $pedido_id;
+    }
+
+    public function getCliente_id()
+    {
+        return $this->cliente_id;
+    }
+
+    public function setCliente_id($cliente_id)
+    {
+        $this->cliente_id = $cliente_id;
+
+        return $this;
     }
 }

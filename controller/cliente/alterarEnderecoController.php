@@ -21,7 +21,7 @@ $enderecoDTO->setCliente_id( $cliente_id );
 $enderecoDTO->setComplemento( $complemento );
 $enderecoDTO->setCidade( $cidade );
 $enderecoDTO->setUf( $uf );
-$enderecoDTO->setUf( $idCliente );
+$enderecoDTO->setCliente_id( $cliente_id );
 
 $enderecoDAO = new EnderecoDAO();
 

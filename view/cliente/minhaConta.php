@@ -101,31 +101,8 @@
         ?>
             </div>
             <div>
-                <button><a href='../cliente/cadastrarEndereco.php?id={$endereco["id"]}'>Adicionar Endereço.</a></button>
-                <button><a href="../cliente/pagamento.php">Adicionar cartão.</a></button>
-            </div>
-
-            <div class='conteudo'>
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Numero do cartão</th>
-                        <th>validade</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                    </tr>
-                    <tr>
-
-                        <?php
-        echo "<td>{$pagamento["nome"]}</td>";
-        echo   "<td>{$pagamento["numero_cartao"]}</td>";
-        echo   "<td>{$pagamento["validade"]}</td>";
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo   "</tr>";
-        echo   "</main>";
-        echo   "</div>";
-        ?>
+                
+                
             </div>
         </main>
 </body>
