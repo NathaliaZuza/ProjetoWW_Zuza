@@ -23,30 +23,45 @@
     font-family: kinetika-light;
 }
 .endereco{
-    width: 200px;
-    height: 100px;
+    width: 35%;
     background-color: rgba(255, 255, 255, 0.795);
     border-radius:7px;
-    border: dashed 2px rgb(194, 194, 194);
+    border: dashed 2px rgb(212, 212, 212);
     font-family: kinetika-light;
     font-weight: 900;
     text-align: center;
-
+    padding: 15px;
+    margin-left: 25px;
+}
+.endereco a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 900;
 }
 .mais{
     font-family: kinetika-light;
     font-size: 70px;
     margin-top: -20px;
     text-align: center;
-}
-a .mais {
-    text-decoration: none;
+    color: #c7c7c7;
 }
 .div1{
-    border: 1px solid black;
-    width: 40%;
-    padding: 30px;
+    border: 1px solid #929292;
+    width: 70%;
+    padding: 20px;
     border-radius: 7px;
+    margin-bottom: 25px;
+}
+.div2{
+    border: 1px solid #929292;
+    width: 40%;
+    padding: 20px;
+    border-radius: 7px;
+}
+.endereco:hover{
+    background-color: #f0f0f0;
+    transition: 0.5s;
 }
 .atualizar{
     display: flex;
@@ -55,8 +70,38 @@ a .mais {
 .atualizar2{
     display: flex;
     margin-right: 25px;
-    
 }
 .atualizar a{
     color: rgb(27, 0, 145);
+}
+#tel{
+    font-weight: 900;
+}
+.inline{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+h1{
+    font-family: kinetika;
+    text-align: left;
+    color: rgb(236, 201, 0);
+    font-size: 25px;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    margin-left: -50px;
+}
+.container{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudo{
+    position: absolute;
+    width: 80%;
 }

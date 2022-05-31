@@ -12,7 +12,7 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/cadastro.css">
-    <link rel="styleSheet" href="/css/listaProdutos.css">
+    <!-- <link rel="styleSheet" href="/css/listaProdutos.css"> -->
     <link rel="stylesheet" href="/css/headerMenu.css">
     <link rel="stylesheet" href="/css/minhaConta.css">
 
@@ -47,31 +47,38 @@
 
         <main class='container'>
             <div class='conteudo'>
-                <h1>Listar os dados do cliente</h1>                       
+                <h1>Meus dados</h1>                       
         <?php
+        echo "<div class='inline'>";
             echo "<div class='div1'>";
             echo "<div class='nome'>{$cliente["nome"]}</div>";
-            echo   "<div class='light'>Telefone: {$cliente["telefone"]} </div>";
-            echo   "<div class='light'>{$cliente["cpf"]} </div>";
+            echo   "<div class='light'><span id='tel'>Telefone:</span> {$cliente["telefone"]} </div>";
+            echo   "<div class='light'><span id='tel'>CPF:</span> {$cliente["cpf"]} </div>";           
+                echo "<div class='atualizar'>";
+                    echo   "<div class='atualizar2'><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir </a></div>";
+                    echo   "<div class='atualizar'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Alterar</a></div>"; 
+                echo   "</div>";
+            echo   "</div>";               
+        echo "</div>";
+/*------------------ */
+        echo "<div class='inline'>";
+        echo "<div class='div2'>";
+        echo "<div class='nome'>Endereços</div>";
+        echo   "<div class='light'><span id='tel'>{$endereco["cep"]}, {$endereco["endereco"]}, {$endereco["numero_casa"]}</span></div>";
+        echo   "<div class='light'><span id='tel'>{$endereco["complemento"]}</span></div>";  
+        echo   "<div class='light'><span id='tel'>{$endereco["cidade"]}, {$endereco["uf"]}</span></div>";  
 
             echo "<div class='atualizar'>";
-                echo   "<div class='atualizar2'><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir </a></div>";
-                echo   "<div class='atualizar'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Alterar</a></div>"; 
-            echo   "</div>";
-            echo   "</div>";
-            // echo   "<div><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
-            echo "<div class='endereco'><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'><div class='mais'>+</div>
-            Adicionar endereço</a></div>";
-            echo "<div>{$endereco["cep"]}</div>";
-            echo   "<div>{$endereco["endereco"]}</div>";
-            echo   "<div>{$endereco["numero_casa"]}</div>";
-            echo   "<div>{$endereco["complemento"]}</div>";
-            echo   "<div>{$endereco["cidade"]}</div>";
-            echo   "<div>{$endereco["uf"]}</div>";       
-            echo   "<div align=center class='lixo'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
-            echo   "<div align='center' class='icone'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
-            echo   "</main>";
-            echo   "</div>";
+                echo   "<div class='atualizar2'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'>Excluir</a></div>";
+                echo   "<div class='atualizar2'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'>Alterar</div>"; 
+            echo "</div>";
+        echo   "</div>";
+        echo "<div class='endereco'>
+                <a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>
+                <div class='mais'>+</div>
+                Adicionar endereço</a>
+            </div>";                
+        echo "</div>";
            
         ?>
             </div>
