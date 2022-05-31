@@ -109,7 +109,7 @@
                 </div>
                 <div class="row">
                     <div class="inputbox">
-                        <label for="resposta_comentario">Resposta do comentario</label><br>
+                        <label for="resposta_comentario">Resposta do comentário</label><br>
                         <textarea name="resposta_comentario" id="resposta_comentario" cols="30" rows="10"></textarea>
                     </div>
                 </div>
