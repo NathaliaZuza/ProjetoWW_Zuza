@@ -78,8 +78,8 @@
 #img-account{
     margin-right: 10px;
 }
-.logo{
-    /* background-color: #0f0059da; */
+.logoIndex{
+    background-color: #0f0059da; 
     color: #F3B700;
     letter-spacing: 4px;
     border-radius: 5px;
@@ -121,7 +121,7 @@
 
 /*-----------MENU------------*/
 .menu {
-    display: flex;
+    display: flex; 
     justify-content: space-evenly;
     background-color: #0f00590c;
 }

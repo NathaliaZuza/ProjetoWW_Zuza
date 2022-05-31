@@ -17,7 +17,7 @@
         <ul class="nav-logar">
             <li>
                 <a href="index.php">
-                    <span class="logo">WW.ZUZA</span>
+                    <span class="logoIndex">WW.ZUZA</span>
                 </a>
             </li>
             <li>
@@ -84,13 +84,31 @@
 
 <!------------SIDEBAR----------->
 
+<?php 
+
+  session_start();
+        require_once '../../dao/ClienteDAO.php';
+        $idCliente = $_SESSION["idCliente"];
+        $clienteDAO = new ClienteDAO();
+        $cliente    = $clienteDAO->findById( $idCliente );
+
+        require_once '../../dao/enderecoDAO.php';
+        $enderecoDAO = new EnderecoDAO();
+        $endereco    = $enderecoDAO->findById( $idCliente );
+
+        require_once '../../dao/PagamentoDAO.php';
+        $pagamentoDAO = new PagamentoDAO();
+        $pagamento    = $pagamentoDAO->findById( $idCliente );
+
+
+?>
 <div class="sidebar">
         <div class="logo_conteudo">
             <div class="logo">
            
-            <i class='bx bxs-home-alt-2'></i>
+            <i class='bx bxs-user-circle'></i>
                 
-               <div class="logo_nome">Home</div>
+               <div class="logo_nome">Olá, <?php  echo "{$cliente["nome"]}";  ?> </div>
             
             </div>
             <i class='bx bx-menu' id="btn"></i>

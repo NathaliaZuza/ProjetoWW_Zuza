@@ -84,6 +84,9 @@ body{
     list-style: none;
     line-height: 50px;  
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap
 }
 .sidebar ul li .tooltip{
     position: absolute;
@@ -210,3 +213,6 @@ body{
     display: flex;
 
 }
+
+/*---DIVS GERAL----*/
+
