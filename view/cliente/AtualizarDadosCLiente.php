@@ -20,7 +20,7 @@
     <?php
         session_start();
         require_once '../../dao/ClienteDAO.php';
-        require_once '../../dao/enderecoDAO.php';
+        require_once '../../dao/EnderecoDAO.php';
         
         $idCliente = $_SESSION["idCliente"];
         $clienteDAO = new ClienteDAO();
@@ -30,7 +30,8 @@
     ?>
     <!-- ENDEREÇO -->
     <form id="formCadastroCliente" action="/controller/cliente/alterarEnderecoController.php" method="post">
-        <input type="hidden" name="idEndereco" value="<?php echo $endereco["id"] ?>">
+        <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
+        <input type="hidden" name="id" value="<?=$_GET['id'];?>">
         <div class="inputbox">
             <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
             <label for="cep">Cep</label>
@@ -86,7 +87,7 @@
             <label for="telefone">Telefone</label>
         </div>
         <br><br>
-        <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+        <button type="submit" class="botão">Enviar</button>
         </td>
 
 
