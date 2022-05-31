@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/sidebar.css">
+    <link rel="stylesheet" href="/css/sidebarCliente.css">
+
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="shortcut icon" href="/img/lg-03.png"/>
     <title>Minha Conta | WWZUZA</title>
@@ -65,6 +66,11 @@
             </div>
         </div>
     </div>
+
+    <!-- <a onclick="geral()"><div class="opcoes">Seus dados</div></a>
+    <a onclick="AtualizarCadastro()"><div class="opcoes">Adiicionar cartões/endereços</div></a>
+    <a onclick="compras()"><div class="opcoes">Seus pedidos</div></a>
+   <a href=""><div class="opcoes">Comentários</div></a> -->
 
 
     <iframe src="" frameborder="0" class="iframe"></iframe>
