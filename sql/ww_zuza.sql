@@ -86,6 +86,7 @@ DROP TABLE IF EXISTS `ww_zuza`.`comentario` ;
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `comentario` VARCHAR(1200) NULL DEFAULT NULL,
+  `resposta_comentario` VARCHAR(1200) NULL DEFAULT NULL,
   `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
@@ -97,7 +98,6 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
-
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`endereco_cliente`
