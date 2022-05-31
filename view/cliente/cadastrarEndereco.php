@@ -17,6 +17,7 @@
 
             <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
                 method="post">
+                
                 <input type="hidden" name="cliente_id" value="<?=$_GET['id'];?>">
                 <div class="inputBox">
                     <input type="text" name="cep" id="cep" class="inputUser" required>
