@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+.nome{
+    font-family: kinetika;
+}
+.light{
+    font-family: kinetika-light;
+}
