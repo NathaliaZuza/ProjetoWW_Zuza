@@ -94,7 +94,7 @@
         <button type="submit" class="botão">Atualizar</button>
         </td>
 
-
+        <button><a href="../cliente/alterarSenha.php">Alterar senha</a></button>
     </form>
  </div>
     <div style="text-align: center;">
