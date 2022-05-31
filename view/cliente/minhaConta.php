@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/cadastro.css">
     <link rel="styleSheet" href="/css/listaProdutos.css">
     <link rel="stylesheet" href="/css/headerMenu.css">
+    <link rel="stylesheet" href="/css/minhaConta.css">
 
     <script>
     $(document).ready(function() {
@@ -47,59 +48,26 @@
         <main class='container'>
             <div class='conteudo'>
                 <h1>Listar os dados do cliente</h1>
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                        <th>Enereço</th>
-                    </tr>
-                    <tr>
-
-                        <?php
-        echo "<td>{$cliente["nome"]}</td>";
-        echo   "<td>{$cliente["cpf"]}</td>";
-        echo   "<td>{$cliente["telefone"]}</td>";
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo "<td><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>Atualizar endereço</a></td>";
-        echo   "</tr>";
-        echo   "</main>";
-        echo   "</div>";
+              
+        <?php
+            echo "<div>{$cliente["nome"]}</div>";
+            echo   "<div>{$cliente["cpf"]}</div>";
+            echo   "<div> Telefone: {$cliente["telefone"]}</div>";
+            echo   "<div align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
+            echo   "<div align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i> </div>";
+            echo "<a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>Atualizar endereço</a>";
+    
+            echo "<div>{$endereco["cep"]}</div>";
+            echo   "<div>{$endereco["endereco"]}</div>";
+            echo   "<div>{$endereco["numero_casa"]}</div>";
+            echo   "<div>{$endereco["complemento"]}</div>";
+            echo   "<div>{$endereco["cidade"]}</div>";
+            echo   "<div>{$endereco["uf"]}</div>";       
+            echo   "<div align=center class='lixo'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></div>";
+            echo   "<div align='center' class='icone'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></div>";
+            echo   "</main>";
         ?>
-            </div>
-
-            <div class='conteudo'>
-
-                <table>
-                    <tr>
-                        <th>CEP</th>
-                        <th>Endereço</th>
-                        <th>Nº casa</th>
-                        <th>Complemento</th>
-                        <th>Cidade</th>
-                        <th>UF</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                    </tr>
-                    <tr>
-
-                        <?php
-        echo "<td>{$endereco["cep"]}</td>";
-        echo   "<td>{$endereco["endereco"]}</td>";
-        echo   "<td>{$endereco["numero_casa"]}</td>";
-        echo   "<td>{$endereco["complemento"]}</td>";
-        echo   "<td>{$endereco["cidade"]}</td>";
-        echo   "<td>{$endereco["uf"]}</td>";       
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo   "</tr>";
-        echo   "</main>";
-        echo   "</div>";
-        ?>
-            </div>
+           
             <div>
                 
                 
