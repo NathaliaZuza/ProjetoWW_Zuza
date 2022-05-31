@@ -57,12 +57,12 @@
                         <th>Enereço</th>
                     </tr>
                     <tr>
-
+                        
                         <?php
         echo "<td>{$cliente["nome"]}</td>";
         echo   "<td>{$cliente["cpf"]}</td>";
         echo   "<td>{$cliente["telefone"]}</td>";
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
+        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
         echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
         echo "<td><a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>Atualizar endereço</a></td>";
         echo   "</tr>";
