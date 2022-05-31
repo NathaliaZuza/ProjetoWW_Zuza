@@ -11,7 +11,6 @@
 }
 body{
     font-family: 'kinetika';
-
     color: #000000;
     justify-content: center;
     align-items: center;
@@ -24,11 +23,11 @@ body{
 
 .sidebar{
     position: fixed;
-    top: 0;
+    top: 132px;
     left: 0;
     height: 100%;
     width: 78px;
-    background-color: #F3B700;
+    background-color: #0f00590c;
     color: #090038;
     padding: 6px 14px;
     transition: all 0.5s ease;
@@ -144,7 +143,7 @@ body{
 .sidebar .profile_content{
     position: absolute;
     color: #fff;
-    bottom: 0;
+    bottom: 150px;
     left: 0;
     width: 100%;
 }
@@ -210,20 +209,4 @@ body{
     width: 50%;
     display: flex;
 
-}
-
-/*---DIVS GERAL----*/
-
-.opcoes{
-    background-color:#090038;
-    height: 100px;
-    width: 20%;
-    gap: 50px;
-    display: inline-block;
-    flex-wrap: wrap;
-    color: #fff;
-    text-align: center;
-    align-content: center;
-    align-items: center;
-    margin: auto;
 }

@@ -12,7 +12,6 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/cadastro.css">
-    <!-- <link rel="styleSheet" href="/css/listaProdutos.css"> -->
     <link rel="stylesheet" href="/css/headerMenu.css">
     <link rel="stylesheet" href="/css/minhaConta.css">
 
@@ -26,7 +25,8 @@
 </head>
 
 <body>
-    <?php
+
+<?php 
         session_start();
         require_once '../../dao/ClienteDAO.php';
         $idCliente = $_SESSION["idCliente"];
