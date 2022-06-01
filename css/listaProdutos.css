@@ -34,6 +34,24 @@ h1{
     position: absolute;
     width: 80%;
 }
+.containerVendas{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudoVendas{
+    position: absolute;
+    width: 100%;
+}
+.tableVendas table{
+    width: 100%;
+}
+
 table{
     margin: auto;
     margin-top: 5%;
@@ -73,4 +91,8 @@ td{
 .nome-lista{
     font-family: kinetika ;
     color: #e4ab00;
+}
+.total-lista{
+    font-family: kinetika ;
+    color: #e40000;
 }

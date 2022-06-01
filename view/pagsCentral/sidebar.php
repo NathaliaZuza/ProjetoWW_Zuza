@@ -109,7 +109,7 @@
             iframe.src="/view/pagsCentral/painelAdministrativo.php"
         }
         function vendas(){
-            iframe.src="/view/produto/vendas.php.php"
+            iframe.src="/view/produto/vendas.php"
         }
         function log_out(){
             return confirm("Você está saindo da página do administrador. Tem certeza que deseja sair?");
