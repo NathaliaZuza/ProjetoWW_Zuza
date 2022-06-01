@@ -44,7 +44,7 @@ class EnderecoDAO {
     public function update( EnderecoDTO $enderecoDTO ) {
         try {
             $sql = 'UPDATE endereco_cliente SET '
-                . 'cep=?, endereco=?, numero_casa=?, complemento=?, cidade-?, uf=?, '
+                . 'cep=?, endereco=?, numero_casa=?, complemento=?, cidade=?, uf=? '
                 . 'WHERE cliente_id=?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $enderecoDTO->getCep() );

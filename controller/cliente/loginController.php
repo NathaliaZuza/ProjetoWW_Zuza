@@ -11,6 +11,7 @@ $login    = $loginDAO->findByEmailSenha( $email, $senha );
 if ( !empty( $login ) ) {
 
     $_SESSION["idCliente"] = $login['idCliente'];
+    $_SESSION["perfil"] = $login["perfil"];
 
     if ( $login['perfil'] == 'Administrador' ) {
         header( "Location: /view/pagsCentral/sidebar.php" );
