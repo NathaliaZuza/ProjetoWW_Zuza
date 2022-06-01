@@ -30,13 +30,14 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`categoria` (
 ENGINE = InnoDB
 AUTO_INCREMENT = 11
 DEFAULT CHARACTER SET = utf8mb4;
-
 INSERT INTO `categoria` (`id`, `nome`) VALUES
 (1, 'Panfleto'),
 (2, 'Cartão'),
 (3, 'Cardápio'),
 (4, 'Banner'),
 (5, 'Papel Timbrado');
+
+
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`usuario`
 -- -----------------------------------------------------
@@ -49,7 +50,7 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`usuario` (
   `perfil` VARCHAR(20) NOT NULL DEFAULT 'Cliente',
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
-AUTO_INCREMENT = 4
+AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -73,7 +74,7 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
-AUTO_INCREMENT = 5
+AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8;
 
 
@@ -85,7 +86,8 @@ DROP TABLE IF EXISTS `ww_zuza`.`comentario` ;
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `comentario` VARCHAR(1200) NULL DEFAULT NULL,
-  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `resposta_comentario` VARCHAR(1200) NULL DEFAULT NULL,
+  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_comentario_cliente_idx` (`cliente_id` ASC),
@@ -97,7 +99,6 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4;
 
-
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`endereco_cliente`
 -- -----------------------------------------------------
@@ -108,10 +109,10 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`endereco_cliente` (
   `cep` INT(10) NOT NULL,
   `endereco` VARCHAR(255) NOT NULL,
   `numero_casa` VARCHAR(45) NOT NULL,
+  `cliente_id` INT(11) NOT NULL,
   `complemento` VARCHAR(45) NOT NULL,
   `cidade` VARCHAR(45) NOT NULL,
   `uf` VARCHAR(45) NOT NULL,
-  `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_endereco_cliente_cliente_idx` (`cliente_id` ASC),
   CONSTRAINT `fk_endereco_cliente_cliente`
@@ -130,7 +131,7 @@ DROP TABLE IF EXISTS `ww_zuza`.`pedido` ;
 
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`pedido` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
   `valor_total` DECIMAL(10,2) NOT NULL,
   `situacao` TINYINT(4) NULL DEFAULT NULL,
   `cliente_id` INT(11) NOT NULL,
@@ -213,7 +214,6 @@ INSERT INTO `produto` (`id`, `nome`, `descricao`, `preco`, `cores`, `material`, 
 (8, 'Cartão de Visita 4x4', 'Folders, flyers, outdoors, entre outros materiais, quando inseridos em uma campanha publicitária com estratégias claras, são uma forte arma de divulgação e de presença de marca.', '200', '4x4', 'Papel Couchê 300g', '9cm x 5cm', '3 dias úteis', '1000un', '6282c3a45923e.png', 2),
 (10, 'Cartão de Visita 4x0', 'Folders, flyers, outdoors, entre outros materiais, quando inseridos em uma campanha publicitária com estratégias claras, são uma forte arma de divulgação e de presença de marca.', '60', '4x0', 'Papel Couchê 300g', '9cm x 5cm', '2 dias úteis', '1000un', '6282c4124e65a.png', 2),
 (11, 'Cardápio', 'Folders, flyers, outdoors, entre outros materiais, quando inseridos em uma campanha publicitária com estratégias claras, são uma forte arma de divulgação e de presença de marca.', '250', '4x4 (colorido)', 'Papel Couchê 95g', '20cm x 10cm', '4 dias úteis', '30un', '6285b5b2ed663.png', 3);
-
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`pedido_tem_produto`

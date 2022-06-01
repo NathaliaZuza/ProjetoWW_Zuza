@@ -55,7 +55,16 @@ class ClienteDAO {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
         }
     }
-
+    public function deleteByIdUsuario($idUsuario){
+        try {
+            $sql = 'DELETE FROM usuario WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $idUsuario );
+            return $stmt->execute();
+        } catch ( PDOException $e ) {
+            echo 'Erro ao excluir o Usuario ', $e->getMessage();
+        }
+    }
     public function findById( $id ) {
         try {
             $sql  = 'SELECT * FROM cliente WHERE id = ?';
@@ -79,6 +88,22 @@ class ClienteDAO {
             $stmt->bindValue( 2, $clienteDTO->getCpf() );
             $stmt->bindValue( 3, $clienteDTO->getTelefone() );
             $stmt->bindValue( 4, $clienteDTO->getId() );
+            return $stmt->execute();
+
+        } catch ( PDOException $e ) {
+            echo 'Erro ao atualizar o cliente: ', $e->getMessage();
+        }
+    }
+
+    public function updateUsuario( ClienteDTO $clienteDTO ) {
+        try {
+            $sql = 'UPDATE usuario SET '
+                . 'email=?, senha=? '
+                . 'WHERE id=?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $clienteDTO->getEmail() );
+            $stmt->bindValue( 2, $clienteDTO->getSenha() );
+            $stmt->bindValue( 3, $clienteDTO->getId() );
             return $stmt->execute();
 
         } catch ( PDOException $e ) {

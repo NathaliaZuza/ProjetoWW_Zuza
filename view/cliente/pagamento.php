@@ -17,8 +17,8 @@
     <main class="container">
         <div class="conteudo">
             <h1>Novo cartão de crédito</h1>
-
-            <form id="pagamento" action="" method="post" enctype="multipart/form-data">
+            <button><a href="../cliente/minhaConta.php">Adicionar cartão.</a></button>
+            <form id="pagamento" action="../../controller/cliente/pagamentoController.php" method="post">
                 <div class="row">
                     <div class="inputbox">
                         <input type="text" name="nome_cartao" id="nome_cartao" required>

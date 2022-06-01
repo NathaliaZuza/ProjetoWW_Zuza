@@ -1,9 +1,9 @@
 <?php
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/ProdutoDTO.php';
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dto/CategoriaDTO.php';
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/CategoriaDAO.php';
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/util/Upload.php';
+require_once '../../dao/ProdutoDAO.php';
+require_once '../../dto/ProdutoDTO.php';
+require_once '../../dao/CategoriaDAO.php';
+require_once '../../dto/CategoriaDTO.php';
+require_once '../../util/Upload.php';
 
 define( 'DIR_FOTO', $_SERVER['DOCUMENT_ROOT'] . "/img/produto/foto/" );
 

@@ -11,12 +11,14 @@
 <body>
     <div class="containerpai">
         <h1>Cadastro</h1>
-
+        <button><a href="../cliente/minhaConta.php">Adicionar cartão.</a></button>
 
         <div class="formContainer">
 
             <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
                 method="post">
+                
+                <input type="hidden" name="cliente_id" value="<?=$_GET['id'];?>">
                 <div class="inputBox">
                     <input type="text" name="cep" id="cep" class="inputUser" required>
                     <label for="cep" class="labelInput">Cep</label>

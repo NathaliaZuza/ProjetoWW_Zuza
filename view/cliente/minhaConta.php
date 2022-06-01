@@ -12,8 +12,8 @@
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="/css/cadastro.css">
-    <link rel="styleSheet" href="/css/listaProdutos.css">
     <link rel="stylesheet" href="/css/headerMenu.css">
+    <link rel="stylesheet" href="/css/minhaConta.css">
 
     <script>
     $(document).ready(function() {
@@ -25,7 +25,8 @@
 </head>
 
 <body>
-    <?php
+
+<?php 
         session_start();
         require_once '../../dao/ClienteDAO.php';
         $idCliente = $_SESSION["idCliente"];
@@ -35,7 +36,7 @@
         require_once '../../dao/enderecoDAO.php';
         $enderecoDAO = new EnderecoDAO();
         $endereco    = $enderecoDAO->findById( $idCliente );
-        
+
         require_once '../../dao/PagamentoDAO.php';
         $pagamentoDAO = new PagamentoDAO();
         $pagamento    = $pagamentoDAO->findById( $idCliente );
@@ -46,83 +47,39 @@
 
         <main class='container'>
             <div class='conteudo'>
-                <h1>Listar os dados do cliente</h1>
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>CPF</th>
-                        <th>Telefone</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                    </tr>
-                    <tr>
+                <h1>Meus dados</h1>                       
+        <?php
+        echo "<div class='inline'>";
+            echo "<div class='div1'>";
+            echo "<div class='nome'>{$cliente["nome"]}</div>";
+            echo   "<div class='light'><span id='tel'>Telefone:</span> {$cliente["telefone"]} </div>";
+            echo   "<div class='light'><span id='tel'>CPF:</span> {$cliente["cpf"]} </div>";           
+                echo "<div class='atualizar'>";
+                    echo   "<div class='atualizar2'><td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'>Excluir </a></div>";
+                    echo   "<div class='atualizar'><td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'>Alterar</a></div>"; 
+                echo   "</div>";
+            echo   "</div>";               
+        echo "</div>";
+/*------------------ */
+        echo "<div class='inline'>";
+        echo "<div class='div2'>";
+        echo "<div class='nome'>Endereços</div>";
+        echo   "<div class='light'><span id='tel'>{$endereco["cep"]}, {$endereco["endereco"]}, {$endereco["numero_casa"]}</span></div>";
+        echo   "<div class='light'><span id='tel'>{$endereco["complemento"]}</span></div>";  
+        echo   "<div class='light'><span id='tel'>{$endereco["cidade"]}, {$endereco["uf"]}</span></div>";  
 
-                        <?php
-        echo "<td>{$cliente["nome"]}</td>";
-        echo   "<td>{$cliente["cpf"]}</td>";
-        echo   "<td>{$cliente["telefone"]}</td>";
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo   "</tr>";
-        echo   "</main>";
+            echo "<div class='atualizar'>";
+                echo   "<div class='atualizar2'><a onclick='return confirmarExcluir();'href=/controller/cliente/excluirEnderecoController.php?excluirId={$cliente["id"]}'>Excluir</a></div>";
+                echo   "<div class='atualizar2'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'>Alterar</div>"; 
+            echo "</div>";
         echo   "</div>";
-        ?>
-            </div>
-
-            <div class='conteudo'>
-
-                <table>
-                    <tr>
-                        <th>CEP</th>
-                        <th>Endereço</th>
-                        <th>Nº casa</th>
-                        <th>Complemento</th>
-                        <th>Cidade</th>
-                        <th>UF</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                    </tr>
-                    <tr>
-
-                        <?php
-        echo "<td>{$endereco["cep"]}</td>";
-        echo   "<td>{$endereco["endereco"]}</td>";
-        echo   "<td>{$endereco["numero_casa"]}</td>";
-        echo   "<td>{$endereco["complemento"]}</td>";
-        echo   "<td>{$endereco["cidade"]}</td>";
-        echo   "<td>{$endereco["uf"]}</td>";       
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirEnderecoController.php?excluirId={$endereco["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosendereco.php?id={$endereco["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo   "</tr>";
-        echo   "</main>";
-        echo   "</div>";
-        ?>
-            </div>
-            <div>
-                <button><a href="../cliente/cadastrarEndereco.php">Adicionar Endereço.</a></button>
-                <button><a href="../cliente/pagamento.php">Adicionar cartão.</a></button>
-            </div>
-
-            <div class='conteudo'>
-                <table>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Numero do cartão</th>
-                        <th>validade</th>
-                        <th>Excluir</th>
-                        <th>Editar</th>
-                    </tr>
-                    <tr>
-
-                        <?php
-        echo "<td>{$pagamento["nome"]}</td>";
-        echo   "<td>{$pagamento["numero_cartao"]}</td>";
-        echo   "<td>{$pagamento["validade"]}</td>";
-        echo   "<td align=center class='lixo'><a onclick='return confirmarExcluir();'href='../controller/excluirClienteController.php?excluirId={$cliente["id"]}'><i  class='bx bxs-trash lixo'></a></i></td>";
-        echo   "<td align='center' class='icone'><a href='../cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit'></a></i></td>";
-        echo   "</tr>";
-        echo   "</main>";
-        echo   "</div>";
+        echo "<div class='endereco'>
+                <a href='../cliente/cadastrarEndereco.php?id=" . $cliente["id"] . "'>
+                <div class='mais'>+</div>
+                Adicionar endereço</a>
+            </div>";                
+        echo "</div>";
+           
         ?>
             </div>
         </main>

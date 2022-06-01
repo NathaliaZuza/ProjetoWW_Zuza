@@ -19,14 +19,13 @@ $enderecoDTO->setCidade( $cidade );
 $enderecoDTO->setUf( $uf );
 $enderecoDTO->setCliente_id( $cliente_id );
 
-
 $enderecoDAO = new EnderecoDAO();
 
 if ( empty( $cliente ) ) {
     if ( $enderecoDAO->salvar( $enderecoDTO ) ) {
-        header( "Location: ../view/cliente/sidebarCliente.php?msg={$error[1]}" );
+        header( "Location: ../../view/cliente/minhaConta.php?msg={$error[1]}" );
     }
 } else {
-    header( "Location: ../view/cliente/cadastrarEndereco.php?msg={$error[2]}" );
+    header( "Location: ../../view/cliente/minhaConta.php?msg={$error[2]}" );
 }
 ?>

@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+.nome{
+    font-family: kinetika;
+}
+.light{
+    font-family: kinetika-light;
+}
+.endereco{
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.795);
+    border-radius:7px;
+    border: dashed 2px rgb(212, 212, 212);
+    font-family: kinetika-light;
+    font-weight: 900;
+    text-align: center;
+    padding: 15px;
+    margin-left: 25px;
+}
+.endereco a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    font-weight: 900;
+}
+.mais{
+    font-family: kinetika-light;
+    font-size: 70px;
+    margin-top: -20px;
+    text-align: center;
+    color: #c7c7c7;
+}
+.div1{
+    border: 1px solid #929292;
+    width: 70%;
+    padding: 20px;
+    border-radius: 7px;
+    margin-bottom: 25px;
+}
+.div2{
+    border: 1px solid #929292;
+    width: 40%;
+    padding: 20px;
+    border-radius: 7px;
+}
+.endereco:hover{
+    background-color: #f0f0f0;
+    transition: 0.5s;
+}
+.atualizar{
+    display: flex;
+    font-family: kinetika;
+}
+.atualizar2{
+    display: flex;
+    margin-right: 25px;
+}
+.atualizar a{
+    color: rgb(27, 0, 145);
+}
+#tel{
+    font-weight: 900;
+}
+.inline{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+h1{
+    font-family: kinetika;
+    text-align: left;
+    color: rgb(236, 201, 0);
+    font-size: 25px;
+    margin-bottom: 35px;
+    margin-left: -52px;
+}
+.container{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudo{
+    position: absolute;
+    width: 80%;
+}

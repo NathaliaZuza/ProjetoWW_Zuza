@@ -16,7 +16,10 @@
 
 <body>
 
-    <?php include './view/pagsCentral/headerMenu.php' ?>
+    <?php include './view/pagsCentral/headerMenu.php';
+    session_start();
+    $idCliente = (isset($_SESSION["idCliente"]) ? $_SESSION["idCliente"]: NULL) ;
+    ?>
 
     <!------------CARROSSEL DE IMAGENS----------->
 
@@ -59,6 +62,7 @@
     <div class="pai">
 
         <?php
+           
         require_once './dao/ProdutoDAO.php';
         $produtoDAO = new ProdutoDAO();
         $produtos   = $produtoDAO->findAll();
@@ -95,7 +99,8 @@
 
     <div class="comentario">
             <h1>Envie aqui sua dúvida</h1>
-            <form action="#" method="post">
+            <form action="/controller/produto/comentarioController.php" method="post">
+                <input type="hidden" name="cliente_id" value="<?php echo $idCliente; ?>">
                 <div class="row">
                     <div class="inputbox">
                         <label for="comentario">Dúvida ou sugestão? Escreva aqui</label><br>
@@ -103,9 +108,43 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="inputbox">
+                        <label for="resposta_comentario">Resposta do comentário</label><br>
+                        <textarea name="resposta_comentario" id="resposta_comentario" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+                <div class="row">
                     <input type="submit" value="Enviar pergunta" id="cadastrar">
                 </div>
             </form>
+        <?php
+         
+            require_once './dao/ComentarioDAO.php';
+            require_once './dto/ComentarioDTO.php';
+            require_once './dto/ClienteDTO.php';
+            require_once './dao/ClienteDAO.php';
+            
+            // $clienteDAO = new ClienteDAO();
+            // $cliente    = $clienteDAO->findById( $idCliente );
+            
+            $comentarioDAO = new ComentarioDAO();
+            $comentarios   = $comentarioDAO->findAll();
+            // $comentario    = $comentarioDAO->findById( $id );
+
+            // echo "id", $idCliente;
+    
+            if (!empty($comentarios)) {
+                foreach ($comentarios as $comentario) {
+                    echo "<div id='comentarios'>";
+                    // echo "      <div> {$comentario["id"]} </div>";  
+                    echo "      <div> {$comentario["comentario"]} </div>";   
+                    // echo "      <div> {$comentario["resposta_comentario"]} </div>";               
+                    echo "</div>";
+                }
+            } else {
+                echo "Não existe comentarios";
+            }
+        ?>
     </div>
 
 
