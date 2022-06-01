@@ -63,19 +63,10 @@ class ClienteDAO {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
         }
     }
-    public function deleteByIdUsuario($idUsuario){
-        try {
-            $sql = 'DELETE FROM usuario WHERE id = ?';
-            $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $idUsuario );
-            return $stmt->execute();
-        } catch ( PDOException $e ) {
-            echo 'Erro ao excluir o Usuario ', $e->getMessage();
-        }
-    }
+     
     public function findById( $id ) {
         try {
-            $sql  = 'SELECT * FROM cliente c INNER JOIN usuario u ON c.usuario_id = u.id WHERE c.id = ?';
+            $sql  = 'SELECT c.id,c.nome,c.cpf,c.telefone,c.usuario_id,u.email,u.senha,u.perfil FROM cliente c INNER JOIN usuario u ON c.usuario_id = u.id WHERE c.id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();

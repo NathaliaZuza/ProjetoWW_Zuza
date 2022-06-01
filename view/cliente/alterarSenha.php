@@ -9,11 +9,11 @@
 <body>
 <?php
         session_start();
-        require_once '../../dao/ClienteDAO.php';
+        require_once '../../dao/usuarioDAO.php';
 
         $idCliente = $_SESSION["idCliente"];
-        $clienteDAO = new ClienteDAO();
-        $cliente    = $clienteDAO->findById( $idCliente );
+        $usuarioDAO = new ClienteDAO();
+        $cliente    = $DAO->findById( $idCliente );
         
         ?>
     <h1>alterar senha</h1>
