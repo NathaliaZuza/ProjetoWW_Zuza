@@ -16,7 +16,7 @@
 <div class="box">
         <ul class="nav-logar">
             <li>
-                <a href="index.php">
+                <a href="../../index.php">
                     <span class="logoIndex">WW.ZUZA</span>
                 </a>
             </li>
@@ -74,7 +74,7 @@
                 </a>
             </li>
             <li class="carrinho">
-                <a href="../../carrinho.php"">
+                <a href="../../carrinho.php">
                     <i class='bx bxs-cart'></i>
                 </a>
             </li>

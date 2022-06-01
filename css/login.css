@@ -94,10 +94,12 @@ h1{
 .senhaL:focus{
     border: 2px solid #dfa700;
     transition: 0.1s;
+    box-shadow: 3px 3px 3px 3px #f3b6006e;
 }
 .nomeL:focus{
     border: 2px solid #dfa700;
     transition: 0.1s;
+    box-shadow: 3px 3px 3px 3px #f3b6006e;
 }
 .nomeL, .senhaL{
     padding: 15px;
