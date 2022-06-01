@@ -24,5 +24,5 @@ $enderecoDTO->setCliente_id( $cliente_id );
 $enderecoDAO = new EnderecoDAO();
 
 if ( $enderecoDAO->update( $enderecoDTO ) ) {
-    header( "Location: ../../view/cliente/AtualizarDadosCLiente.php" );
+    header( "Location: ../../view/cliente/listarTodosClientes.php" );
 }

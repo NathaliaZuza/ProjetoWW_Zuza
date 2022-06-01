@@ -4,7 +4,7 @@ require_once '../../dto/ClienteDTO.php';
 
 $nome = $_POST["nome"];
 $cpf = $_POST["cpf"];
- $telefone = $_POST["telefone"];
+ $telefone = $_POST["telefone"]; 
 $email = $_POST["email"];
 $senha = md5( $_POST["senha"] );
 $usuario_id = $_POST["usuario_id"];
@@ -20,7 +20,7 @@ $clienteDTO->setUsuario_id( $usuario_id );
 $clienteDAO = new ClienteDAO();
 $cliente = $clienteDAO->findByEmail( $email );
 
-$error[1] = "Cadastrado com suceso!";
+$error[1] = "Cadastrado com sucesso!";
 $error[2] = "Já existe um cliente cadastro com o email " . $email ;
 
 if ( empty( $cliente ) ) {

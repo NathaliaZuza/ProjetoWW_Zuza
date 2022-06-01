@@ -22,10 +22,15 @@
         session_start();
         require_once '../../dao/ClienteDAO.php';
         require_once '../../dao/EnderecoDAO.php';
-        
-        $idCliente = $_SESSION["idCliente"];
-        $clienteDAO = new ClienteDAO();
-        $cliente    = $clienteDAO->findById( $idCliente );
+        // echo $_SESSION['perfil'];
+        // exit();
+        if ( $_SESSION['perfil'] == "Administrador" ) {
+            $idCliente = $_GET["id"];
+        } else {
+            $idCliente = $_SESSION["idCliente"];
+        }
+        $clienteDAO  = new ClienteDAO();
+        $cliente     = $clienteDAO->findById( $idCliente );
         $enderecoDAO = new EnderecoDAO();
         $endereco    = $enderecoDAO->findById( $idCliente );
     ?>
@@ -33,9 +38,9 @@
 
     <div class="container">
 
-        
+
         <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
-            
+
             <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
             <input type="hidden" name="id" value="<?=$_GET['id'];?>">
             <div class="inputbox">
@@ -71,7 +76,7 @@
             <button type="submit" class="botão">Atualizar</button>
             </td>
         </form>
-   
+
     <!-- LOGIN -->
 
     <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
@@ -95,8 +100,8 @@
         </td>
         <br><br>
     <?php
-       echo "<button><a href='../cliente/alterarSenha.php?id=" . $cliente["id"] . "'>Alterar senha</a></button>"
-        ?>
+        echo "<button><a href='../cliente/alterarSenha.php?id=" . $cliente["id"] . "'>Alterar senha</a></button>"
+    ?>
     </form>
  </div>
     <div style="text-align: center;">

@@ -40,7 +40,7 @@
         echo "<td >{$cliente["cpf"]}</td>";
         echo "<td >{$cliente["telefone"]}</td>";
         echo "<td align=center><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
-        echo "<td align='center'><a href='../../controller/cliente/alterarClienteController.php?id={$cliente["id"]}'><i class='bx bx-edit icone'></a></i></td>";
+        echo "<td align='center'><a href='../../view/cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit icone'></a></i></td>";
         echo "</tr>";
         echo "</main>";
         echo "</div>";
