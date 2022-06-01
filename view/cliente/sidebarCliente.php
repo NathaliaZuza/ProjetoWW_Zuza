@@ -40,7 +40,7 @@
 <!------------MENU----------->
 
     <div class="menu">
-        <ul class="nav-list">
+        <ul class="nav-list-menu">
             <li>
                 <a href="index.php">
                     <i class='bx bxs-store'></i>

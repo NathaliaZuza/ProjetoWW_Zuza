@@ -125,7 +125,7 @@
     justify-content: space-evenly;
     background-color: #0f00590c;
 }
-.nav-list{
+.nav-list-menu{
     display: flex;
     height: 10vh;
     list-style: none;
@@ -133,7 +133,7 @@
     align-items: center;
     font-family: kinetika; 
 }
-.nav-list li{
+.nav-list-menu li{
     margin-left: 70px;
     font-weight: bolder;
     padding: 7px;
