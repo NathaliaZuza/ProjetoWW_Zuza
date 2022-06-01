@@ -57,5 +57,28 @@ class CarrinhoDAO {
                 echo "erro ao listar pedidos: ", $e->getMessage();
             }
         }
+    public function findById( $id ) {
+        try {
+            $sql  = "SELECT * FROM pedido WHERE cliente_id=?";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $id );
+            $stmt->execute();
+            $pedido = $stmt->fetch( PDO::FETCH_ASSOC );
+            return $pedido;
+        } catch ( PDOException $e ) {
+            echo "Erro ao listar o pedido: ", $e->getMessage();
+        }
+    }
+    public function findAllPedidos() {
+        try {
+            $sql  = "SELECT * FROM pedido_tem_produto";
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->execute();
+            $pedidos = $stmt->fetchAll( PDO::FETCH_ASSOC );
+            return $pedidos;
+        } catch ( PDOException $e ) {
+            echo "erro ao listar pedidos: ", $e->getMessage();
+        }
+    }
 }
 ?>
