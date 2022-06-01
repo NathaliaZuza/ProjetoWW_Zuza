@@ -47,10 +47,18 @@ class ClienteDAO {
 
     public function deleteById( $idCliente ) {
         try {
+            $cliente = $this->findById($idCliente);
+
             $sql  = 'DELETE FROM cliente WHERE id = ?';
             $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $idCliente );
+            $stmt->bindValue( 1, $cliente["id"] );
+            $stmt->execute();
+
+            $sql = 'DELETE FROM usuario WHERE id = ?';
+            $stmt = $this->pdo->prepare( $sql );
+            $stmt->bindValue( 1, $cliente["usuario_id"] );
             return $stmt->execute();
+
         } catch ( PDOException $e ) {
             echo 'Erro ao excluir um cliente ', $e->getMessage();
         }
@@ -67,7 +75,7 @@ class ClienteDAO {
     }
     public function findById( $id ) {
         try {
-            $sql  = 'SELECT * FROM cliente WHERE id = ?';
+            $sql  = 'SELECT * FROM cliente c INNER JOIN usuario u ON c.usuario_id = u.id WHERE c.id = ?';
             $stmt = $this->pdo->prepare( $sql );
             $stmt->bindValue( 1, $id );
             $stmt->execute();

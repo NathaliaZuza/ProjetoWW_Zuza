@@ -9,11 +9,11 @@
 <body>
 <?php
         session_start();
-        require_once '../../dao/usuarioDAO.php';
+        require_once '../../dao/ClienteDAO.php';
 
         $idCliente = $_SESSION["idCliente"];
-        $usuarioDAO = new UsuarioDAO();
-        $cliente    = $usuarioDAO->findById( $idCliente );
+        $clienteDAO = new ClienteDAO();
+        $cliente    = $clienteDAO->findById( $idCliente );
         
         ?>
     <h1>alterar senha</h1>
@@ -28,6 +28,6 @@
                 <input type="password" name="senha" id="senha" value="<?php echo $cliente["senha"] ?>">
                 <label for="senha">Senha</label>
             </div>
-
+            <button type="submit" class="botão">Enviar</button>
 </body>
 </html>

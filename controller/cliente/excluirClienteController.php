@@ -15,11 +15,4 @@ if ( $clienteDAO->deleteById( $idCliente ) ) {
      echo '<script> parent.window.location.href = "../../index.php"; </script>';
  }}
 
- if ( $clienteDAO->deleteByIdUsuario( $idUsuario ) ) {
-     if ( $perfil['perfil'] == 'Administrador' ) {
-     header( "Location: ../../view/cliente/listarTodosClientes.php" );
- } else if ( $perfil['perfil'] == 'Cliente' ) {
-     echo '<script> parent.window.location.href = "../../index.php"; </script>';
- }
-}
-
+?>
