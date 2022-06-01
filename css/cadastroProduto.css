@@ -58,6 +58,7 @@ input{
 }
 .inputbox input:focus{
    border: 1px solid #F3B700;
+   box-shadow: 3px 3px 3px 3px #f3b6007a;
 }
 
 .inputbox label{

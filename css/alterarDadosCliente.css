@@ -22,7 +22,10 @@ body{
 /*----------CADASTRANDO PRODUTO----------*/
 
 form{
-    width: 30%;
+    width: 40%;
+}
+#topo{
+    margin-top: 96px;
 }
 h1{
     font-family: kinetika;
@@ -33,6 +36,18 @@ h1{
     margin-left: -52px;
     width: 100%;
 }
+/* .alterar{
+    width: 100vw;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    gap: 20px;
+    width: calc(100%  - 108px); 
+    transition: all 0.5s ease;
+    height: 5%;  
+    position: absolute;
+} */
 .container{
     flex-grow: 3;
     display: flex;
@@ -50,9 +65,13 @@ h1{
     width: 100%;
 }
 .sidebar.active ~ .container{
+    width: calc(100% - 200px);
+    left: 440px;
+}
+/* .sidebar.active ~ .alterar{
     width: calc(100% - 300px);
     left: 240px;
-}
+} */
 .row{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -68,6 +87,7 @@ input{
 }
 .inputbox input:focus{
    border: 1px solid #F3B700;
+   box-shadow: 3px 3px 3px 3px #f3b60086;
 }
 
 .inputbox label{
@@ -83,7 +103,7 @@ input{
     height: 40px;
     bottom: 0;
     box-shadow: none;
-    border: 1px solid #0F0059;
+    border: 1px solid #0f005967;
     outline: none;
     border-radius: 2px;
     transition: 0.5s;
