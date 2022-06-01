@@ -44,6 +44,18 @@ class CarrinhoDAO {
         } catch ( PDOException $e ) {
             echo 'Erro ao finalizar a compra: ', $e->getMessage();
         }
+        
     }
+    public function findAll() {
+            try {
+                $sql  = "SELECT * FROM pedido";
+                $stmt = $this->pdo->prepare( $sql );
+                $stmt->execute();
+                $pedidos = $stmt->fetchAll( PDO::FETCH_ASSOC );
+                return $pedidos;
+            } catch ( PDOException $e ) {
+                echo "erro ao listar pedidos: ", $e->getMessage();
+            }
+        }
 }
 ?>
