@@ -74,14 +74,13 @@
                 </a>
             </li>
             <li class="carrinho">
-                <a href="carrinho.php">
+                <a href="../../carrinho.php"">
                     <i class='bx bxs-cart'></i>
                 </a>
             </li>
 
         </ul>
     </div>
-
 <!------------SIDEBAR----------->
 
 <?php 
