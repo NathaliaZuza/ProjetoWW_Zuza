@@ -32,14 +32,8 @@ echo "<div class='conteudo'>";
 foreach ($carrinhos as $carrinho){
     if($carrinho['cliente_id'] == $idCliente){
         echo "<table border='1'>";
-        // echo "<tr><th>Cliente</th>"; 
-        // echo "<th>Valor</th>";
-        // echo "<th>Produtos</th>"; 
-        // echo "<th>Foto</th>";    
-        // echo "<th>Data</th>";
-        
+
         $cliente = $clienteDAO->findById($idCliente);      
-        //echo "<td class='nome-lista'>";
     
         foreach($pedidos as $pedido){
             if($pedido['pedido_id'] == $carrinho['id']){
@@ -58,11 +52,7 @@ foreach ($carrinhos as $carrinho){
     
 
 ?>   
-    <!-- <td><div class='img_produto'>
-            <p> <img src="/img/produto/foto/<?php echo $produto["foto"] ?>" width="112" /></p>
-        </div>
-    </td>
-    </tr> -->
+
 <?php
         echo "<tr>";
         echo "<th>Data</th>";

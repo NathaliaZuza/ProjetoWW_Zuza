@@ -10,10 +10,11 @@
 <?php
         session_start();
         require_once '../../dao/usuarioDAO.php';
+        require_once '../../dao/ClienteDAO.php';
 
         $idCliente = $_SESSION["idCliente"];
         $usuarioDAO = new ClienteDAO();
-        $cliente    = $DAO->findById( $idCliente );
+        $clienteDAO->findById( $idCliente );
         
         ?>
     <h1>alterar senha</h1>
@@ -25,7 +26,7 @@
                 <label for="email">email</label>
             </div>
             <div class="inputbox">
-                <input type="password" name="senha" id="senha" value="<?php echo $cliente["senha"] ?>">
+                <input type="password" name="senha" id="senha">
                 <label for="senha">Senha</label>
             </div>
             <button type="submit" class="botão">Enviar</button>

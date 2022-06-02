@@ -4,13 +4,14 @@ require_once '../../dao/PagamentoDAO.php';
 
 $n_cartao = $_POST["n_cartao"];
 $pedido_id = $_POST["pedido_id"];
+
 $nome_cartao = $_POST["nome_cartao"];
 $validade = $_POST["validade"];
 $verificacao = $_POST["verificacao"];
 $cpf = $_POST["cpf"];
 $data_nasc = $_POST["data_nasc"];
 $parcelamento = $_POST["parcelamento"];
-$pedido_id = $_POST["cliente_id"];
+$cliente_id = $_POST["cliente_id"];
 
 $pagamentoDTO = new PagamentoDTO();
 $pagamentoDTO->setN_cartao( $n_cartao );
@@ -25,11 +26,7 @@ $pagamentoDTO->setCliente_id( $cliente_id );
 
 $pagamentoDAO = new PagamentoDAO();
 
-if ( empty( $pagamento ) ) {
-    if ( $pagamentoDAO->salvar( $pagamentoDTO ) ) {
-        header( "Location: ../../view/cliente/minhaConta.php?msg={$error[1]}" );
-    }
-} else {
-    header( "Location: ../view/cliente/cadastrarEndereco.php?msg={$error[2]}" );
-}
+if ( $pagamentoDAO->salvar( $pagamentoDTO ) ) {
+    header( "Location: ../../carrinho.php" );
+} 
 ?>

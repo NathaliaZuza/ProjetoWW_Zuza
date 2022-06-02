@@ -18,14 +18,15 @@
         <div class="conteudo">
             <h1>Novo cartão de crédito</h1>
             <button><a href="../cliente/minhaConta.php">Adicionar cartão.</a></button>
-            <form id="pagamento" action="../../controller/cliente/pagamentoController.php" method="post">
+            <form id="pagamento" action="../../controller/produto/finalizarCompraController.php" method="post">
+                
                 <div class="row">
                     <div class="inputbox">
                         <input type="text" name="nome_cartao" id="nome_cartao" required>
                         <label for="nome_cartao">Nome impresso no cartão</label>
                     </div>
                     <div class="inputbox">
-                        <input type="text" name="n_cartão" id="n_cartao" required>
+                        <input type="text" name="n_cartao" id="n_cartao" required>
                         <label for="n_cartao">Número do cartão</label>
                     </div>
                 </div>

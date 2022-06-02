@@ -12,7 +12,7 @@ class PagamentoDAO {
     public function salvar( PagamentoDTO $pagamentoDTO ) {
         try {
             $sql = "INSERT INTO pagamento "
-                . "(n_cartao, pedido_id, nome_cartao, validade, verificacao, cpf, data_nasc, parcelamento, cliente_id "
+                . "(n_cartao, pedido_id, nome_cartao, validade, verificacao, cpf, data_nasc, parcelamento, cliente_id) "
                 . "VALUES(?,?,?,?,?,?,?,?,?)";
 
             $stmt = $this->pdo->prepare( $sql );

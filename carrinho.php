@@ -151,9 +151,11 @@
             ?>
             <p class='resumoFrete'> <span >Frete:</span> R$ 0,00</p>
 
-            <div class="pagamento-btn"><p><a href="/controller/produto/finalizarCompraController.php">Ir para o pagamento</p></a></div>
+            <div class="pagamento-btn"><p><a href="./view/cliente/pagamento.php">Ir para o pagamento</p></a></div>
+            <!-- <div class="pagamento-btn"><p><a href="/controller/produto/finalizarCompraController.php">Ir para o pagamento</p></a></div> -->
             <div class="continuarComprando-btn"><p><a href="index.php">Continuar comprando</a></p></div>
         </div>     
+        
 </div>
 <!------------SE NÃO EXISTIR PRODUTOS----------->  
     <?php 

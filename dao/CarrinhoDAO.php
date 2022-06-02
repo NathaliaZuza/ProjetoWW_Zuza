@@ -39,7 +39,8 @@ class CarrinhoDAO {
                 $stmt->execute();
             }
 
-            return $this->pdo->commit();
+            $this->pdo->commit();
+            return $idPedido;
 
         } catch ( PDOException $e ) {
             echo 'Erro ao finalizar a compra: ', $e->getMessage();
