@@ -1,0 +1,91 @@
+@font-face {
+    font-family: kinetika;
+    src: url('kinetika-black.ttf') format('truetype'), url('kinetika-black.ttf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: kinetika-light;
+    src: url('Kastelov\ -\ Kinetika\ Light.otf') format('truetype'), url('Kastelov\ -\ Kinetika\ Light.otf') format('opentype') ;
+    font-weight: normal;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudo{
+    position: absolute;
+    width: 80%;
+}
+.containerVendas{
+    padding: 20px;
+    flex-grow: 3;
+    display: flex;
+    justify-content: center;
+    width: calc(100%  - 78px); 
+    transition: all 0.5s ease;
+    height: 100%;  
+    position: absolute;
+}
+.conteudoVendas{
+    position: absolute;
+    width: 100%;
+}
+.tableVendas table{
+    width: 100%;
+}
+
+table{
+    margin: auto;
+    margin-top: 5%;
+    border-collapse: collapse;
+    border: 1px solid  #503400;
+    border-radius: 10px;
+    color: #000c42;
+
+}
+th{
+    font-family: kinetika;
+    background-color: #F3B700;
+    padding: 10px 15px 10px 15px;
+    color: #000c42;
+}
+tr{
+    font-family: kinetika-light;
+    border: 1px solid  #e49400;
+    background-color: #fff;
+}
+tr:nth-child(even){
+    background-color: rgba(255, 255, 255, 0.137);
+}
+td{
+    padding: 5px 15px 5px 15px;
+    background-color: #fff;
+}
+.icone i{
+    font-size: 25px;
+    color:#1cd43b; 
+}
+.lixo i{
+    font-size: 25px; 
+    color:#d60000;   
+}
+
+.nome-lista{
+    font-family: kinetika ;
+    color: #e4ab00;
+}
+.total-lista{
+    font-family: kinetika ;
+    color: #e40000;
+}

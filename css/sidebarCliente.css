@@ -22,7 +22,7 @@ body{
 /*---------MENU----------*/
 
 .sidebar{
-    position: fixed;
+    position: absolute;
     top: 132px;
     left: 0;
     height: 100%;
