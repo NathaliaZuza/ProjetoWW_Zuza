@@ -5,6 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../../js/jquery-validation-1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script src="../../js/jquery.mask.min.js"></script>
+    <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/css/headerMenu.css">
     <link rel="stylesheet" href="/css/minhaConta.css">
     <link rel="stylesheet" href="/css/alterarDadosCliente.css">
@@ -48,6 +52,12 @@
             <button type="submit" class="botão">Enviar</button>
         </form>
     </div>
+    <script>
+    $(document).ready(function() {
+        $('#cep').mask('00000-000');
+        
+    });
+    </script>
 </body>
 
 </html>

@@ -106,7 +106,7 @@ DROP TABLE IF EXISTS `ww_zuza`.`endereco_cliente` ;
 
 CREATE TABLE IF NOT EXISTS `ww_zuza`.`endereco_cliente` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `cep` INT(10) NOT NULL,
+  `cep` VARCHAR(45) NOT NULL,
   `endereco` VARCHAR(255) NOT NULL,
   `numero_casa` VARCHAR(45) NOT NULL,
   `cliente_id` INT(11) NOT NULL,
