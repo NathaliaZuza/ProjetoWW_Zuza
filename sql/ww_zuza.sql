@@ -54,7 +54,7 @@ AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
 INSERT INTO `usuario` (`id`, `email`, `senha`, `perfil`) VALUES
-(1, 'adm@gmail.com', md5('adm123'), 'Administrador' );
+(1, 'adm@gmail.com', '123', 'Administrador' );
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`cliente`
 -- -----------------------------------------------------

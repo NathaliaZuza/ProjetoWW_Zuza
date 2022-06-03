@@ -1,5 +1,6 @@
 <?php
-require_once '/Documentos/GitHub/ProjetoWW_Zuza/dao/ProdutoDAO.php';
+require_once '../../dao/ProdutoDAO.php';
+
 define( 'DIR_FOTO', $_SERVER['DOCUMENT_ROOT'] . "/img/produto/foto/" );
 
 $idProduto = $_GET['excluirId'];

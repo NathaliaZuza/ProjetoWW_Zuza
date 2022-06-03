@@ -133,7 +133,9 @@ session_start();
                     <label for="senha" class="labelInput">Confirmar Senha</label>
                 </div>
                 <br><br>
-                <button type="submit" onclick="return validarSenha()" class="botão">Enviar</button>
+                <!-- <button type="submit" onclick="return validarSenha()" onclick="Cadastrado()" class="botão">Enviar</button> -->
+                <button type="submit" onclick="Cadastrado()" class="botão">Enviar</button>
+
                 </td>
             </form>
         </div>
@@ -174,6 +176,11 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
 ?>
     </div>
     <script>
+        function Cadastrado(){
+            alert("Cliente cadastrado com sucesso!")
+        }
+        
+
     $(document).ready(function() {
         $('#cpf').mask('000.000.000-00');
         $('#telefone').mask('(00) 00000-0000');
