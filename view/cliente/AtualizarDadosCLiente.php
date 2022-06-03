@@ -39,79 +39,79 @@
 
 <!-- <div class="alterar"><h1>Alterar dados</h1></div> -->
     <div class="container">
-        
+        <div class="conteudo">
         
     <!-- LOGIN -->
 
-    <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
-        <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
+        <form id="formCadastroCliente" action="/controller/cliente/alterarClienteController.php" method="post">
+            <input type="hidden" name="idCliente" value="<?php echo $cliente["id"] ?>">
 
-        <h1>Alterar dados</h1>
+            <h1>Alterar dados</h1>
 
-        <div class="inputbox">
-            <input type="text" name="nome" id="nome" value="<?php echo $cliente["nome"] ?>">
-            <label for="nome">Nome Completo</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="cpf" id="cpf" value="<?php echo $cliente["cpf"] ?>">
-            <label for="cpf">Cpf</label>
-        </div>
-        <br><br>
-        <div class="inputbox">
-            <input type="text" name="telefone" id="telefone" value="<?php echo $cliente["telefone"] ?>">
-            <label for="telefone">Telefone</label>
-        </div>
-        <br><br>
-        <button type="submit" class="botão">Atualizar</button>
-        </td>
-        <br><br>
-    <?php
-        echo "<button><a href='../cliente/alterarSenha.php?id=" . $cliente["id"] . "'>Alterar senha</a></button>"
-    ?>
-    </form>
-
-    
-    <!-- ENDEREÇO -->
-
-        <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
-
-            <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
-            <!-- <input type="hidden" name="id" value="<?=$_GET['id'];?>"> -->
-            <div class="inputbox" id="topo">
-                <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
-                <label for="cep">Cep</label>
+            <div class="inputbox">
+                <input type="text" name="nome" id="nome" value="<?php echo $cliente["nome"] ?>">
+                <label for="nome">Nome Completo</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
-                <label for="endereco">Endereço</label>
+                <input type="text" name="cpf" id="cpf" value="<?php echo $cliente["cpf"] ?>">
+                <label for="cpf">Cpf</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
-                <label for="numero_casa">N° casa</label>
-            </div>
-            <br><br>
-            <div class="inputbox">
-                <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
-                <label for="complemento">Complemento</label>
-            </div>
-            <br><br>
-            <div class="inputbox">
-                <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
-                <label for="cidade">Cidade</label>
-            </div>
-            <br><br>
-            <div class="inputbox">
-                <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
-                <label for="uf">UF</label>
+                <input type="text" name="telefone" id="telefone" value="<?php echo $cliente["telefone"] ?>">
+                <label for="telefone">Telefone</label>
             </div>
             <br><br>
             <button type="submit" class="botão">Atualizar</button>
             </td>
+            <br><br>
+        <?php
+            echo "<button><a href='../cliente/alterarSenha.php?id=" . $cliente["id"] . "'>Alterar senha</a></button>"
+        ?>
         </form>
 
+        
+        <!-- ENDEREÇO -->
+
+            <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
+
+                <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
+                <!-- <input type="hidden" name="id" value="<?=$_GET['id'];?>"> -->
+                <div class="inputbox" id="topo">
+                    <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
+                    <label for="cep">Cep</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
+                    <label for="endereco">Endereço</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
+                    <label for="numero_casa">N° casa</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
+                    <label for="complemento">Complemento</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
+                    <label for="cidade">Cidade</label>
+                </div>
+                <br><br>
+                <div class="inputbox">
+                    <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
+                    <label for="uf">UF</label>
+                </div>
+                <br><br>
+                <button type="submit" class="botão">Atualizar</button>
+                </td>
+            </form>
+    </div>
  </div>
     <div style="text-align: center;">
         <?php

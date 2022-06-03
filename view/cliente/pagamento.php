@@ -9,15 +9,85 @@
     <script src="../../js/jquery-3.6.0.min.js"></script>
     <script src="../../js/jquery.mask.min.js"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../../css/cadastroProduto.css">
+    <link rel="stylesheet" href="../../css/pagamento.css">
+    <link rel="stylesheet" href="/css/headerMenuCliente.css">
     <title>pagamento</title>
 </head>
 
+
+
+<div class="box">
+        <ul class="nav-logar">
+            <li>
+                <a href="../../index.php">
+                    <span class="logoIndex">WW.ZUZA</span>
+                </a>
+            </li>
+            <li>
+                <div class="inputSearch">
+                    <i class='bx bx-search'></i>
+                    <input type="text" name="pesquisar" placeholder="Pesquise um produto...">
+                </div>
+            </li>
+        </ul>
+        <div class="btn-logar">
+            <a href="/view/pagsCentral/login.php">
+                <img id="img-account" src="/img/my account-02.png" alt="">
+                Minha conta</a>
+        </div>
+        <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php">
+                <p id="cadastro">É novo por aqui? </p>Cadastre-se
+            </a></div>
+    </div>
+
+<!------------MENU----------->
+
+    <div class="menu">
+        <ul class="nav-list-menu">
+            <li>
+                <a href="index.php">
+                    <i class='bx bxs-store'></i>
+                    <span class="nomelink" id="home">Todos os produtos</span>
+                </a>
+            </li>
+
+            <li class="produtoshover">
+                <a href="/view/produto/tipoproduto.php?categoria_id=1">
+                    <span class="nomelink">Panfleto</span>
+                </a>
+            </li>
+            <li class="produtoshover">
+                <a href="/view/produto/tipoproduto.php?categoria_id=2">
+                    <span class="nomelink">Cartão de visita</span>
+                </a>
+            </li>
+            <li class="produtoshover">
+                <a href="/view/produto/tipoproduto.php?categoria_id=3">
+                    <span class="nomelink">Cardápio</span>
+                </a>
+            </li>
+            <li class="produtoshover">
+                <a href="/view/produto/tipoproduto.php?categoria_id=4">
+                    <span class="nomelink">Banner</span>
+                </a>
+            </li>
+            <li class="produtoshover">
+                <a href="/view/produto/tipoproduto.php?categoria_id=5">
+                    <span class="nomelink">Papel timbrado</span>
+                </a>
+            </li>
+            <li class="carrinho">
+                <a href="../../carrinho.php">
+                    <i class='bx bxs-cart'></i>
+                </a>
+            </li>
+
+        </ul>
+    </div>
 <body>
     <main class="container">
         <div class="conteudo">
             <h1>Novo cartão de crédito</h1>
-            <button><a href="../cliente/minhaConta.php">Adicionar cartão.</a></button>
             <form id="pagamento" action="../../controller/produto/finalizarCompraController.php" method="post">
                 
                 <div class="row">
