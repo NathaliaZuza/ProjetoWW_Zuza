@@ -11,7 +11,11 @@
     <title>Minha Conta | WWZUZA</title>
 </head>
 <body>
+<?php
 
+session_start();
+
+?>
 
 <div class="box">
         <ul class="nav-logar">
@@ -32,9 +36,15 @@
                 <img id="img-account" src="/img/my account-02.png" alt="">
                 Minha conta</a>
         </div>
+        <?php
+            if (!isset($_SESSION['idCliente'])) {
+        ?>
         <div class="btn-logar2"><a href="/view/cliente/formCadastrarCliente.php">
                 <p id="cadastro">É novo por aqui? </p>Cadastre-se
             </a></div>
+        <?php
+            }
+        ?>
     </div>
 
 <!------------MENU----------->
@@ -85,7 +95,6 @@
 
 <?php 
 
-  session_start();
         require_once '../../dao/ClienteDAO.php';
         $idCliente = $_SESSION["idCliente"];
         $clienteDAO = new ClienteDAO();

@@ -17,7 +17,12 @@
 </head>
 
 <body>
-
+<?php
+session_start();
+    if (isset($_SESSION['idCliente'])) {
+        header( "Location: /view/cliente/sidebarCliente.php" );
+    }
+?>
     <div class="box">
         <ul class="nav-logar">
             <li>
