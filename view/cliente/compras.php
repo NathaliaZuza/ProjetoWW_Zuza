@@ -65,10 +65,12 @@ foreach ($carrinhos as $carrinho){
         echo "</main>";
         echo "</div>";
     } else{
-        echo "Você nao possui pedidos no seu histórico";
+        echo "<div class='vazio'>";
+        echo "<p id='vazio'>Você nao possui nenhum pedido finalizado</p>";
+        echo "<div class='continuarComprando-btn'><p><a href='../../index.php'>Continuar comprando</a></p></div>";
+        echo "</div>";
     }
 }
 ?>
-
 </body>
 </html>

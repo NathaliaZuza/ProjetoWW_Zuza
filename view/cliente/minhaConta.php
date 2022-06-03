@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="/css/cadastro.css">
     <link rel="stylesheet" href="/css/headerMenu.css">
     <link rel="stylesheet" href="/css/minhaConta.css">
+    <link rel="stylesheet" href="/css/listaProdutosCliente.css">
 
     <script>
     $(document).ready(function() {

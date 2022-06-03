@@ -104,3 +104,16 @@ h1{
     position: absolute;
     width: 80%;
 }
+.vazio{
+    font-family: kinetika;
+    text-align: center;
+    margin: auto;
+    width: 30%;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 50px;
+}
+#vazio{
+    padding: 20px;
+}
