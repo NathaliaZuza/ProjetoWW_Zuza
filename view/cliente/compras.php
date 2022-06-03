@@ -64,6 +64,8 @@ foreach ($carrinhos as $carrinho){
         echo "</tr>";
         echo "</main>";
         echo "</div>";
+    } else{
+        echo "Você nao possui pedidos no seu histórico";
     }
 }
 ?>
