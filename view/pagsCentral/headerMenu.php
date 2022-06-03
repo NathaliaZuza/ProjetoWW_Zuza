@@ -26,7 +26,7 @@
             </li>
         </ul>
         <div class="btn-logar">
-            <a href="/view/pagsCentral/login.php">
+            <a href="../../controller/cliente/direcionamentoController.php">
                 <img id="img-account" src="../img/my account-02.png" alt="">
                 Minha conta</a>
         </div>

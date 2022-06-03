@@ -94,20 +94,23 @@ class ClienteDAO {
         }
     }
 
-    public function updateUsuario( ClienteDTO $clienteDTO ) {
+    public function updateSenha(ClienteDTO $clienteDTO) {
+        $cliente = $this->findById($clienteDTO->getId());
         try {
+
             $sql = 'UPDATE usuario SET '
                 . 'email=?, senha=? '
                 . 'WHERE id=?';
-            $stmt = $this->pdo->prepare( $sql );
-            $stmt->bindValue( 1, $clienteDTO->getEmail() );
-            $stmt->bindValue( 2, $clienteDTO->getSenha() );
-            $stmt->bindValue( 3, $clienteDTO->getId() );
-            return $stmt->execute();
+             $stmt = $this->pdo->prepare( $sql );
+             $stmt->bindValue( 1, $clienteDTO->getEmail() );
+             $stmt->bindValue( 2, $clienteDTO->getSenha() );
+             $stmt->bindValue( 3, $cliente["usuario_id"]);
+             return $stmt->execute();
 
         } catch ( PDOException $e ) {
-            echo 'Erro ao atualizar o cliente: ', $e->getMessage();
         }
+        
+        
     }
 
     public function findByEmail( $email ) {
