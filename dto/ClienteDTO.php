@@ -5,6 +5,9 @@ class ClienteDTO {
     private $nome;
     private $cpf;   
     private $telefone; 
+    private $email; 
+    private $senha;
+    private $perfil;
     private $usuario_id;
 
     public function getId() {
@@ -52,4 +55,16 @@ class ClienteDTO {
         $this->telefone = $telefone;
         return $this;
 }
+ 
+    public function getPerfil()
+    {
+        return $this->perfil;
+    }
+    
+    public function setPerfil($perfil)
+    {
+        $this->perfil = $perfil;
+
+        return $this;
+    }
 }

@@ -8,15 +8,15 @@
 </head>
 <body>
 <?php
-        session_start();
-        require_once '../../dao/usuarioDAO.php';
-        require_once '../../dao/ClienteDAO.php';
+    session_start();
+    require_once '../../dao/usuarioDAO.php';
+    require_once '../../dao/ClienteDAO.php';
 
-        $idCliente = $_SESSION["idCliente"];
-        $usuarioDAO = new ClienteDAO();
-        $clienteDAO->findById( $idCliente );
-        
-        ?>
+    $idCliente  = $_SESSION["idCliente"];
+    $clienteDAO = new ClienteDAO();
+    $cliente    = $clienteDAO->findById( $idCliente );
+
+?>
     <h1>alterar senha</h1>
 
     <form id="formCadastroCliente" action="../../controller/cliente/alterarSenhaController.php" method="post">

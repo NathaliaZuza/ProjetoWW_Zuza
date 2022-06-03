@@ -1,13 +1,18 @@
 <?php
-require_once '../../dao/usuarioDAO.php';
-
+require_once '../../dao/ClienteDAO.php';
+require_once '../../dto/ClienteDTO.php';
 
 $id = $_POST["id"];
 $email = $_POST["email"];
 $senha = md5( $_POST["senha"] );
 
-$usuarioDAO = new UsuarioDAO();
+$clienteDTO = new ClienteDTO();
+$clienteDTO->setId( $id );
+$clienteDTO->setSenha( $senha );
+$clienteDTO->setEmail($email);
 
-if ( $usuarioDAO->update( $email, $senha, $id  ) ) {
+$clienteDAO = new ClienteDAO();
+
+if ( $clienteDAO->updateSenha( $clienteDTO ) ) {
     header( "Location: ../../view/cliente/AtualizarDadosCLiente.php" );
 }
