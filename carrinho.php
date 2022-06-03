@@ -22,7 +22,6 @@
     include_once './DTO/CategoriaDTO.php';
     ?>
 
-
     <?php
     session_start();
     ?>

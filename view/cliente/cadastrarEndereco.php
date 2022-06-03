@@ -5,54 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/headerMenu.css">
+    <link rel="stylesheet" href="/css/minhaConta.css">
+    <link rel="stylesheet" href="/css/alterarDadosCliente.css">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="containerpai">
-        <h1>Cadastro</h1>
-        <button><a href="../cliente/minhaConta.php">Adicionar cartão.</a></button>
+        <h1>Adicionar endereço</h1>
 
-        <div class="formContainer">
+    <div class="container">
 
-            <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
-                method="post">
-                
-                <input type="hidden" name="cliente_id" value="<?=$_GET['id'];?>">
-                <div class="inputBox">
-                    <input type="text" name="cep" id="cep" class="inputUser" required>
-                    <label for="cep" class="labelInput">Cep</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="endereco" id="endereco" class="inputUser" required>
-                    <label for="endereco" class="labelInput">Endereço</label> <br>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="numero_casa" id="numero_casa" class="inputUser" required>
-                    <label for="numero_casa" class="labelInput">N° casa</label> <br>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="complemento" id="complemento" class="inputUser" required>
-                    <label for="complemento" class="labelInput">Complemento</label>
-                </div>
-                <br><br>
-                <div class="inputBox">
-                    <input type="text" name="cidade" id="cidade" class="inputUser" required>
-                    <label for="cidade" class="labelInput">Cidade</label><br>
-                    <br><br>
-                </div>
-                <div class="inputBox">
-                    <input type="text" name="uf" id="uf" class="inputUser" required>
-                    <label for="uf" class="labelInput">UF</label>
-                </div>
-                <br><br>
-                <button type="submit" class="botão">Enviar</button>
-                </td>
-            </form>
-        </div>
+        <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
+            method="post">
+            <input type="hidden" name="cliente_id" value="<?=$_GET['id'];?>">
+
+            <div class="inputbox">
+                <input type="text" name="cep" id="cep">
+                <label for="cep" class="labelInput">CEP</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="endereco" id="endereco">
+                <label for="endereco" class="labelInput">Endereço</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="numero_casa" id="numero_casa">
+                <label for="numero_casa" class="labelInput">N° casa</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="complemento" id="complemento">
+                <label for="complemento" class="labelInput">Complemento</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="cidade" id="cidade">
+                <label for="cidade" class="labelInput">Cidade</label>
+            </div>
+            <div class="inputbox">
+                <input type="text" name="uf" id="uf">
+                <label for="uf" class="labelInput">UF</label>
+            </div>
+            <br><br>
+            <button type="submit" class="botão">Enviar</button>
+        </form>
     </div>
 </body>
 
