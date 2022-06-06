@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -38,7 +37,7 @@ foreach ($carrinhos as $carrinho){
             if($pedido['pedido_id'] == $carrinho['id']){
                
                 $produto = $produtoDAO->findById($pedido['produto_id']);
-                echo "<div>";
+                echo "<div class='pedido-foto'>";
                 echo    "<div class='nome-lista'>{$produto['nome']}</div>";  
                 echo    "<div class='qtd'>{$pedido['quantidade']} </div></tr>";
                 echo    "<div class='foto'><img src='../../img/produto/foto/{$produto['foto']}' width='200'/></div>"; 
@@ -50,12 +49,22 @@ foreach ($carrinhos as $carrinho){
 ?>   
 
 <?php
+        $dataCompra = new DateTime($carrinho["data"]);
+        $diaCompra = $dataCompra->format('d');
+        $mesCompra = $dataCompra->format('m') - 1;
+        $anoCompra = $dataCompra->format('Y');
+        $horaCompra = $dataCompra->format('H:i:s');
 
-        echo "<div class='data'>Data</div>";
-        echo "<div class='nome-lista'>{$carrinho["data"]}</div>"; 
-        echo "<div class='data'>Valor total:</div>";
-        echo "<div class='nome-lista'>" , number_format(($carrinho["valor_total"]), 2, ",", "." ), "</div>"; 
+        $arrayAno = array('Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro');
+        
+        $dataExtenso = "{$diaCompra} de {$arrayAno[$mesCompra]} de {$anoCompra} as {$horaCompra}";
+        echo "<div class='pedido'>";
+        echo "<div class='realizado'>PEDIDO REALIZADO</div>";
+        echo "<div class='nome-lista'>{$dataExtenso}</div>"; 
+        echo "<div class='data' style='display: inline-block;'>VALOR TOTAL:</div>";
+        echo "<div class='total-lista' style='font-size: 19px; display: inline-block; margin-left:7px;'>" , number_format(($carrinho["valor_total"]), 2, ",", "." ), "</div>"; 
         echo "</main>";
+        echo "</div>";
         echo "</div>";
     } 
 }

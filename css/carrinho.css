@@ -27,7 +27,6 @@ h2{
     /* border: 1px solid #f31c00; */
     max-width: 80%;
     height: 100%;
-    margin: 0 auto;
     margin: 20px auto;
     grid-gap: 20px ;
     display: grid;
@@ -91,6 +90,7 @@ h2{
 }
 .endereco i{
     color: #f31c00;
+
 }
 .editar-endereco{
     display: inline-block;

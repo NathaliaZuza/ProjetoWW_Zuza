@@ -50,9 +50,9 @@
             <?php
              echo   "<p>{$endereco["endereco"]}, {$endereco["numero_casa"]}</p>";
              echo   "<p>{$endereco["cep"]} - {$endereco["cidade"]} </p>";
-             echo   "<p>{$endereco["complemento"]} </p>";
-        "</div>";
+             echo   "<p>{$endereco["complemento"]} </p>";       
         ?>
+        </div>
         <div class="editar-endereco">
             <?php
              echo "<div class='editar'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'>EDITAR</a></div>"; 
