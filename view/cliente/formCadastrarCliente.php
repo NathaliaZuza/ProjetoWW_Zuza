@@ -195,7 +195,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
         messages: {
             cpf: {
                 required: "Campo obrigatório",
-                minlength: jQuery.validator.format("At least {0} characters required!"),
+                minlength: jQuery.validator.format("Pelo menos {0} caracteres obrigatórios!"),
             },
             nome: {
                 required: "Campo obrigatório",

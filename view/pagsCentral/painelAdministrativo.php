@@ -17,6 +17,7 @@
     <main class="container">
         <div class="conteudo">     
                 <h1>Home</h1>
+               <p style="text-align: center; margin-top: 60px;"><img src="../../img/geral-01.png" width="100%" alt=""></p>
         </div>   
     </main>
 </body>

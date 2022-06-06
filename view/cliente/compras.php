@@ -12,7 +12,6 @@
 </head>
 <body>
 
-
 <?php
    require_once '../../dao/ProdutoDAO.php';
    require_once '../../dao/CarrinhoDAO.php';
@@ -39,37 +38,26 @@ foreach ($carrinhos as $carrinho){
             if($pedido['pedido_id'] == $carrinho['id']){
                
                 $produto = $produtoDAO->findById($pedido['produto_id']);
-                echo "<tr><th>Produto:</th>"; 
-                echo "<td> {$produto['nome']} </td>";
-                echo "<td><img src='../../img/produto/foto/{$produto['foto']}' width='112' /></tr>"; 
-                echo "<tr><th>Valor</th>";
-                echo "<td>" , number_format(($pedido["preco"]), 2, ",", "." ), "</td></tr>";
-                echo "<tr><th>Quantidade</th>"; 
-                echo "<td> {$pedido['quantidade']} </td></tr>";
-                echo "</td>";
+                echo "<div>";
+                echo    "<div class='nome-lista'>{$produto['nome']}</div>";  
+                echo    "<div class='qtd'>{$pedido['quantidade']} </div></tr>";
+                echo    "<div class='foto'><img src='../../img/produto/foto/{$produto['foto']}' width='200'/></div>"; 
+                echo    "<div class='preco'> R$ " , number_format(($produto["preco"] * $pedido['quantidade'] ), 2, ",", "." ), "</div></tr>";
+                echo "</div>";
             }
         }
     
-
 ?>   
 
 <?php
-        echo "<tr>";
-        echo "<th>Data</th>";
-        echo "<td class='nome-lista'>{$carrinho["data"]}</td>"; 
-        echo "</tr>";
-        echo "<tr>";
-        echo "<th>Valor total:</th>";
-        echo "<td class='nome-lista'>" , number_format(($carrinho["valor_total"]), 2, ",", "." ), "</td>"; 
-        echo "</tr>";
+
+        echo "<div class='data'>Data</div>";
+        echo "<div class='nome-lista'>{$carrinho["data"]}</div>"; 
+        echo "<div class='data'>Valor total:</div>";
+        echo "<div class='nome-lista'>" , number_format(($carrinho["valor_total"]), 2, ",", "." ), "</div>"; 
         echo "</main>";
         echo "</div>";
-    } else{
-        echo "<div class='vazio'>";
-        echo "<p id='vazio'>Você nao possui nenhum pedido finalizado</p>";
-        echo "<div class='continuarComprando-btn'><p><a href='../../index.php'>Continuar comprando</a></p></div>";
-        echo "</div>";
-    }
+    } 
 }
 ?>
 </body>

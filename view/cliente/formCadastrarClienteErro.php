@@ -123,10 +123,8 @@ session_start();
                 </div>
                 <br><br>        
             <?php
-                require_once "../../dao/ClienteDAO.php";
-                $clienteDAO = new ClienteDAO();
-                $cliente = $clienteDAO->findByEmail( $email );
-                 echo "<p>Já existe um cliente cadastro com o email</p>". $email ;
+                 echo "<p style='text-align: center; color: red; '>Já existe um cliente cadastrado com esse email</p>";
+                 echo "<br><br>";
             ?>
                 <!-- <button type="submit" onclick="return validarSenha()" onclick="Cadastrado()" class="botão">Enviar</button> -->
                 <button type="submit" class="botão">Enviar</button>
@@ -201,7 +199,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
         messages: {
             cpf: {
                 required: "Campo obrigatório",
-                minlength: jQuery.validator.format("At least {0} characters required!"),
+                minlength: jQuery.validator.format("Pelo menos {0} caracteres obrigatórios!"),
             },
             nome: {
                 required: "Campo obrigatório",

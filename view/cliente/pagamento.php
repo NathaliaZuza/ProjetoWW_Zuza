@@ -10,11 +10,10 @@
     <script src="../../js/jquery.mask.min.js"></script>
     <script src="https://kit.fontawesome.com/ca14b9e588.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../css/pagamento.css">
+    <link rel="shortcut icon" href="../../img/lg-03.png"/>
     <link rel="stylesheet" href="/css/headerMenuCliente.css">
-    <title>pagamento</title>
+    <title>Pagamento | WWZ</title>
 </head>
-
-
 
 <div class="box">
         <ul class="nav-logar">
@@ -160,7 +159,7 @@ if ( isset( $_GET["sucesso"] ) && $_GET["sucesso"] == true ) {
         messages: {
             cpf: {
                 required: "Campo obrigatório",
-                minlength: jQuery.validator.format("At least {0} characters required!"),
+                minlength: jQuery.validator.format("Pelo menos {0} caracteres obrigatórios!"),
             },
             nome_cartao: {
                 required: "Campo obrigatório",

@@ -34,7 +34,7 @@ INSERT INTO `categoria` (`id`, `nome`) VALUES
 (1, 'Panfleto'),
 (2, 'Cartão'),
 (3, 'Cardápio'),
-(4, 'Banner'),
+(4, 'Banner');
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`usuario`
