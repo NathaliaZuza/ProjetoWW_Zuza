@@ -58,11 +58,11 @@
                <span class="tooltip">Vendas</span>
             </li>
             <li>
-                <a href="#">
-                    <i class='bx bxs-chat'></i>
-                    <span class="links_name">Comentários</span>
+                <a href="">
+                    <i class='bx bxs-store-alt'></i>
+                    <span class="links_name">Página inicial</span>
                 </a>
-                <span class="tooltip">Comentários</span> 
+                <span class="tooltip">Página inicial</span> 
             </li>
         </ul>
         <div class="profile_content">
