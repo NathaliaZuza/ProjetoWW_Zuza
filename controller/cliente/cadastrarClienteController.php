@@ -28,7 +28,7 @@ if ( empty( $cliente ) ) {
         header( "Location: /view/cliente/formCadastrarCliente.php?msg={$error[1]}" );
     }
 } else {
-    header( "Location: /view/cliente/formCadastrarCliente.php?msg={$error[2]}" );
+    header( "Location: /view/cliente/formCadastrarClienteErro.php?msg={$error[2]}" );
 }
 
 ?>

@@ -35,8 +35,6 @@ INSERT INTO `categoria` (`id`, `nome`) VALUES
 (2, 'Cartão'),
 (3, 'Cardápio'),
 (4, 'Banner'),
-(5, 'Papel Timbrado');
-
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`usuario`
@@ -53,8 +51,6 @@ ENGINE = InnoDB
 AUTO_INCREMENT = 3
 DEFAULT CHARACTER SET = utf8;
 
-INSERT INTO `usuario` (`id`, `email`, `senha`, `perfil`) VALUES
-(1, 'adm@gmail.com', '123', 'Administrador' );
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`cliente`
 -- -----------------------------------------------------
@@ -77,28 +73,6 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`cliente` (
 ENGINE = InnoDB
 AUTO_INCREMENT = 4
 DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `ww_zuza`.`comentario`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ww_zuza`.`comentario` ;
-
-CREATE TABLE IF NOT EXISTS `ww_zuza`.`comentario` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `comentario` VARCHAR(1200) NULL DEFAULT NULL,
-  `resposta_comentario` VARCHAR(1200) NULL DEFAULT NULL,
-  `data` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP() ON UPDATE CURRENT_TIMESTAMP(),
-  `cliente_id` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_comentario_cliente_idx` (`cliente_id` ASC),
-  CONSTRAINT `fk_comentario_cliente`
-    FOREIGN KEY (`cliente_id`)
-    REFERENCES `ww_zuza`.`cliente` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4;
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`endereco_cliente`
@@ -162,7 +136,7 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`pagamento` (
   `verificacao` VARCHAR(45) NOT NULL,
   `cpf` VARCHAR(45) NOT NULL,
   `data_nasc` VARCHAR(45) NOT NULL,
-  `parcelamento` VARCHAR(45) NOT NULL,
+  `parcelamento` VARCHAR(45) NULL,
   `cliente_id` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_pagamento_pedido1_idx` (`pedido_id` ASC),
@@ -179,7 +153,6 @@ CREATE TABLE IF NOT EXISTS `ww_zuza`.`pagamento` (
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
-
 
 -- -----------------------------------------------------
 -- Table `ww_zuza`.`produto`

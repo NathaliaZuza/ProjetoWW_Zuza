@@ -45,7 +45,7 @@
     <div class="menu">
         <ul class="nav-list-menu">
             <li>
-                <a href="index.php">
+                <a href="../../index.php">
                     <i class='bx bxs-store'></i>
                     <span class="nomelink" id="home">Todos os produtos</span>
                 </a>
@@ -103,7 +103,7 @@
                 <div class="row">
                     <div class="inputbox">
                         <input type="text" name="validade" id="validade" required>
-                        <label for="validade">validade</label>
+                        <label for="validade">Validade</label>
                     </div>
                     <div class="inputbox">
                         <input type="text" name="verificacao" id="verificacao" placeholder="CVV" required>
@@ -119,13 +119,8 @@
                         <input type="text" name="data_nasc" id="data_nasc" required>
                         <label for="data_nasc">Data de nascimento</label>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="inputbox">
-                        <input type="text" name="parcelamento" id="parcelamento" required>
-                        <label for="parcelamento">Forma de pagamento</label>
-                    </div>
-                </div>
+                </div>           
+                    <input type="hidden" name="parcelamento" id="parcelamento">                       
                 <div class="row">
                     <input type="submit" value="Pagar com cartão" id="cadastrar">
                 </div>

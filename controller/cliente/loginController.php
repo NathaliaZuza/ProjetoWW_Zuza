@@ -20,5 +20,5 @@ if ( !empty( $login ) ) {
     }
 
 } else {
-    echo "Senha e/ou email incorreto!";
+    header( "Location: ../../view/pagsCentral/loginErro.php" );
 }

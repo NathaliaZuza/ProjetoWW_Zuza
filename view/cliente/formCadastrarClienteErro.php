@@ -132,7 +132,13 @@ session_start();
                     <input type="password" name="senhaC" id="senhaC" class="inputUser" required>
                     <label for="senha" class="labelInput">Confirmar Senha</label>
                 </div>
-                <br><br>
+                <br><br>        
+            <?php
+                require_once "../../dao/ClienteDAO.php";
+                $clienteDAO = new ClienteDAO();
+                $cliente = $clienteDAO->findByEmail( $email );
+                 echo "<p>Já existe um cliente cadastro com o email</p>". $email ;
+            ?>
                 <!-- <button type="submit" onclick="return validarSenha()" onclick="Cadastrado()" class="botão">Enviar</button> -->
                 <button type="submit" class="botão">Enviar</button>
 

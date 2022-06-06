@@ -142,3 +142,9 @@ h1{
     color: #0F0059;
     text-align: center;
 }
+#incorreto{
+    color: #ff0000;
+    font-family: kinetika;
+    text-align: center;
+    padding: 15px;
+}

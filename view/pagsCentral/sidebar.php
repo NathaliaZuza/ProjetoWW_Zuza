@@ -1,3 +1,11 @@
+<?php
+session_start();
+    if ( $_SESSION["perfil"] != 'Administrador' ) {
+        
+        header( "Location: /view/cliente/sidebarCliente.php" );
+    }
+    
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -58,7 +66,7 @@
                <span class="tooltip">Vendas</span>
             </li>
             <li>
-                <a href="">
+                <a href="../../index.php">
                     <i class='bx bxs-store-alt'></i>
                     <span class="links_name">Página inicial</span>
                 </a>
