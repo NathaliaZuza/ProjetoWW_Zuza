@@ -32,7 +32,6 @@
     echo "<th>CPF</th>";
     echo "<th>Telefone</th>";
     echo "<th>Excluir</th>";
-    echo "<th>Editar</th></tr>";
    
    foreach ($clientes as $cliente){        
         echo "<tr>";
@@ -40,7 +39,6 @@
         echo "<td >{$cliente["cpf"]}</td>";
         echo "<td >{$cliente["telefone"]}</td>";
         echo "<td align=center><a onclick='return confirmarExcluir();'href='../../controller/cliente/excluirClienteController.php?excluirId={$cliente["id"]}'><i class='bx bxs-trash lixo'></a></i></td>";
-        echo "<td align='center'><a href='../../view/cliente/AtualizarDadosCLiente.php?id={$cliente["id"]}'><i class='bx bx-edit icone'></a></i></td>";
         echo "</tr>";
         echo "</main>";
         echo "</div>";

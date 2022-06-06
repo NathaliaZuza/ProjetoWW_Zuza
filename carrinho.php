@@ -24,23 +24,39 @@
 
     <?php
     session_start();
-    ?>
+    require_once 'dao/ClienteDAO.php';
+    $idCliente = $_SESSION["idCliente"];
+    $clienteDAO = new ClienteDAO();
+    $cliente    = $clienteDAO->findById( $idCliente );
 
+    require_once 'dao/enderecoDAO.php';
+    $enderecoDAO = new EnderecoDAO();
+    $endereco    = $enderecoDAO->findById( $idCliente );
+
+    require_once 'dao/PagamentoDAO.php';
+    $pagamentoDAO = new PagamentoDAO();
+    $pagamento    = $pagamentoDAO->findById( $idCliente );
+    ?>
 
 <!------------ENDERECO----------->
 
 <div class='container'>
     <div class="endereco">
+        
         <h2> <i class='bx bxs-map'></i>SELECIONE O ENDEREÇO</h2>
         <div class="linha"></div>
         <div class="dados-endereco">
             <span id="principal"><p>Endereço principal</p></span>
-            <p>QNM 05 conj P 06</p>
-            <p>CEP 72215066 - Brasília, DF</p>
-        </div>
+            <?php
+             echo   "<p>{$endereco["endereco"]}, {$endereco["numero_casa"]}</p>";
+             echo   "<p>{$endereco["cep"]} - {$endereco["cidade"]} </p>";
+             echo   "<p>{$endereco["complemento"]} </p>";
+        "</div>";
+        ?>
         <div class="editar-endereco">
-            <div class="editar">EDITAR</div>
-            <div class="editar">NOVO ENDEREÇO</div> 
+            <?php
+             echo "<div class='editar'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'>EDITAR</a></div>"; 
+             ?>
         </div>
     </div>
 
