@@ -4,7 +4,7 @@ $arrayImagem = array(
     1 => '/img/banner-panfleto-04.png',
     2 => '/img/3.png',
     3 => '/img/3-13-13.png',
-    4 => '/img/.jpg',
+    4 => '/img/4.png',
     5 => '/img/.jpg',
 ); 
 $pathImagem = $arrayImagem[$categoria_id];
@@ -122,7 +122,7 @@ $pathImagem = $arrayImagem[$categoria_id];
                 echo "</div>";
             }
         } else {
-            echo "Não existe produtos cadastrados";
+            echo "<p class='semProduto'>Não existe produtos cadastrados</p>";
         }
         ?>
    

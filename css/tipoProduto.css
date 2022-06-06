@@ -175,3 +175,8 @@ p #comprar{
 .img-banner img {
     width: 100%;
 }
+p.semProduto {
+    font-family: kinetika;
+    font-size: 20px;
+    color: #f36d00;
+}

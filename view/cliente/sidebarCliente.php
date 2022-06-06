@@ -132,13 +132,6 @@ session_start();
                 </a>
                <span class="tooltip">Compras</span>
             </li>
-            <li>
-                <a href="#">
-                    <i class='bx bxs-chat'></i>
-                    <span class="links_name">Comentários</span>
-                </a>
-                <span class="tooltip">Comentários</span> 
-            </li>
         </ul>
         <div class="profile_content">
             <div class="profile">
