@@ -34,6 +34,8 @@
         $cliente     = $clienteDAO->findById( $idCliente );
         $enderecoDAO = new EnderecoDAO();
         $endereco    = $enderecoDAO->findById( $idCliente );
+
+        // var_dump(empty($endereco["cep"]));
     ?>
     <!-- ENDEREÇO -->
 
@@ -76,35 +78,35 @@
 
         <form id="formCadastroCliente" action="../../controller/cliente/alterarEnderecoController.php" method="post">
 
-            <input type="hidden" name="cliente_id" value="<?php echo $endereco["cliente_id"] ?>">
-            <!-- <input type="hidden" name="id" value="<?=$_GET['id'];?>"> -->
+            <input type="hidden" name="cliente_id" value="<?php echo $cliente["id"] ?>">
+            <input type="hidden" name="endereco_id" value="<?php echo (empty($endereco["id"]) ? "0": $endereco["id"]) ?>">
             <div class="inputbox" id="topo">
-                <input type="text" name="cep" id="cep" value="<?php echo $endereco["cep"] ?>">
+                <input type="text" name="cep" id="cep" value="<?php echo (empty($endereco["cep"]) ? '': $endereco["cep"]) ?>">
                 <label for="cep">Cep</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="endereco" id="endereco" value="<?php echo $endereco["endereco"] ?>">
+                <input type="text" name="endereco" id="endereco" value="<?php echo (empty($endereco["endereco"]) ? '': $endereco["endereco"]) ?>">
                 <label for="endereco">Endereço</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="numero_casa" id="numero_casa" value="<?php echo $endereco["numero_casa"] ?>">
+                <input type="text" name="numero_casa" id="numero_casa" value="<?php echo (empty($endereco["numero_casa"]) ? '': $endereco["numero_casa"]) ?>">
                 <label for="numero_casa">N° casa</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="complemento" id="complemento" value="<?php echo $endereco["complemento"] ?>">
+                <input type="text" name="complemento" id="complemento" value="<?php echo (empty($endereco["complemento"]) ? '': $endereco["complemento"]) ?>">
                 <label for="complemento">Complemento</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="cidade" id="cidade" value="<?php echo $endereco["cidade"] ?>">
+                <input type="text" name="cidade" id="cidade" value="<?php echo (empty($endereco["cidade"]) ? '': $endereco["cidade"]) ?>">
                 <label for="cidade">Cidade</label>
             </div>
             <br><br>
             <div class="inputbox">
-                <input type="text" name="uf" id="uf" value="<?php echo $endereco["uf"] ?>">
+                <input type="text" name="uf" id="uf" value="<?php  echo (empty($endereco["uf"]) ? '': $endereco["uf"]) ?>">
                 <label for="uf">UF</label>
             </div>
             <br><br>
