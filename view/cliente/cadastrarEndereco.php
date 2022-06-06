@@ -16,10 +16,10 @@
 </head>
 
 <body>
-        <h1>Adicionar endereço</h1>
+        <h1 style="text-align: center; margin-top: 40px; margin-bottom: -10px;">Adicionar endereço</h1>
 
     <div class="container">
-
+    
         <form id="formCadastroCliente" action="../../controller/cliente/cadastrarEnderecoController.php"
             method="post">
             <input type="hidden" name="cliente_id" value="<?=$_GET['id'];?>">

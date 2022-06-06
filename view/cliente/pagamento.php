@@ -44,7 +44,6 @@
                     <span class="nomelink" id="home">Todos os produtos</span>
                 </a>
             </li>
-
             <li class="produtoshover">
                 <a href="/view/produto/tipoproduto.php?categoria_id=1">
                     <span class="nomelink">Panfleto</span>
@@ -70,7 +69,6 @@
                     <i class='bx bxs-cart'></i>
                 </a>
             </li>
-
         </ul>
     </div>
 <body>
