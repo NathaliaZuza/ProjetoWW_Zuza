@@ -30,12 +30,6 @@ session_start();
                     <span class="logo">WW.ZUZA</span>
                 </a>
             </li>
-            <li>
-                <div class="inputSearch">
-                    <i class='bx bx-search'></i>
-                    <input type="text" name="pesquisar" placeholder="Pesquise um produto...">
-                </div>
-            </li>
         </ul>
         <div class="btn-logar">
             <a href="/view/pagsCentral/login.php">
@@ -77,11 +71,6 @@ session_start();
             <li class="produtoshover">
                 <a href="/view/produto/tipoproduto.php?categoria_id=4">
                     <span class="nomelink">Banner</span>
-                </a>
-            </li>
-            <li class="produtoshover">
-                <a href="/view/produto/tipoproduto.php?categoria_id=5">
-                    <span class="nomelink">Papel timbrado</span>
                 </a>
             </li>
             <li class="carrinho">
