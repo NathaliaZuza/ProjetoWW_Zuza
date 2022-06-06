@@ -1,0 +1,8 @@
+<?php
+session_start();
+    if ( $_SESSION["perfil"] != 'Administrador' ) {
+        
+        header( "Location: /view/cliente/sidebarCliente.php" );
+    }
+    
+?>
