@@ -40,7 +40,7 @@
 
 <!------------ENDERECO----------->
 
-<div class='container'>
+
     <div class="endereco">
         
         <h2> <i class='bx bxs-map'></i>SELECIONE O ENDEREÇO</h2>
@@ -50,9 +50,10 @@
             <?php
              echo   "<p>{$endereco["endereco"]}, {$endereco["numero_casa"]}</p>";
              echo   "<p>{$endereco["cep"]} - {$endereco["cidade"]} </p>";
-             echo   "<p>{$endereco["complemento"]} </p>";       
+             echo   "<p>{$endereco["complemento"]} </p>";
         ?>
         </div>
+        
         <div class="editar-endereco">
             <?php
              echo "<div class='editar'><a href='../../view/cliente/AtualizarDadosCliente.php?id={$cliente["id"]}'>EDITAR</a></div>"; 
@@ -60,101 +61,96 @@
         </div>
     </div>
 
-<!------------CARRINHO----------->   
+<!------------CARRINHO----------->
+<div class='container'>
     <div class="container-itens">
-<?php
-    require_once './dao/ProdutoDAO.php';
-    $produtoDAO = new ProdutoDAO();
-    $produtos   = $produtoDAO->findAll();
-    $total      = 0;
+        <?php
+            require_once './dao/ProdutoDAO.php';
+            $produtoDAO = new ProdutoDAO();
+            $produtos   = $produtoDAO->findAll();
+            $total      = 0;
 
-    if (isset($_SESSION['carrinho']) && !empty($_SESSION['carrinho'])) {
+            if (isset($_SESSION['carrinho']) && !empty($_SESSION['carrinho'])) {
 
-        foreach ($_SESSION['carrinho'] as $key => $qtde) {
-            $produto = $produtoDAO->findById($key);
-            $total += $produto["preco"] * $qtde;
-        
-        echo "<div class='itens'>";
-        echo "<div class='item1'>";
-        echo "  <div class='div-img'>";
-        echo "      <p><img src='../img/produto/foto/{$produto["foto"]}' width='112'/></p>";
-        echo "  </div>";
-        echo "  </div>";
+                foreach ($_SESSION['carrinho'] as $key => $qtde) {
+                    $produto = $produtoDAO->findById($key);
+                    $total += $produto["preco"] * $qtde;
+                
+                echo "<div class='itens'>";
+                echo "<div class='item1'>";
+                echo "  <div class='div-img'>";
+                echo "      <p><img src='img/produto/foto/{$produto["foto"]}' width='112'/></p>";
+                echo "  </div>";
+                echo "  </div>";
 
-        echo "<div class='item2'>";
-        echo "      <div class='nome_produto'>
-                        {$produto["nome"]}
-                    </div>";
-                    
-        echo "  <div class='menos1_carrinho'>
-                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del1'>
-                        - 
-                    </a>
-                </div>";
+                echo "<div class='item2'>";
+                echo "      <div class='nome_produto'>
+                                {$produto["nome"]}
+                            </div>";
+                            
+                echo "  <div class='menos1_carrinho'>
+                            <a href='controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del1'>
+                                - 
+                            </a>
+                        </div>";
 
-        echo "  <div class='qtd'> 
-                    {$qtde}
-                </div>";
+                echo "  <div class='qtd'> 
+                            {$qtde}
+                        </div>";
 
-        echo    "<div class='menos1_carrinho'>
-                    <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'>
-                        +
-                    </a>
-                 </div>";
+                echo    "<div class='menos1_carrinho'>
+                            <a href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=add'>
+                                +
+                            </a>
+                        </div>";
 
-        echo "      <div class='desc_produto'>
-                        {$produto["descricao"]}
-                    </div>";
+                echo "      <div class='desc_produto'>
+                                {$produto["descricao"]}
+                            </div>";
 
-        echo        "<div class='preco'>
-                        <p>R$ ", number_format(($produto["preco"]), 2, ",", "." ), "<span id='undIndex'></span></p>
-                    </div>";
-        echo "      <div class='info'>
-                        <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
-                    </div>";
+                echo        "<div class='preco'>
+                                <p>R$ ", number_format(($produto["preco"]), 2, ",", "." ), "<span id='undIndex'></span></p>
+                            </div>";
+                echo "      <div class='info'>
+                                <p>Cores: <span class='descricao'>{$produto["cores"]}</span></p>
+                            </div>";
 
-        echo        "<div class='info'>
-                        <p>Material: <span class='descricao'>{$produto['material']}</span></p>
-                    </div>";
+                echo        "<div class='info'>
+                                <p>Material: <span class='descricao'>{$produto['material']}</span></p>
+                            </div>";
 
-        echo        "<div class='info'>
-                        <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
-                    </div>";
+                echo        "<div class='info'>
+                                <p>Tamanho final: <span class='descricao'> {$produto["tamanho"]}</span></p>
+                            </div>";
 
-        echo        "<div class='info'>
-                        <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
-                    </div>";
+                echo        "<div class='info'>
+                                <p>Quantidade: <span class='descricao'>{$produto["qtd"]}</span></p>
+                            </div>";
 
-        echo        "<div class='info'>
-                        <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
-                    </div>";
-        echo "  <div class='subtotal_carrinho'>
-                    Subtotal: R$ ", number_format(($produto["preco"] * $qtde), 2, ",", "."),
-        "       </div>";
+                echo        "<div class='info'>
+                                <p>Prazo de produção: <span class='descricao'>{$produto["prazo"]}</span></p>
+                            </div>";
+                echo "  <div class='subtotal_carrinho'>
+                            Subtotal: R$ ", number_format(($produto["preco"] * $qtde), 2, ",", "."),
+                "       </div>";
 
-        echo "  <div class='remover_carrinho'>
-                    <a onclick='return confirmarExcluir();' href='/controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del'>
-                        REMOVER ITEM <i class='bx bx-trash'></i>
-                    </a>";           
-        echo    "</div>";
+                echo "  <div class='remover_carrinho'>
+                            <a onclick='return confirmarExcluir();' href='controller/produto/carrinhoController.php?id={$produto["id"]}&acao=del'>
+                                REMOVER ITEM <i class='bx bx-trash'></i>
+                            </a>";           
+                echo    "</div>";
 
-        echo "</div>";
-        echo "</div>";
-    
-        }  ?>
+                echo "</div>";
+                echo "</div>";
+            
+            }  ?>
     </div>
+
     <script>
           function confirmarExcluir(){
             return confirm("Você tem certeza que deseja remover esse produto do carrinho?");
         } 
     </script>
-<!------------TOTAL-----------> 
-
-        <?php
-        echo "  <div class='total_carrinho'>
-                    Total: R$ ", number_format($total, 2, ",", "."),
-             "  </div>";
-        ?>
 
 <!------------RESUMO----------->   
         <div class="resumo">
@@ -171,7 +167,15 @@
             <div class="continuarComprando-btn"><p><a href="index.php">Continuar comprando</a></p></div>
         </div>     
         
+    </div>
 </div>
+<!------------TOTAL-----------> 
+
+    <?php
+        echo "  <div class='total_carrinho'>
+                   <p style='text-align: left; margin-left: 8%;'>Total: R$ ", number_format($total, 2, ",", "."),
+             "</p></div>";
+    ?>
 <!------------SE NÃO EXISTIR PRODUTOS----------->  
     <?php 
     } else {
@@ -183,7 +187,8 @@
     ?>
 
 <!---------FOOTER---------->
-
+</div>
+    </div>
     <footer>
         <div class="social">
             <p><span class="logo">WW.ZUZA</span></p>
